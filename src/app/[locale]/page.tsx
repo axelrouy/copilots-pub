@@ -127,7 +127,7 @@ export default async function HomePage({
                 href={`/${locale}/prompts#${p.id}`}
                 className="card-lift flex flex-col items-center gap-2 rounded-2xl border border-border bg-surface p-5 text-center"
               >
-                <ProductIcon icon={p.icon} label={pick(p.label, locale)} size={30} className="text-3xl" />
+                <ProductIcon icon={p.icon} label={pick(p.label, locale)} size={44} className="text-4xl" />
                 <span className="text-sm font-medium">
                   {pick(p.label, locale)}
                 </span>

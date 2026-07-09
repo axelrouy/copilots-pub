@@ -96,7 +96,7 @@ export default function FilterableTips({
               className={chip(product === p.id)}
               onClick={() => setProduct(product === p.id ? "all" : p.id)}
             >
-              <ProductIcon icon={p.icon} label={pick(p.label, locale)} size={16} className="mr-1" /> {pick(p.label, locale)}
+              <ProductIcon icon={p.icon} label={pick(p.label, locale)} size={20} className="mr-1" /> {pick(p.label, locale)}
             </button>
           ))}
         </div>
