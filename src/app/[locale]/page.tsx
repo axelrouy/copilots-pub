@@ -143,7 +143,13 @@ export default async function HomePage({
           href={`/${locale}/m365`}
           className="card-lift rounded-3xl border border-border bg-surface p-6"
         >
-          <div className="mb-2 text-3xl">💎</div>
+          <img
+            src="/copilot-m365.png"
+            alt="Copilot M365"
+            width={48}
+            height={48}
+            className="mb-2 h-12 w-12 object-contain"
+          />
           <h3 className="text-lg font-bold">{dict.sections.m365_title}</h3>
           <p className="mt-1 text-sm text-muted">{dict.sections.m365_desc}</p>
         </Link>
@@ -151,7 +157,13 @@ export default async function HomePage({
           href={`/${locale}/chat`}
           className="card-lift rounded-3xl border border-border bg-surface p-6"
         >
-          <div className="mb-2 text-3xl">💬</div>
+          <img
+            src="/copilot.png"
+            alt="Copilot"
+            width={48}
+            height={48}
+            className="mb-2 h-12 w-12 object-contain"
+          />
           <h3 className="text-lg font-bold">{dict.sections.chat_title}</h3>
           <p className="mt-1 text-sm text-muted">{dict.sections.chat_desc}</p>
         </Link>
