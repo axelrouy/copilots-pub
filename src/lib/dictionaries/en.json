@@ -24,6 +24,26 @@
     "browse_by": "Browse by",
     "see_all": "See all"
   },
+  "barpub": {
+    "kicker": "Welcome to the counter",
+    "tab_bar": "The Bar",
+    "tab_counter": "The Counter",
+    "bar_title": "Where AIs meet around a drink",
+    "bar_body": "Copilot isn't a single model — it's a bar where several frontier AIs gather. Thanks to multi-model orchestration, Copilot calls on the right model for each task — reasoning, writing, analysis, code — and serves you the sharpest answer.",
+    "bar_chips": [
+      "Multi-model",
+      "Reasoning",
+      "Writing",
+      "Analysis",
+      "Code",
+      "Research"
+    ],
+    "bar_note": "The right model, at the right moment — without you having to choose.",
+    "counter_kicker": "Behind the counter",
+    "counter_title": "Axel, your Copilot bartender",
+    "counter_body": "A Cloud Solution Architect for M365 Copilot at Microsoft France, Axel serves up hands-on tips, prompts and scenarios. Place your order and he'll mix the right recommendation.",
+    "counter_quote": "\u201cWhat can I get you today?\u201d"
+  },
   "filters": {
     "all": "All",
     "premium": "M365 Premium",

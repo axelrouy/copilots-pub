@@ -10,6 +10,7 @@ import {
 } from "@/data/tips";
 import TipCard from "@/components/tip-card";
 import { AudienceBadge, SectionBadge } from "@/components/badges";
+import BarPub from "@/components/bar-pub";
 
 export default async function HomePage({
   params,
@@ -51,6 +52,9 @@ export default async function HomePage({
           </Link>
         </div>
       </section>
+
+      {/* Bar / Comptoir */}
+      <BarPub dict={dict} />
 
       {/* Tip of the day */}
       <section className="mt-10">
