@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍻 Copilot's Pub
 
-## Getting Started
+> Le comptoir des astuces Microsoft Copilot — *Where pros gather for real-world Microsoft Copilot tips.*
 
-First, run the development server:
+Le référentiel pratique des fonctionnalités, prompts et scénarios Copilot pour **IT Pros** et **End Users**.
+Répond à une question simple : **« Qu'est-ce que je peux faire aujourd'hui avec Copilot ? »**
+
+## ✨ Fonctionnalités
+
+- **Bilingue FR / EN** — routing `/fr/...` et `/en/...`, tout le contenu est traduit.
+- **Thème clair / sombre** — bascule instantanée, sans flash, mémorisée.
+- **2 sections** : 💎 Copilot M365 (Premium) et 💬 Copilot Chat (Basic).
+- **Badges publics** : 🔵 IT PRO / 🟢 END USER pour distinguer IT et utilisateurs.
+- **Recherche & filtres** : par section, audience, produit (Outlook, Teams, Excel, Notebooks, Agents…).
+- **Explorer Copilot** (différenciant) : rôle + niveau + produit → scénarios recommandés.
+- **Pages astuce** : étapes numérotées, prompt copiable en un clic, tags, astuces liées.
+- **Commentaires** modérés (anti-spam via modération manuelle).
+- **Console Admin** (`/admin`) : analytics (visiteurs, pages vues, temps de lecture, sources de trafic), contenu, modération.
+
+## 🚀 Lancer en local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000  (redirige vers /fr)
+npm run build    # build de production
+npm start        # servir le build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✍️ Éditer le contenu à la main
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tout le contenu vit dans **`src/data/tips.ts`** — un tableau `tips[]` typé et bilingue.
+Ajouter une astuce = ajouter un objet :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```ts
+{
+  slug: "mon-astuce",
+  section: "m365",              // "m365" (Premium) | "chat" (Basic)
+  audience: ["user"],           // "it" | "user"
+  product: "outlook",           // outlook | teams | word | excel | powerpoint | notebooks | agents | scout | general
+  roles: ["Manager"],           // pour l'Explorer
+  level: "beginner",            // beginner | intermediate | advanced
+  icon: "📧",
+  date: "2026-07-09",
+  isNew: true, trending: true,  // flags optionnels (+ tipOfDay, featured)
+  readMinutes: 2,
+  title:   { fr: "…", en: "…" },
+  summary: { fr: "…", en: "…" },
+  steps:   { fr: ["…"], en: ["…"] },
+  prompt:  { fr: "…", en: "…" },
+  tags: ["email"],
+}
+```
 
-## Learn More
+Les textes d'interface se modifient dans `src/lib/dictionaries/fr.json` et `en.json`.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌍 Déployer sur le web (Vercel)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Pousser ce dossier sur un repo GitHub.
+2. Sur [vercel.com](https://vercel.com) → New Project → importer le repo.
+3. Framework détecté automatiquement (Next.js). Deploy. ✅
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🗄️ Passer en production (Supabase) — Phase 2
 
-## Deploy on Vercel
+L'analytics et les commentaires utilisent aujourd'hui un **store en mémoire** (`src/lib/store.ts`),
+idéal pour la démo mais réinitialisé à chaque redémarrage serverless.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pour du réel, créer 2 tables Supabase et remplacer le corps des fonctions de `store.ts` :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sql
+create table comments (
+  id uuid default gen_random_uuid() primary key,
+  slug text not null,
+  name text,
+  body text not null,
+  approved boolean default false,
+  created_at timestamptz default now()
+);
+create table views (
+  id uuid default gen_random_uuid() primary key,
+  path text not null,
+  ref text,
+  created_at timestamptz default now()
+);
+```
+
+Variables d'environnement : `SUPABASE_URL`, `SUPABASE_ANON_KEY` (+ ajouter l'auth admin).
+
+## 🗺️ Roadmap
+
+- **Phase 1** (actuelle) : articles, prompts, astuces, admin démo.
+- **Phase 2** : Supabase (commentaires/analytics réels), auth admin, vidéos, newsletter.
+- **Phase 3** : communauté, contributions externes.
+- **Phase 4** : annuaire d'agents Copilot, bibliothèque de prompts certifiés.
+
+---
+
+Construit avec Copilot par **Axel**. Projet personnel, non affilié officiellement à Microsoft.

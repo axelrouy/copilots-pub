@@ -1,0 +1,103 @@
+{
+  "brand": {
+    "name": "Copilot's Pub",
+    "tagline": "Le comptoir des astuces Microsoft Copilot.",
+    "question": "Qu'est-ce que je peux faire aujourd'hui avec Copilot ?"
+  },
+  "nav": {
+    "home": "Accueil",
+    "m365": "Copilot M365",
+    "chat": "Copilot Chat",
+    "prompts": "Prompt Library",
+    "explorer": "Explorer",
+    "about": "À propos",
+    "admin": "Admin",
+    "search_placeholder": "Rechercher une astuce, un prompt, un produit…"
+  },
+  "home": {
+    "hero_kicker": "Le référentiel pratique de Microsoft Copilot",
+    "hero_cta_explore": "Explorer Copilot",
+    "hero_cta_browse": "Parcourir les astuces",
+    "tip_of_day": "Astuce du jour",
+    "whats_new": "Nouveautés Copilot",
+    "trending": "Fonctionnalités tendances",
+    "browse_by": "Parcourir par",
+    "see_all": "Tout voir"
+  },
+  "filters": {
+    "all": "Tout",
+    "premium": "M365 Premium",
+    "chat": "Copilot Chat",
+    "it": "IT Pro",
+    "user": "End User",
+    "title": "Filtres"
+  },
+  "sections": {
+    "m365_title": "Copilot M365 — Premium",
+    "m365_desc": "Copilot intégré dans Outlook, Teams, Word, Excel, PowerPoint, Notebooks et les Agents.",
+    "chat_title": "Copilot Chat — Basic",
+    "chat_desc": "Productivité personnelle, recherche, Scout, Deep Research et prompt engineering.",
+    "count_tips": "astuces"
+  },
+  "tip": {
+    "steps": "Comment faire",
+    "prompt": "Prompt à copier",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "related": "À découvrir aussi",
+    "back": "Retour",
+    "comments": "Commentaires",
+    "comment_placeholder": "Partagez votre retour ou une variante de ce prompt…",
+    "comment_name": "Votre nom",
+    "comment_submit": "Publier",
+    "comment_empty": "Aucun commentaire pour l'instant. Soyez le premier !",
+    "comment_pending": "Merci ! Votre commentaire sera visible après modération."
+  },
+  "explorer": {
+    "title": "Explorer Copilot",
+    "subtitle": "Choisissez votre profil, on vous propose les meilleurs usages.",
+    "role": "Votre rôle",
+    "level": "Votre niveau",
+    "product": "Produit",
+    "any": "Tous",
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé",
+    "results": "Scénarios recommandés",
+    "no_results": "Aucun scénario ne correspond encore. Élargissez vos filtres."
+  },
+  "badges": {
+    "it": "IT PRO",
+    "user": "END USER",
+    "premium": "Premium",
+    "chat": "Chat"
+  },
+  "footer": {
+    "built": "Construit avec Copilot par Axel",
+    "phase": "Phase 1 — Astuces, prompts & scénarios",
+    "rights": "Un projet personnel, non affilié officiellement à Microsoft."
+  },
+  "admin": {
+    "title": "Console Admin",
+    "analytics": "Analytics",
+    "unique_visitors": "Visiteurs uniques",
+    "page_views": "Pages vues",
+    "avg_read": "Temps de lecture moyen",
+    "top_pages": "Pages les plus visitées",
+    "top_searches": "Recherches effectuées",
+    "traffic_sources": "Sources de trafic",
+    "content": "Contenu",
+    "comments": "Modération des commentaires",
+    "status_draft": "Brouillon",
+    "status_published": "Publié",
+    "approve": "Approuver",
+    "reject": "Rejeter",
+    "new_article": "Nouvel article",
+    "demo_notice": "Données de démonstration — branchez Supabase pour l'analytics et les commentaires réels."
+  },
+  "common": {
+    "minutes_read": "min de lecture",
+    "new": "Nouveau",
+    "trending": "Tendance"
+  }
+}
