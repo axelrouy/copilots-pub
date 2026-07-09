@@ -30,10 +30,10 @@ export default async function HomePage({
       <section className="relative overflow-hidden rounded-3xl border border-border bg-surface px-6 py-12 sm:px-10 sm:py-16 mt-6">
         <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full brand-gradient opacity-20 blur-3xl" />
         <img
-          src="/pub-hero.svg"
+          src="/pub-hero.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-auto max-w-[55%] object-contain object-bottom opacity-90 [mask-image:linear-gradient(to_right,transparent,black_35%)] sm:block"
+          className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[62%] object-cover object-right opacity-90 [mask-image:linear-gradient(to_right,transparent,black_45%)] sm:block"
         />
         <div className="relative">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-copilot">
