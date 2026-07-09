@@ -72,23 +72,27 @@ export default function BarPub({ dict }: { dict: Dictionary }) {
           </div>
         </div>
       ) : (
-        <div className="grid gap-6 rounded-3xl border border-border bg-surface p-6 sm:grid-cols-[auto_1fr] sm:p-8">
-          <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-3xl border border-border sm:h-48 sm:w-48">
-            <Image
-              src="/axel-barman.jpg"
-              alt={t.counter_title}
-              fill
-              sizes="192px"
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-copilot">
+        <div className="relative overflow-hidden rounded-3xl border border-border">
+          <Image
+            src="/axel-barman.jpg"
+            alt={t.counter_title}
+            fill
+            sizes="(max-width: 768px) 100vw, 1152px"
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/25" />
+          <div className="relative max-w-2xl p-6 pt-40 text-white sm:p-10 sm:pt-56">
+            <p className="text-sm font-semibold uppercase tracking-wide text-white/80">
               {t.counter_kicker}
             </p>
-            <h3 className="mt-1 text-2xl font-bold">{t.counter_title}</h3>
-            <p className="mt-3 text-muted">{t.counter_body}</p>
-            <p className="mt-4 text-sm italic text-muted">{t.counter_quote}</p>
+            <h3 className="mt-1 text-2xl font-bold sm:text-3xl">
+              {t.counter_title}
+            </h3>
+            <p className="mt-3 text-white/85">{t.counter_body}</p>
+            <p className="mt-4 text-sm italic text-white/75">
+              {t.counter_quote}
+            </p>
           </div>
         </div>
       )}
