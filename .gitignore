@@ -42,3 +42,7 @@ next-env.d.ts
 
 # migration script contains DB password
 /scripts/migrate.mjs
+.vercel
+.env*
+/scripts/set-secrets.mjs
+/.github/workflows/deploy.yml
