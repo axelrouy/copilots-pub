@@ -24,26 +24,6 @@
     "browse_by": "Parcourir par",
     "see_all": "Tout voir"
   },
-  "barpub": {
-    "kicker": "Bienvenue au comptoir",
-    "tab_bar": "Le Bar",
-    "tab_counter": "Le Comptoir",
-    "bar_title": "Là où les IA se rencontrent autour d'un verre",
-    "bar_body": "Copilot n'est pas un modèle unique, mais un comptoir où plusieurs IA de pointe se retrouvent. Grâce à l'orchestration multi-modèle, Copilot mobilise le bon modèle pour chaque tâche — raisonnement, rédaction, analyse, code — et vous sert la réponse la plus juste.",
-    "bar_chips": [
-      "Multi-modèle",
-      "Raisonnement",
-      "Rédaction",
-      "Analyse",
-      "Code",
-      "Recherche"
-    ],
-    "bar_note": "Le bon modèle, au bon moment, sans que vous ayez à choisir.",
-    "counter_kicker": "Derrière le comptoir",
-    "counter_title": "Axel, votre barman Copilot",
-    "counter_body": "Cloud Solution Architect M365 Copilot chez Microsoft France, Axel vous sert astuces, prompts et scénarios concrets. Passez commande, il vous prépare la bonne recommandation.",
-    "counter_quote": "« Qu'est-ce que je vous sers aujourd'hui ? »"
-  },
   "filters": {
     "all": "Tout",
     "premium": "M365 Premium",

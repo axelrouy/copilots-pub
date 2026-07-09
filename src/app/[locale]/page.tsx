@@ -10,7 +10,6 @@ import {
 } from "@/data/tips";
 import TipCard from "@/components/tip-card";
 import { AudienceBadge, SectionBadge } from "@/components/badges";
-import BarPub from "@/components/bar-pub";
 
 export default async function HomePage({
   params,
@@ -30,31 +29,36 @@ export default async function HomePage({
       {/* Hero */}
       <section className="relative overflow-hidden rounded-3xl border border-border bg-surface px-6 py-12 sm:px-10 sm:py-16 mt-6">
         <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full brand-gradient opacity-20 blur-3xl" />
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-copilot">
-          {dict.home.hero_kicker}
-        </p>
-        <h1 className="max-w-3xl text-4xl font-extrabold leading-tight sm:text-5xl">
-          {dict.brand.question}
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted">{dict.brand.tagline}</p>
-        <div className="mt-7 flex flex-wrap gap-3">
-          <Link
-            href={`/${locale}/explorer`}
-            className="rounded-xl brand-gradient px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-copilot/20 hover:opacity-95"
-          >
-            🧭 {dict.home.hero_cta_explore}
-          </Link>
-          <Link
-            href={`/${locale}/m365`}
-            className="rounded-xl border border-border bg-surface px-5 py-3 text-sm font-semibold hover:bg-surface-2"
-          >
-            {dict.home.hero_cta_browse}
-          </Link>
+        <img
+          src="/pub-hero.svg"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-auto max-w-[55%] object-contain object-bottom opacity-90 [mask-image:linear-gradient(to_right,transparent,black_35%)] sm:block"
+        />
+        <div className="relative">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-copilot">
+            {dict.home.hero_kicker}
+          </p>
+          <h1 className="max-w-3xl text-4xl font-extrabold leading-tight sm:text-5xl">
+            {dict.brand.question}
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg text-muted">{dict.brand.tagline}</p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link
+              href={`/${locale}/explorer`}
+              className="rounded-xl brand-gradient px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-copilot/20 hover:opacity-95"
+            >
+              🧭 {dict.home.hero_cta_explore}
+            </Link>
+            <Link
+              href={`/${locale}/m365`}
+              className="rounded-xl border border-border bg-surface px-5 py-3 text-sm font-semibold hover:bg-surface-2"
+            >
+              {dict.home.hero_cta_browse}
+            </Link>
+          </div>
         </div>
       </section>
-
-      {/* Bar / Comptoir */}
-      <BarPub dict={dict} />
 
       {/* Tip of the day */}
       <section className="mt-10">
