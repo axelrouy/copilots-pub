@@ -16,7 +16,7 @@ export default async function ChatPage({
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <div className="mb-6 rounded-3xl border border-border bg-surface p-6 sm:p-8">
-        <div className="mb-2 text-3xl">💬</div>
+        <img src="/copilot.png" alt="Copilot" className="mb-2 h-12 w-12 object-contain" />
         <h1 className="text-3xl font-extrabold">{dict.sections.chat_title}</h1>
         <p className="mt-2 max-w-2xl text-muted">{dict.sections.chat_desc}</p>
         <p className="mt-3 text-sm font-medium text-ms-blue">

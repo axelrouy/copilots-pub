@@ -41,7 +41,7 @@ export function SectionBadge({
           : "bg-ms-blue/15 text-ms-blue"
       }`}
     >
-      {premium ? "💎" : "💬"}
+      <img src="/copilot.png" alt="" className="h-3.5 w-3.5 object-contain" />
       {premium ? dict.badges.premium : dict.badges.chat}
     </span>
   );

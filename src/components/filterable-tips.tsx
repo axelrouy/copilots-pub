@@ -70,10 +70,12 @@ export default function FilterableTips({
                 {dict.filters.all}
               </button>
               <button className={chip(section === "m365")} onClick={() => setSection("m365")}>
-                💎 {dict.filters.premium}
+                <img src="/copilot.png" alt="" className="mr-1 inline-block h-4 w-4 object-contain align-[-3px]" />
+                {dict.filters.premium}
               </button>
               <button className={chip(section === "chat")} onClick={() => setSection("chat")}>
-                💬 {dict.filters.chat}
+                <img src="/copilot.png" alt="" className="mr-1 inline-block h-4 w-4 object-contain align-[-3px]" />
+                {dict.filters.chat}
               </button>
               <span className="mx-1 h-5 w-px bg-border" />
             </>
