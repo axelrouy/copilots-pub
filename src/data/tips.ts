@@ -44,7 +44,7 @@ export const PRODUCTS: { id: Product; label: Bilingual; icon: string }[] = [
   { id: "notebooks", label: { fr: "Notebooks", en: "Notebooks" }, icon: "📓" },
   { id: "agents", label: { fr: "Agents", en: "Agents" }, icon: "/agents.png" },
   { id: "scout", label: { fr: "Word", en: "Word" }, icon: "/word.png" },
-  { id: "general", label: { fr: "Général", en: "General" }, icon: "✨" },
+  { id: "general", label: { fr: "Général", en: "General" }, icon: "/general.png" },
 ];
 
 export const ROLES: Bilingual[] = [
