@@ -304,7 +304,7 @@ export const tips: Tip[] = [
       "/articles/brandkit-policy-config.png",
       "/articles/brandkit-elevated-role.png",
       null,
-      null,
+      "/articles/brandkit-verify-publish.png",
       null,
     ],
     tags: ["powerpoint", "brand kit", "it", "policy", "config.office.com", "gouvernance"],
