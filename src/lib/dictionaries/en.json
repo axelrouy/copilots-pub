@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "Copilot's Pub",
+    "name": "AI Tip's Pub",
     "tagline": "Where pros gather for real-world Microsoft Copilot tips.",
     "question": "What can I do with Copilot today?"
   },
@@ -11,6 +11,7 @@
     "prompts": "Prompt Library",
     "explorer": "Explorer",
     "about": "About",
+    "legal": "Legal notice",
     "admin": "Admin",
     "search_placeholder": "Search a tip, a prompt, a product…"
   },
@@ -75,7 +76,7 @@
   "footer": {
     "built": "Built with Copilot by Axel",
     "phase": "Phase 1 — Tips, prompts & scenarios",
-    "rights": "A personal project, not officially affiliated with Microsoft."
+    "rights": "AI Tip's Pub is a personal, independent project with no affiliation with, partnership with, or endorsement by Microsoft. \u201cMicrosoft\u201d, \u201cCopilot\u201d and the associated logos are trademarks of Microsoft Corporation, used here for purely descriptive purposes and reproduced without modification."
   },
   "admin": {
     "title": "Admin Console",

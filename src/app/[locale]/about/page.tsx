@@ -42,10 +42,10 @@ const content: Record<Locale, Content> = {
     valuesTitle: "Ce qui me guide",
     values:
       "Hors du bureau, c'est l'océan qui me recentre — le surf, l'équilibre, prendre du recul pour mieux avancer. Curiosité, bienveillance, apprentissage continu et partage de connaissances : c'est ma boussole. Sécuriser, connecter, automatiser, innover. Et toujours : more adoption, more impact, more human.",
-    manifestoTitle: "Pourquoi Copilot's Pub ?",
+    manifestoTitle: "Pourquoi AI Tip's Pub ?",
     manifesto: [
       "Parce que les meilleures astuces, on se les échange rarement dans une doc de 80 pages. On se les file au comptoir, entre deux, quand quelqu'un lâche : « attends, montre-moi comment t'as fait ça ».",
-      "Copilot's Pub, c'est exactement ça. Un endroit sans chichi où je pose les usages Copilot qui marchent vraiment. Pas la théorie, pas le blabla marketing — ce que tu peux faire aujourd'hui, tout de suite, avec le Copilot que tu as déjà sous la main.",
+      "AI Tip's Pub, c'est exactement ça. Un endroit sans chichi où je pose les usages Copilot qui marchent vraiment. Pas la théorie, pas le blabla marketing — ce que tu peux faire aujourd'hui, tout de suite, avec le Copilot que tu as déjà sous la main.",
       "D'un côté du bar : Copilot M365 (Premium), intégré dans Outlook, Teams, Word, Excel, Notebooks, les Agents. De l'autre : Copilot Chat, pour la productivité perso et la recherche. Et à chaque astuce, je te dis clairement si c'est un truc pour l'IT ou pour l'utilisateur final. Zéro jargon inutile.",
       "Mon pari est simple : si tu repars d'ici avec une astuce que tu utilises dès demain, il est gagné. Allez, sers-toi — la première tournée est offerte. 🍻",
     ],
@@ -75,10 +75,10 @@ const content: Record<Locale, Content> = {
     valuesTitle: "What guides me",
     values:
       "Off the clock, the ocean is what recenters me — surfing, balance, stepping back to move forward better. Curiosity, kindness, continuous learning and knowledge sharing: that's my compass. Secure, connect, automate, innovate. And always: more adoption, more impact, more human.",
-    manifestoTitle: "Why Copilot's Pub?",
+    manifestoTitle: "Why AI Tip's Pub?",
     manifesto: [
       "Because the best tips rarely get shared in an 80-page doc. They get passed along at the counter, in between things, when someone says: “wait, show me how you did that.”",
-      "Copilot's Pub is exactly that. A no-nonsense place where I drop the Copilot use cases that actually work. No theory, no marketing fluff — what you can do today, right now, with the Copilot you already have.",
+      "AI Tip's Pub is exactly that. A no-nonsense place where I drop the Copilot use cases that actually work. No theory, no marketing fluff — what you can do today, right now, with the Copilot you already have.",
       "On one side of the bar: Copilot M365 (Premium), built into Outlook, Teams, Word, Excel, Notebooks, Agents. On the other: Copilot Chat, for personal productivity and search. And for every tip, I tell you clearly whether it's an IT thing or an end-user thing. Zero useless jargon.",
       "My bet is simple: if you leave with one tip you use tomorrow, it's a win. Come on in, help yourself — the first round's on me. 🍻",
     ],

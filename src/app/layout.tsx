@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Copilot's Pub — Le comptoir des astuces Microsoft Copilot",
+  title: "AI Tip's Pub — Le comptoir des astuces Microsoft Copilot",
   description:
     "Le référentiel pratique des fonctionnalités, prompts et scénarios Microsoft Copilot pour IT Pros et End Users.",
 };

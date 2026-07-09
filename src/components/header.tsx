@@ -37,7 +37,7 @@ export default function Header({
             🍻
           </span>
           <span className="text-lg font-bold tracking-tight">
-            Copilot&apos;s <span className="brand-gradient-text">Pub</span>
+            AI Tip&apos;s <span className="brand-gradient-text">Pub</span>
           </span>
         </Link>
 

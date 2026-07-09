@@ -80,7 +80,7 @@ export default function AdminPage() {
             href="/fr"
             className="ml-auto text-sm text-muted hover:text-foreground"
           >
-            ← Copilot&apos;s Pub
+            ← AI Tip&apos;s Pub
           </Link>
         </div>
       </header>
