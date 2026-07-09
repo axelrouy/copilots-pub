@@ -41,7 +41,7 @@ export const PRODUCTS: { id: Product; label: Bilingual; icon: string }[] = [
   { id: "teams", label: { fr: "Teams", en: "Teams" }, icon: "💬" },
   { id: "word", label: { fr: "Word", en: "Word" }, icon: "📝" },
   { id: "excel", label: { fr: "Excel", en: "Excel" }, icon: "📊" },
-  { id: "powerpoint", label: { fr: "PowerPoint", en: "PowerPoint" }, icon: "📽️" },
+  { id: "powerpoint", label: { fr: "PowerPoint", en: "PowerPoint" }, icon: "/powerpoint.png" },
   { id: "notebooks", label: { fr: "Notebooks", en: "Notebooks" }, icon: "📓" },
   { id: "agents", label: { fr: "Agents", en: "Agents" }, icon: "🤖" },
   { id: "scout", label: { fr: "Scout / Recherche", en: "Scout / Search" }, icon: "🔎" },

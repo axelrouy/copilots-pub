@@ -5,6 +5,7 @@ import type { Section, Tip, Audience, Product } from "@/data/tips";
 import { PRODUCTS } from "@/data/tips";
 import { pick, type Dictionary, type Locale } from "@/lib/i18n";
 import TipCard from "./tip-card";
+import ProductIcon from "./product-icon";
 
 export default function FilterableTips({
   tips,
@@ -95,7 +96,7 @@ export default function FilterableTips({
               className={chip(product === p.id)}
               onClick={() => setProduct(product === p.id ? "all" : p.id)}
             >
-              {p.icon} {pick(p.label, locale)}
+              <ProductIcon icon={p.icon} label={pick(p.label, locale)} size={16} className="mr-1" /> {pick(p.label, locale)}
             </button>
           ))}
         </div>

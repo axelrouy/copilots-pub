@@ -9,6 +9,7 @@ import {
   tips,
 } from "@/data/tips";
 import TipCard from "@/components/tip-card";
+import ProductIcon from "@/components/product-icon";
 import { AudienceBadge, SectionBadge } from "@/components/badges";
 
 export default async function HomePage({
@@ -126,7 +127,7 @@ export default async function HomePage({
                 href={`/${locale}/prompts#${p.id}`}
                 className="card-lift flex flex-col items-center gap-2 rounded-2xl border border-border bg-surface p-5 text-center"
               >
-                <span className="text-3xl">{p.icon}</span>
+                <ProductIcon icon={p.icon} label={pick(p.label, locale)} size={30} className="text-3xl" />
                 <span className="text-sm font-medium">
                   {pick(p.label, locale)}
                 </span>
