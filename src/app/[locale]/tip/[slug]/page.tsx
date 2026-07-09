@@ -66,12 +66,22 @@ export default async function TipPage({
           {steps.map((s, i) => (
             <li
               key={i}
-              className="flex gap-3 rounded-2xl border border-border bg-surface p-4"
+              className="flex flex-col gap-3 rounded-2xl border border-border bg-surface p-4"
             >
-              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full brand-gradient text-sm font-bold text-white">
-                {i + 1}
-              </span>
-              <span className="text-sm leading-relaxed">{s}</span>
+              <div className="flex gap-3">
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full brand-gradient text-sm font-bold text-white">
+                  {i + 1}
+                </span>
+                <span className="text-sm leading-relaxed">{s}</span>
+              </div>
+              {tip.stepImages?.[i] && (
+                <img
+                  src={tip.stepImages[i] as string}
+                  alt={`${pick(tip.title, locale)} — étape ${i + 1}`}
+                  loading="lazy"
+                  className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"
+                />
+              )}
             </li>
           ))}
         </ol>

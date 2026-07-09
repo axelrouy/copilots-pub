@@ -32,6 +32,7 @@ export type Tip = {
   title: Bilingual;
   summary: Bilingual;
   steps: BilingualList;
+  stepImages?: (string | null)[];
   prompt?: Bilingual;
   tags: string[];
 };
@@ -253,6 +254,60 @@ export const tips: Tip[] = [
       en: "Create an 8-slide deck about [topic] using our brand kit. Structure: title, context, 3 key messages, proof/figures, customer case, next steps, contact.",
     },
     tags: ["powerpoint", "branding", "design", "présentation"],
+  },
+  {
+    slug: "deployer-brand-kit-officiel-it",
+    section: "m365",
+    audience: ["it"],
+    product: "powerpoint",
+    roles: ["IT Admin", "Cloud Architect"],
+    level: "advanced",
+    icon: "🏢",
+    date: "2026-07-09",
+    isNew: true,
+    trending: true,
+    readMinutes: 6,
+    title: {
+      fr: "Déployer les Brand Kits officiels (côté IT)",
+      en: "Deploy official Brand Kits (IT side)",
+    },
+    summary: {
+      fr: "Activez les Brand Kits « Official » au niveau tenant : créez le groupe de sécurité Brand Managers et configurez la policy dans config.office.com.",
+      en: "Enable tenant-wide “Official” Brand Kits: create the Brand Managers security group and configure the policy in config.office.com.",
+    },
+    steps: {
+      fr: [
+        "Prérequis : une licence Microsoft 365 Copilot (Premium) assignée à chaque futur Brand Manager, et des droits admin pour créer un groupe et configurer config.office.com. Sans la policy, personne ne voit le terme « Official » ni le bouton « Publish ».",
+        "Dans admin.microsoft.com › Teams et groupes › Équipes et groupes actifs, ouvrez l'onglet « Groupes de sécurité », puis cliquez sur « + Ajouter un groupe de sécurité à extension de messagerie » (mail-enabled). ⚠️ Un Team / Groupe M365, un groupe de sécurité simple ou une liste de distribution ne fonctionnent PAS (message « policy has been incorrectly configured »).",
+        "Nommez le groupe (ex. « Brand Managers »), ajoutez tous les comptes qui devront publier/éditer en tant que MEMBRES (les owners n'ont PAS le droit de publier), puis notez l'adresse e-mail primaire du groupe.",
+        "Dans config.office.com › Customization › Policy Management, créez ou ouvrez une configuration avec le scope « Apply to all users » (Tenant).",
+        "Onglet Policies › recherchez « Brand Manager » › ouvrez « Elevated role for enterprise brand managers ». Passez Configuration setting sur « Enabled » et collez l'adresse e-mail exacte du groupe dans « Security group email address », puis Apply.",
+        "Review and Publish › Done. Laissez Priority = 1 (priorité maximale avec une seule config ; « 0 » n'est pas assignable). Comptez jusqu'à 24 h de propagation — chaque modification relance le délai, évitez de retoucher pendant l'attente.",
+        "Vérification : microsoft365.com › Create › More… › Brand kits. Pour un membre du groupe, le terme « Official » et le bouton « Publish » doivent apparaître.",
+        "Dépannage : « Policy has been incorrectly configured » → mauvais type de groupe, scope ≠ Tenant ou e-mail erroné. « You do not have permission to publish » → compte owner mais pas membre, ou propagation < 24 h. Aucun « Official » → policy non Enabled, licence Copilot manquante, ou propagation en cours.",
+      ],
+      en: [
+        "Prerequisites: a Microsoft 365 Copilot (Premium) license assigned to each future Brand Manager, and admin rights to create a group and configure config.office.com. Without the policy, no one sees the “Official” term or the “Publish” button.",
+        "In admin.microsoft.com › Teams & groups › Active teams & groups, open the “Security groups” tab, then click “+ Add a mail-enabled security group”. ⚠️ A Team / M365 group, a plain security group or a distribution list will NOT work (you'll get “policy has been incorrectly configured”).",
+        "Name the group (e.g. “Brand Managers”), add every account that will publish/edit as MEMBERS (owners do NOT get publish rights), then note the group's primary email address.",
+        "In config.office.com › Customization › Policy Management, create or open a configuration with the scope “Apply to all users” (Tenant).",
+        "Policies tab › search “Brand Manager” › open “Elevated role for enterprise brand managers”. Set Configuration setting to “Enabled” and paste the exact group email into “Security group email address”, then Apply.",
+        "Review and Publish › Done. Leave Priority = 1 (highest priority with a single config; “0” isn't assignable). Allow up to 24 h of propagation — each change restarts the timer, so avoid re-editing while waiting.",
+        "Verify: microsoft365.com › Create › More… › Brand kits. For a group member, the “Official” term and the “Publish” button should now appear.",
+        "Troubleshooting: “Policy has been incorrectly configured” → wrong group type, scope ≠ Tenant or wrong email. “You do not have permission to publish” → account is owner but not member, or propagation < 24 h. No “Official” → policy not Enabled, missing Copilot license, or propagation in progress.",
+      ],
+    },
+    stepImages: [
+      null,
+      "/articles/brandkit-security-group.png",
+      null,
+      "/articles/brandkit-policy-config.png",
+      "/articles/brandkit-elevated-role.png",
+      null,
+      null,
+      null,
+    ],
+    tags: ["powerpoint", "brand kit", "it", "policy", "config.office.com", "gouvernance"],
   },
   {
     slug: "analyse-excel-copilot",
