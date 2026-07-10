@@ -60,6 +60,54 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "utiliser-brand-kit-powerpoint",
+    section: "m365",
+    audience: ["user"],
+    product: "powerpoint",
+    roles: ["Marketing", "Consultant", "Manager", "Sales"],
+    level: "beginner",
+    icon: "🎨",
+    date: "2026-07-10",
+    isNew: true,
+    readMinutes: 3,
+    title: {
+      fr: "Utiliser un brand kit depuis Copilot dans PowerPoint",
+      en: "Use a brand kit from Copilot in PowerPoint",
+    },
+    summary: {
+      fr: "Une fois votre kit de marque disponible, appliquez-le en un clic dans PowerPoint via le volet Copilot : couleurs, polices, images et voix de marque s'appliquent automatiquement à vos slides.",
+      en: "Once your brand kit is available, apply it in one click in PowerPoint via the Copilot pane: colors, fonts, images and brand voice are applied automatically to your slides.",
+    },
+    steps: {
+      fr: [
+        "Ouvrez le volet Copilot dans PowerPoint (bouton Copilot dans le ruban Accueil), sur Windows, Mac ou le web, au moment de créer ou de mettre en forme une présentation.",
+        "Lancez « Créer une présentation » (ou « Mettre en forme »), puis ouvrez le menu « + » : le volet propose l'option Sélectionner une marque (Select brand).",
+        "Choisissez votre kit dans la liste — Personnel, Partagé ou Officiel. Le bouton « Gérer les kits » permet d'en créer ou d'en modifier un.",
+        "Copilot génère les slides à partir de votre template et applique automatiquement couleurs, polices, images et voix de marque.",
+        "💡 Bon à savoir : Copilot s'appuie en priorité sur les slides d'exemple de votre template. Plus votre modèle contient de dispositions variées (Titre, Sommaire, Contenu, Data-viz, Q&R, Conclusion…), plus le résultat est fidèle à votre marque.",
+      ],
+      en: [
+        "Open the Copilot pane in PowerPoint (Copilot button in the Home ribbon), on Windows, Mac or the web, when creating or formatting a presentation.",
+        "Start “Create a presentation” (or “Format”), then open the “+” menu: the pane offers the Select brand option.",
+        "Pick your kit from the list — Personal, Shared or Official. The “Manage brand kits” button lets you create or edit one.",
+        "Copilot generates the slides from your template and automatically applies colors, fonts, images and brand voice.",
+        "💡 Good to know: Copilot relies first on the example slides in your template. The more varied layouts your template contains (Title, Agenda, Content, Data-viz, Q&A, Conclusion…), the more faithful the result is to your brand.",
+      ],
+    },
+    stepImages: [
+      null,
+      "/articles/ppt-brandkit-menu.png",
+      "/articles/ppt-brandkit-selector.png",
+      null,
+      null,
+    ],
+    prompt: {
+      fr: "Crée une présentation de 8 slides sur [sujet] en appliquant mon brand kit [nom du kit] : une slide de titre, un sommaire, 4 slides de contenu avec un visuel, une slide data-viz et une conclusion avec appel à l'action.",
+      en: "Create an 8-slide presentation about [topic] applying my brand kit [kit name]: a title slide, an agenda, 4 content slides with a visual, one data-viz slide and a conclusion with a call to action.",
+    },
+    tags: ["powerpoint", "brand kit", "marque", "présentation", "design"],
+  },
+  {
     slug: "gpt-5-6-arrive-dans-copilot",
     section: "chat",
     audience: ["user", "it"],
