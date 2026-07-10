@@ -195,9 +195,15 @@ export const tips: Tip[] = [
         "Check recipient and subject, then send.",
       ],
     },
+    stepImages: [
+      "/articles/mail-copilot-draft.png",
+      null,
+      null,
+      null,
+    ],
     prompt: {
-      fr: "Rédige un e-mail professionnel et concis à [destinataire] pour [objectif]. Ton : chaleureux mais direct. Ajoute un objet accrocheur et un appel à l'action clair.",
-      en: "Write a concise, professional email to [recipient] about [goal]. Tone: warm but direct. Add a catchy subject line and a clear call to action.",
+      fr: "Envoi un e-mail professionnel et concis à [destinataire] pour [objectif]. Ton : chaleureux mais direct. Ajoute un objet accrocheur et un appel à l'action clair.",
+      en: "Send a concise, professional email to [recipient] about [goal]. Tone: warm but direct. Add a catchy subject line and a clear call to action.",
     },
     tags: ["email", "outlook", "productivité", "rédaction"],
   },
