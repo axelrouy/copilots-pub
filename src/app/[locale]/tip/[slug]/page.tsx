@@ -80,9 +80,11 @@ export default async function TipPage({
                   alt={`${pick(tip.title, locale)} — étape ${i + 1}`}
                   loading="lazy"
                   className={`ml-10 rounded-xl border border-border ${
-                    tip.compactImages
+                    tip.imageWidth === "xs"
                       ? "w-full max-w-xs"
-                      : "w-[calc(100%-2.5rem)]"
+                      : tip.imageWidth === "md"
+                        ? "w-full max-w-md"
+                        : "w-[calc(100%-2.5rem)]"
                   }`}
                 />
               )}
