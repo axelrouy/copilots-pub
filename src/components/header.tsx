@@ -32,10 +32,12 @@ export default function Header({
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-surface/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4">
-        <Link href={`/${locale}`} className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-xl brand-gradient text-lg">
-            🍻
-          </span>
+        <Link href={`/${locale}`} className="flex items-center gap-2.5">
+          <img
+            src="/logo.png"
+            alt="AI Tip's Pub"
+            className="h-12 w-12 rounded-full ring-1 ring-border shadow-sm"
+          />
           <span className="text-lg font-bold tracking-tight">
             AI Tip&apos;s <span className="brand-gradient-text">Pub</span>
           </span>

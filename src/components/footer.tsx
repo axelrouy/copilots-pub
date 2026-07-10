@@ -13,7 +13,7 @@ export default function Footer({
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <div className="flex items-center gap-2 text-sm font-semibold">
-            <span>🍻</span> AI Tip&apos;s Pub
+            <img src="/logo.png" alt="" className="h-6 w-6 rounded-full" /> AI Tip&apos;s Pub
           </div>
           <p className="mt-1 text-xs text-muted">{dict.footer.rights}</p>
         </div>
