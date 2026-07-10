@@ -30,7 +30,7 @@ const content: Record<Locale, Content> = {
         body: [
           "Ce site est édité à titre personnel par Axel Rouy.",
           "Il s'agit d'un projet indépendant, mené sur son temps personnel, sans but lucratif.",
-          "Contact : via la page « À propos » du site.",
+          "Contact : axelrouy.ms@gmail.com",
         ],
       },
       {
@@ -67,8 +67,9 @@ const content: Record<Locale, Content> = {
       {
         heading: "Données personnelles & cookies",
         body: [
-          "Le site mesure une audience anonyme (pages vues) et permet le dépôt de commentaires modérés. Aucune donnée n'est revendue ni utilisée à des fins publicitaires.",
-          "Les commentaires que vous soumettez (nom et message) sont stockés afin d'être affichés après modération. Vous pouvez demander leur suppression via la page « À propos ».",
+          "Le site mesure une audience anonyme (pages vues), sans cookie ni traceur, et permet le dépôt de commentaires modérés. Aucune donnée n'est revendue ni utilisée à des fins publicitaires.",
+          "Les commentaires que vous soumettez (pseudonyme et message) sont stockés afin d'être affichés après modération. Aucune adresse e-mail n'est demandée.",
+          "Pour le détail des traitements, vos droits (accès, rectification, effacement…) et le contact RGPD, consultez la Politique de confidentialité du site.",
         ],
       },
     ],
@@ -86,7 +87,7 @@ const content: Record<Locale, Content> = {
         body: [
           "This website is published in a personal capacity by Axel Rouy.",
           "It is an independent, non-profit project run on personal time.",
-          "Contact: via the site's \u201cAbout\u201d page.",
+          "Contact: axelrouy.ms@gmail.com",
         ],
       },
       {
@@ -123,8 +124,9 @@ const content: Record<Locale, Content> = {
       {
         heading: "Personal data & cookies",
         body: [
-          "The site measures anonymous audience metrics (page views) and allows moderated comments. No data is resold or used for advertising purposes.",
-          "The comments you submit (name and message) are stored so they can be displayed after moderation. You may request their deletion via the \u201cAbout\u201d page.",
+          "The site measures anonymous audience metrics (page views), with no cookie or tracker, and allows moderated comments. No data is resold or used for advertising purposes.",
+          "The comments you submit (nickname and message) are stored so they can be displayed after moderation. No email address is requested.",
+          "For details of the processing, your rights (access, rectification, erasure…) and the GDPR contact, see the site's Privacy Policy.",
         ],
       },
     ],

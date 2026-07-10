@@ -33,6 +33,9 @@ export default function Footer({
           <Link href={`/${locale}/legal`} className="hover:text-foreground">
             {dict.nav.legal}
           </Link>
+          <Link href={`/${locale}/privacy`} className="hover:text-foreground">
+            {dict.nav.privacy}
+          </Link>
           <Link href="/admin" className="hover:text-foreground">
             {dict.nav.admin}
           </Link>
