@@ -33,6 +33,7 @@ export type Tip = {
   summary: Bilingual;
   steps: BilingualList;
   stepImages?: (string | null)[];
+  compactImages?: boolean;
   prompt?: Bilingual;
   tags: string[];
 };
@@ -101,6 +102,7 @@ export const tips: Tip[] = [
       null,
       null,
     ],
+    compactImages: true,
     prompt: {
       fr: "Crée une présentation de 8 slides sur [sujet] en appliquant mon brand kit [nom du kit] : une slide de titre, un sommaire, 4 slides de contenu avec un visuel, une slide data-viz et une conclusion avec appel à l'action.",
       en: "Create an 8-slide presentation about [topic] applying my brand kit [kit name]: a title slide, an agenda, 4 content slides with a visual, one data-viz slide and a conclusion with a call to action.",
