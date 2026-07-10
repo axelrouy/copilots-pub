@@ -72,7 +72,7 @@ export default async function TipPage({
                 <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full brand-gradient text-sm font-bold text-white">
                   {i + 1}
                 </span>
-                <span className="text-sm leading-relaxed">{s}</span>
+                <span className="text-sm leading-relaxed whitespace-pre-line">{s}</span>
               </div>
               {tip.stepImages?.[i] && (
                 <img

@@ -60,6 +60,55 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "gpt-5-6-arrive-dans-copilot",
+    section: "chat",
+    audience: ["user", "it"],
+    product: "general",
+    roles: ["Manager", "Consultant", "Sales", "IT Admin"],
+    level: "beginner",
+    icon: "🚀",
+    date: "2026-07-10",
+    isNew: true,
+    trending: true,
+    readMinutes: 3,
+    title: {
+      fr: "GPT-5.6 arrive dans Microsoft 365 Copilot",
+      en: "GPT-5.6 arrives in Microsoft 365 Copilot",
+    },
+    summary: {
+      fr: "GPT-5.6 devient le modèle par défaut de Copilot : raisonnement renforcé, intégration native Work IQ et meilleure qualité dans Word, Excel et PowerPoint. Voici où le sélectionner et ce qui change concrètement.",
+      en: "GPT-5.6 becomes Copilot's default model: stronger reasoning, native Work IQ integration and better quality in Word, Excel and PowerPoint. Here's where to select it and what actually changes.",
+    },
+    steps: {
+      fr: [
+        "Où choisir le modèle ? Dans Copilot Chat, en haut de la conversation, cliquez sur le sélecteur de mode (à côté de « Work IQ »). C'est ici que vous basculez entre les modes de raisonnement et les modèles.",
+        "Ce qui est disponible aujourd'hui :\n➞ Auto — Copilot décide du temps de réflexion (et du modèle le plus adapté).\n➞ Quick response — réponse immédiate.\n➞ Think deeper — réflexion plus longue pour de meilleures réponses.\n➞ Opus — Claude (Anthropic).\n➞ GPT (OpenAI) → GPT 5.6 Think deeper, GPT 5.5 Quick response, GPT 5.5 Think deeper.",
+        "✨ Ce qui change concrètement :\n➞ GPT-5.6 remplace GPT-5.5 comme modèle par défaut dans Copilot Chat.\n➞ Raisonnement renforcé, notamment pour les tâches agentiques et les workflows multi-étapes : Copilot gère des scénarios plus complexes avec davantage d'efficacité.\n➞ Intégration native avec Work IQ : combine les capacités de raisonnement du modèle avec les données de travail de votre organisation.\n➞ Le résultat : une amélioration tangible de la qualité du travail quotidien dans Word, Excel et PowerPoint.",
+        "💻 Dans les applications :\n➞ Copilot Cowork : exécute les tâches plus efficacement et produit des résultats plus complets et directement exploitables.\n➞ Excel : analyse des problématiques plus complexes et transforme plus rapidement une demande en résultat, avec moins d'interventions manuelles.\n➞ Word : aide à transformer des idées en documents plus complets, mieux structurés et plus fluides, tout en améliorant la qualité rédactionnelle.\n➞ PowerPoint : génère des présentations plus riches, avec un contenu de meilleure qualité, un meilleur équilibre visuel et une plus grande flexibilité dans les styles.",
+        "📅 Disponibilité :\n➞ Le déploiement de GPT-5.6 est actuellement en cours dans l'ensemble des applications Microsoft 365 Copilot.\n➞ Copilot pourra utiliser automatiquement GPT-5.6 lorsqu'il est le modèle le plus adapté à la tâche, en devenant le modèle par défaut.",
+      ],
+      en: [
+        "Where do you pick the model? In Copilot Chat, at the top of the conversation, click the mode selector (next to “Work IQ”). This is where you switch between reasoning modes and models.",
+        "What's available today:\n➞ Auto — Copilot decides how long to think (and the best-fit model).\n➞ Quick response — answers right away.\n➞ Think deeper — thinks longer for better answers.\n➞ Opus — Claude (Anthropic).\n➞ GPT (OpenAI) → GPT 5.6 Think deeper, GPT 5.5 Quick response, GPT 5.5 Think deeper.",
+        "✨ What actually changes:\n➞ GPT-5.6 replaces GPT-5.5 as the default model in Copilot Chat.\n➞ Stronger reasoning, especially for agentic tasks and multi-step workflows: Copilot handles more complex scenarios more efficiently.\n➞ Native Work IQ integration: combines the model's reasoning with your organization's work data.\n➞ The result: a tangible improvement in everyday work quality in Word, Excel and PowerPoint.",
+        "💻 Across the apps:\n➞ Copilot Cowork: runs tasks more efficiently and produces more complete, directly actionable results.\n➞ Excel: analyzes more complex problems and turns a request into a result faster, with less manual work.\n➞ Word: helps turn ideas into more complete, better-structured and smoother documents, while improving writing quality.\n➞ PowerPoint: generates richer presentations, with higher-quality content, better visual balance and more flexibility in styles.",
+        "📅 Availability:\n➞ GPT-5.6 is currently rolling out across all Microsoft 365 Copilot apps.\n➞ Copilot will automatically use GPT-5.6 when it's the best-fit model for the task, becoming the default model.",
+      ],
+    },
+    stepImages: [
+      "/articles/gpt56-model-selector.png",
+      null,
+      null,
+      null,
+      null,
+    ],
+    prompt: {
+      fr: "Passe en GPT-5.6 (Think deeper), puis : à partir de [document / données], propose un plan d'action en 5 étapes avec, pour chaque étape, les risques, les dépendances et le livrable attendu.",
+      en: "Switch to GPT-5.6 (Think deeper), then: from [document / data], propose a 5-step action plan with, for each step, the risks, dependencies and expected deliverable.",
+    },
+    tags: ["gpt-5.6", "modèles", "nouveautés", "copilot chat", "work iq"],
+  },
+  {
     slug: "creer-notebook-copilot-veille",
     section: "m365",
     audience: ["user"],
