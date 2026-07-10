@@ -359,7 +359,7 @@ export const tips: Tip[] = [
         "Cliquez sur + New Brand kit, donnez un nom à votre kit, configurez les éléments, puis Enregistrez / Publiez.",
         "Configurer les éléments du kit :\n➞ Logos — Logo principal, logos secondaires et variantes (couleur, blanc…).\n➞ Color — Couleurs officielles avec leurs codes HEX précis.\n➞ Fonts — Typographies (titres, corps), fichiers .ttf / .otf.\n➞ Images & Icons — Photos, graphiques et icônes approuvés, alignés au style de marque.\n➞ Templates — Modèles PowerPoint (.pptx) avec slides d'exemple représentatives.\n➞ Brand voice — Personnalité et ton de la marque.\n➞ Brand guidelines — Charte de marque au format PDF (extraction auto possible).\n➞ Style — Style d'images/icônes/illustrations (exemples ou description).",
         "💡 Astuce IA : en uploadant un template et une charte PDF, Copilot extrait automatiquement couleurs, polices et règles — vous n'avez plus qu'à relire et ajuster.",
-        "Enregistrer / Publier :\n➞ Kit Personnel / Partagé — vos modifications sont enregistrées automatiquement. Un kit Partagé se diffuse via le bouton Partager (choix des personnes au moment du partage).\n➞ Kit Officiel — le bouton Publish le rend visible à toute l'organisation, réservé aux Brand managers (délai d'activation ≤ 24 h après désignation par l'admin).",
+        "Point information :\n➞ Kit Personnel / Partagé — vos modifications sont enregistrées automatiquement. Un kit Partagé se diffuse via le bouton Partager (choix des personnes au moment du partage).\n➞ Kit Officiel — le bouton Publish le rend visible à toute l'organisation, réservé aux Brand managers (délai d'activation ≤ 24 h après désignation par l'admin).",
       ],
       en: [
         "From the Microsoft 365 Copilot app, click Create in the left-hand menu.",
@@ -367,7 +367,7 @@ export const tips: Tip[] = [
         "Click + New Brand kit, name your kit, configure the elements, then Save / Publish.",
         "Configure the kit elements:\n➞ Logos — Primary logo, secondary logos and variants (color, white…).\n➞ Color — Official colors with their precise HEX codes.\n➞ Fonts — Typography (headings, body), .ttf / .otf files.\n➞ Images & Icons — Approved photos, graphics and icons, aligned to the brand style.\n➞ Templates — PowerPoint templates (.pptx) with representative example slides.\n➞ Brand voice — The brand's personality and tone.\n➞ Brand guidelines — Brand guidelines as a PDF (auto-extraction possible).\n➞ Style — Style of images/icons/illustrations (examples or description).",
         "💡 AI tip: by uploading a template and a PDF guideline, Copilot automatically extracts colors, fonts and rules — you just review and adjust.",
-        "Save / Publish:\n➞ Personal / Shared kit — your changes are saved automatically. A Shared kit is distributed via the Share button (pick the people when sharing).\n➞ Official kit — the Publish button makes it visible to the whole organization, reserved for Brand managers (activation ≤ 24 h after designation by the admin).",
+        "Information point:\n➞ Personal / Shared kit — your changes are saved automatically. A Shared kit is distributed via the Share button (pick the people when sharing).\n➞ Official kit — the Publish button makes it visible to the whole organization, reserved for Brand managers (activation ≤ 24 h after designation by the admin).",
       ],
     },
     stepImages: [
@@ -376,7 +376,7 @@ export const tips: Tip[] = [
       "/articles/brandkit-config-page.png",
       null,
       null,
-      "/articles/brandkit-personnel-officiel.png",
+      null,
     ],
     imageWidth: "md",
     prompt: {
