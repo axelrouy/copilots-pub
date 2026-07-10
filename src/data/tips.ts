@@ -60,6 +60,58 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "creer-notebook-copilot-veille",
+    section: "m365",
+    audience: ["user"],
+    product: "notebooks",
+    roles: ["Manager", "Consultant", "Marketing"],
+    level: "beginner",
+    icon: "📓",
+    date: "2026-07-10",
+    isNew: true,
+    trending: true,
+    readMinutes: 3,
+    title: {
+      fr: "Créer un Notebook Copilot pour organiser sa veille",
+      en: "Create a Copilot Notebook to organize your watch",
+    },
+    summary: {
+      fr: "Regroupez fichiers, chats, réunions et e-mails d'un même sujet dans un Notebook Copilot : un espace dédié où Copilot raisonne uniquement sur vos sources de veille.",
+      en: "Bundle files, chats, meetings and emails on one topic into a Copilot Notebook: a dedicated space where Copilot reasons only over your curated sources.",
+    },
+    steps: {
+      fr: [
+        "Dans Microsoft 365 Copilot, ouvrez l'onglet « Notebooks » dans le volet de gauche. Vous y voyez vos notebooks existants (personnels « Just you » ou « Shared »).",
+        "Cliquez sur le « + » pour créer un notebook, donnez-lui un nom parlant lié à votre veille (ex. « Nouveautés Microsoft Copilot 2026 »), puis validez.",
+        "Ajoutez vos sources via « Add » : basculez sur l'onglet « References » pour piocher dans vos Chats, Files, Meetings, Emails et Sites — ou « Copilot Chats » pour réutiliser d'anciennes conversations.",
+        "Recherchez et sélectionnez chaque source à suivre (documents, fils d'e-mails, notes de réunion, pages SharePoint). Le notebook devient le périmètre de raisonnement de Copilot.",
+        "Posez vos questions dans le notebook : Copilot répond en s'appuyant UNIQUEMENT sur les sources ajoutées — parfait pour synthétiser votre veille, comparer des versions ou générer un récapitulatif.",
+        "Enrichissez le notebook au fil de l'eau : chaque nouvelle source ou réunion ajoutée met à jour le contexte. Besoin d'aller plus loin ? « Open in OneNote » exporte le contenu.",
+      ],
+      en: [
+        "In Microsoft 365 Copilot, open the “Notebooks” tab in the left pane. You'll see your existing notebooks (personal “Just you” or “Shared”).",
+        "Click “+” to create a notebook, give it a clear name tied to your topic (e.g. “Microsoft Copilot 2026 news”), then confirm.",
+        "Add your sources via “Add”: switch to the “References” tab to pull from your Chats, Files, Meetings, Emails and Sites — or “Copilot Chats” to reuse past conversations.",
+        "Search and select each source to track (documents, email threads, meeting notes, SharePoint pages). The notebook becomes Copilot's reasoning scope.",
+        "Ask your questions inside the notebook: Copilot answers based ONLY on the added sources — ideal to synthesize your watch, compare versions or generate a recap.",
+        "Grow the notebook over time: every new source or meeting added updates the context. Need more? “Open in OneNote” exports the content.",
+      ],
+    },
+    stepImages: [
+      "/articles/notebook-list.png",
+      "/articles/notebook-create.png",
+      "/articles/notebook-references.png",
+      null,
+      null,
+      null,
+    ],
+    prompt: {
+      fr: "À partir des sources de ce notebook, fais-moi une synthèse des nouveautés clés, classées par thème, avec pour chacune : ce qui change, l'impact pour l'utilisateur et le lien vers la source.",
+      en: "Using this notebook's sources, give me a synthesis of the key updates, grouped by theme, with for each: what changes, the user impact and the source link.",
+    },
+    tags: ["notebooks", "veille", "organisation", "productivité", "m365"],
+  },
+  {
     slug: "envoyer-mail-depuis-copilot",
     section: "m365",
     audience: ["user"],
