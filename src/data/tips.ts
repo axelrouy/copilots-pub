@@ -151,7 +151,7 @@ export const tips: Tip[] = [
       "/articles/notebook-create.png",
       "/articles/notebook-references.png",
       null,
-      null,
+      "/articles/notebook-overview.png",
       null,
     ],
     prompt: {
@@ -276,46 +276,6 @@ export const tips: Tip[] = [
       en: "Summarize this meeting in 5 bullets, list the decisions taken, then generate a task table with columns: action, owner, due date.",
     },
     tags: ["teams", "réunion", "tâches", "productivité"],
-  },
-  {
-    slug: "creer-un-notebook",
-    section: "m365",
-    audience: ["user"],
-    product: "notebooks",
-    roles: ["Consultant", "Manager", "Marketing"],
-    level: "intermediate",
-    icon: "📓",
-    date: "2026-07-05",
-    featured: true,
-    isNew: true,
-    readMinutes: 4,
-    title: {
-      fr: "Créer un Notebook Copilot pour organiser sa veille",
-      en: "Create a Copilot Notebook to organize your research",
-    },
-    summary: {
-      fr: "Les Notebooks regroupent fichiers, liens et notes dans un espace où Copilot raisonne sur VOS sources.",
-      en: "Notebooks group files, links and notes into a space where Copilot reasons over YOUR sources.",
-    },
-    steps: {
-      fr: [
-        "Dans Copilot, ouvrez Notebooks › Nouveau notebook.",
-        "Ajoutez vos sources : documents SharePoint, pages, notes collées.",
-        "Posez des questions transverses : « Quelles tendances reviennent dans ces 6 documents ? ».",
-        "Demandez une synthèse structurée que vous réutiliserez chaque semaine.",
-      ],
-      en: [
-        "In Copilot, open Notebooks › New notebook.",
-        "Add your sources: SharePoint docs, pages, pasted notes.",
-        "Ask cross-cutting questions: “Which trends recur across these 6 documents?”",
-        "Ask for a structured synthesis you'll reuse every week.",
-      ],
-    },
-    prompt: {
-      fr: "À partir des sources de ce notebook, crée une synthèse de veille : 3 tendances clés, 3 signaux faibles, et 3 actions recommandées pour mon équipe.",
-      en: "From this notebook's sources, build a research digest: 3 key trends, 3 weak signals, and 3 recommended actions for my team.",
-    },
-    tags: ["notebooks", "veille", "connaissance", "organisation"],
   },
   {
     slug: "creer-un-brand-kit",
