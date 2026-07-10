@@ -71,7 +71,7 @@ export default async function HomePage({
           className="card-lift group grid gap-6 rounded-3xl border border-border bg-surface p-6 sm:grid-cols-[auto_1fr] sm:p-8"
         >
           <div className="grid h-20 w-20 place-items-center rounded-2xl bg-surface-2 text-5xl">
-            {tod.icon}
+            <ProductIcon icon={tod.icon} size={52} className="text-5xl" />
           </div>
           <div>
             <div className="mb-2 flex flex-wrap items-center gap-2">

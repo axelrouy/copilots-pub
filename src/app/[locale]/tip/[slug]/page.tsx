@@ -7,6 +7,7 @@ import CopyButton from "@/components/copy-button";
 import TipCard from "@/components/tip-card";
 import Comments from "@/components/comments";
 import PageTracker from "@/components/page-tracker";
+import ProductIcon from "@/components/product-icon";
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -50,7 +51,7 @@ export default async function TipPage({
       </div>
 
       <div className="flex items-start gap-4">
-        <span className="text-5xl">{tip.icon}</span>
+        <span className="text-5xl"><ProductIcon icon={tip.icon} size={52} className="text-5xl" /></span>
         <div>
           <h1 className="text-3xl font-extrabold leading-tight">
             {pick(tip.title, locale)}

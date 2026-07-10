@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Tip } from "@/data/tips";
 import { pick, type Dictionary, type Locale } from "@/lib/i18n";
 import { AudienceBadge, SectionBadge } from "./badges";
+import ProductIcon from "./product-icon";
 
 export default function TipCard({
   tip,
@@ -18,7 +19,7 @@ export default function TipCard({
       className="card-lift group flex flex-col rounded-2xl border border-border bg-surface p-5"
     >
       <div className="mb-3 flex items-center justify-between">
-        <span className="text-2xl">{tip.icon}</span>
+        <span className="text-2xl"><ProductIcon icon={tip.icon} size={26} className="text-2xl" /></span>
         <div className="flex items-center gap-1.5">
           {tip.isNew && (
             <span className="rounded-full bg-pub/15 px-2 py-0.5 text-[11px] font-semibold text-pub">
