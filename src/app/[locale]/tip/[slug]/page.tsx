@@ -61,7 +61,7 @@ export default async function TipPage({
       </div>
 
       {/* Demo video (looping) */}
-      {tip.video && (
+      {tip.video && tip.videoStep === undefined && (
         <video
           className="mt-6 w-full rounded-2xl border border-border"
           src={tip.video}
@@ -101,6 +101,18 @@ export default async function TipPage({
                         ? "w-full max-w-md"
                         : "w-[calc(100%-2.5rem)]"
                   }`}
+                />
+              )}
+              {tip.video && tip.videoStep === i && (
+                <video
+                  className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"
+                  src={tip.video}
+                  poster={tip.videoPoster}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
                 />
               )}
             </li>

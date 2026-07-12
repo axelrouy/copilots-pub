@@ -36,6 +36,7 @@ export type Tip = {
   imageWidth?: "xs" | "md" | "full";
   video?: string;
   videoPoster?: string;
+  videoStep?: number;
   info?: Bilingual;
   prompt?: Bilingual;
   tags: string[];
@@ -473,6 +474,7 @@ export const tips: Tip[] = [
     readMinutes: 3,
     video: "/articles/analyse-excel.mp4",
     videoPoster: "/articles/analyse-excel-poster.jpg",
+    videoStep: 1,
     title: {
       fr: "Analyser un tableau Excel en langage naturel",
       en: "Analyze an Excel table in plain language",
