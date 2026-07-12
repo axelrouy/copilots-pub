@@ -68,7 +68,7 @@ export default async function HomePage({
       {/* Tip of the day */}
       <section className="mt-10">
         <h2 className="mb-4 flex items-center gap-2 text-xl font-bold">
-          ⭐ {dict.home.tip_of_day}
+          💡 {dict.home.tip_of_day}
         </h2>
         <Link
           href={`/${locale}/tip/${tod.slug}`}
