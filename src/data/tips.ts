@@ -754,8 +754,12 @@ export function tipsBySection(section: Section): Tip[] {
   return tips.filter((t) => t.section === section);
 }
 
-export function tipOfTheDay(): Tip {
-  return tips.find((t) => t.tipOfDay) ?? tips[0];
+export function tipOfTheDay(date: Date = new Date()): Tip {
+  if (tips.length === 0) return tips[0];
+  // Rotation quotidienne déterministe : le numéro de jour (UTC) sélectionne
+  // une astuce différente chaque jour, en parcourant toute la liste.
+  const dayNumber = Math.floor(date.getTime() / 86_400_000);
+  return tips[dayNumber % tips.length];
 }
 
 export function trendingTips(limit = 4): Tip[] {

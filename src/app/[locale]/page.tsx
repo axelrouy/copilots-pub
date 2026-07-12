@@ -12,6 +12,10 @@ import TipCard from "@/components/tip-card";
 import ProductIcon from "@/components/product-icon";
 import { AudienceBadge, SectionBadge } from "@/components/badges";
 
+// Regénère la page au moins une fois par heure pour que l'astuce du jour
+// bascule automatiquement au changement de journée.
+export const revalidate = 3600;
+
 export default async function HomePage({
   params,
 }: {
