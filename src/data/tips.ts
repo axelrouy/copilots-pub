@@ -812,6 +812,53 @@ export const tips: Tip[] = [
     },
     tags: ["management", "researcher", "agent", "work iq", "entretien annuel", "1:1"],
   },
+  {
+    slug: "confiance-securite-m365-copilot",
+    section: "m365",
+    audience: ["user", "it"],
+    product: "general",
+    roles: ["Manager", "IT Admin", "Cloud Architect", "Consultant"],
+    level: "beginner",
+    icon: "🛡️",
+    date: "2026-07-12",
+    isNew: true,
+    featured: true,
+    readMinutes: 3,
+    title: {
+      fr: "Pourquoi puis-je faire confiance à Microsoft 365 Copilot ?",
+      en: "Why can I trust Microsoft 365 Copilot?",
+    },
+    summary: {
+      fr: "Vos données restent vos données : Copilot applique les permissions existantes, n'entraîne pas les modèles avec vos contenus et ne partage rien entre clients. Le bouclier vert « Enterprise Data Protection » le confirme visuellement.",
+      en: "Your data stays your data: Copilot honors existing permissions, never trains models on your content and shares nothing across tenants. The green “Enterprise Data Protection” shield confirms it visually.",
+    },
+    steps: {
+      fr: [
+        "Les mêmes garanties que Microsoft 365\nMicrosoft 365 Copilot a été conçu pour respecter les mêmes exigences de sécurité, de conformité et de confidentialité que Microsoft 365. Vos prompts, les réponses générées et les données de votre organisation ne sont pas utilisés pour entraîner les modèles fondamentaux d'IA de Microsoft ou d'OpenAI.",
+        "Vos données restent dans votre tenant\nLes données restent dans le périmètre de votre tenant Microsoft 365. Copilot applique les permissions existantes : il ne peut accéder qu'aux contenus auxquels l'utilisateur a déjà accès — ni plus, ni moins.",
+        "Le bouclier vert « Enterprise Data Protection »\nUn élément visuel permet d'identifier que vous utilisez une expérience bénéficiant des protections d'entreprise : l'icône « Enterprise Data Protection » (protection des données d'entreprise), représentée par un bouclier vert dans Copilot Chat. Lorsqu'elle est présente, Microsoft garantit que les données sont protégées selon ses engagements de sécurité, qu'elles ne servent pas à l'entraînement des modèles et qu'elles bénéficient des contrôles de conformité de l'entreprise.",
+        "Vérifier les engagements à la source\nPour vérifier ces engagements officiellement, Microsoft publie toute sa documentation de référence sur Microsoft Learn et sur le Microsoft Trust Center :\n➞ https://learn.microsoft.com/microsoft-365-copilot/microsoft-365-copilot-privacy\n➞ https://www.microsoft.com/trust-center",
+      ],
+      en: [
+        "The same guarantees as Microsoft 365\nMicrosoft 365 Copilot was built to meet the same security, compliance and privacy requirements as Microsoft 365. Your prompts, the generated responses and your organization's data are not used to train Microsoft's or OpenAI's foundation AI models.",
+        "Your data stays in your tenant\nData stays within your Microsoft 365 tenant boundary. Copilot enforces existing permissions: it can only access content the user already has access to — no more, no less.",
+        "The green “Enterprise Data Protection” shield\nA visual cue tells you that you're using an experience covered by enterprise protections: the “Enterprise Data Protection” icon, shown as a green shield in Copilot Chat. When it's present, Microsoft guarantees that data is protected under its security commitments, isn't used to train models and benefits from enterprise compliance controls.",
+        "Verify the commitments at the source\nTo verify these commitments officially, Microsoft publishes all its reference documentation on Microsoft Learn and the Microsoft Trust Center:\n➞ https://learn.microsoft.com/microsoft-365-copilot/microsoft-365-copilot-privacy\n➞ https://www.microsoft.com/trust-center",
+      ],
+    },
+    stepImages: [
+      null,
+      null,
+      "/articles/edp-shield-icon.png",
+      null,
+    ],
+    imageWidth: "md",
+    info: {
+      fr: "À retenir : vos données restent vos données. Microsoft 365 Copilot respecte les permissions existantes, ne partage pas vos informations avec d'autres clients et n'utilise pas vos contenus professionnels pour entraîner les modèles d'IA.",
+      en: "Key takeaway: your data stays your data. Microsoft 365 Copilot honors existing permissions, doesn't share your information with other customers and doesn't use your work content to train AI models.",
+    },
+    tags: ["sécurité", "confidentialité", "conformité", "trust", "enterprise data protection"],
+  },
 ];
 
 /* ---------- Helpers ---------- */
