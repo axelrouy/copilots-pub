@@ -36,6 +36,7 @@ export type Tip = {
   imageWidth?: "xs" | "md" | "full";
   video?: string;
   videoPoster?: string;
+  info?: Bilingual;
   prompt?: Bilingual;
   tags: string[];
 };
@@ -468,35 +469,51 @@ export const tips: Tip[] = [
     roles: ["Manager", "Consultant", "Sales"],
     level: "intermediate",
     icon: "/excel.png",
-    date: "2026-07-03",
+    date: "2026-07-12",
     readMinutes: 3,
+    video: "/articles/analyse-excel.mp4",
+    videoPoster: "/articles/analyse-excel-poster.jpg",
     title: {
       fr: "Analyser un tableau Excel en langage naturel",
       en: "Analyze an Excel table in plain language",
     },
     summary: {
-      fr: "Posez vos questions métier ; Copilot crée formules, tableaux croisés et graphiques sans syntaxe.",
-      en: "Ask business questions; Copilot builds formulas, pivots and charts with no syntax.",
+      fr: "Copilot comprend le contexte de votre tableau et l'analyse en langage naturel — puis, si vous le laissez éditer, ajoute colonnes, dashboards et graphiques, dans un nouvel onglet si besoin.",
+      en: "Copilot understands your table's context and analyzes it in plain language — then, if you let it edit, adds columns, dashboards and charts, on a new sheet if needed.",
     },
     steps: {
       fr: [
-        "Convertissez vos données en tableau (Ctrl+T), puis ouvrez Copilot dans Excel.",
-        "Demandez : « Quelles régions dépassent l'objectif ce trimestre ? ».",
-        "Enchaînez : « Ajoute une colonne d'écart à l'objectif et surligne les négatifs ».",
-        "Demandez un graphique et une synthèse en 3 points.",
+        "Ouvrez votre tableau dans Excel (ici, un suivi budgétaire Contoso) et lancez Copilot. Il lit et comprend le contexte : intitulés de colonnes, totaux, taux d'exécution… sans que vous ayez à tout réexpliquer.",
+        "Collez votre demande et laissez Copilot analyser : il identifie les tendances, calcule les écarts et propose une visualisation adaptée.",
+        "Pour qu'il modifie le classeur (nouvelle colonne d'écart vs objectif, mise en forme, graphique), passez en mode « Allow Editing » / « Edit with Copilot ». Il peut créer ces éléments dans un nouvel onglet pour ne pas toucher vos données d'origine.",
+        "Besoin d'un vrai tableau de bord ? Demandez-le : Copilot assemble indicateurs clés et graphiques sur une feuille dédiée.",
+        "Envie de comparer ? Vous pouvez jouer avec les modèles (GPT-5.6, etc.), mais le mode Auto est amplement suffisant pour ce type d'analyse.",
       ],
       en: [
-        "Convert your data to a table (Ctrl+T), then open Copilot in Excel.",
-        "Ask: “Which regions beat target this quarter?”",
-        "Chain it: “Add a variance-to-target column and highlight negatives.”",
-        "Ask for a chart and a 3-bullet takeaway.",
+        "Open your table in Excel (here, a Contoso budget tracker) and launch Copilot. It reads and understands the context — column headers, totals, execution rates — with no need to re-explain everything.",
+        "Paste your request and let Copilot analyze: it surfaces trends, computes variances and suggests a fitting visualization.",
+        "To have it edit the workbook (a variance-vs-target column, formatting, a chart), switch to “Allow Editing” / “Edit with Copilot”. It can create these on a new sheet so your original data stays untouched.",
+        "Need a real dashboard? Just ask: Copilot assembles key metrics and charts on a dedicated sheet.",
+        "Want to compare? You can play with models (GPT-5.6, etc.), but Auto mode is plenty for this kind of analysis.",
       ],
     },
+    stepImages: [
+      "/articles/excel-contoso-budget.png",
+      null,
+      null,
+      null,
+      null,
+    ],
+    imageWidth: "full",
     prompt: {
       fr: "Analyse ce tableau : identifie les 3 tendances majeures, ajoute une colonne d'écart vs objectif, et propose un graphique adapté. Termine par 3 recommandations.",
       en: "Analyze this table: surface the top 3 trends, add a variance-vs-target column, and suggest a fitting chart. End with 3 recommendations.",
     },
-    tags: ["excel", "analyse", "données", "reporting"],
+    info: {
+      fr: "Deux modes à connaître : restez en « Allow Editing » (Edit with Copilot) si vous voulez que Copilot modifie le classeur (colonnes, graphiques, dashboards). Si vous voulez juste analyser, auditer ou discuter du document ouvert sans y toucher, préférez le mode « Chat Only ».",
+      en: "Two modes to know: stay in “Allow Editing” (Edit with Copilot) when you want Copilot to change the workbook (columns, charts, dashboards). If you only want to analyze, audit or discuss the open document without touching it, prefer “Chat Only” mode.",
+    },
+    tags: ["excel", "analyse", "données", "reporting", "dashboard"],
   },
   {
     slug: "creer-un-agent-metier",

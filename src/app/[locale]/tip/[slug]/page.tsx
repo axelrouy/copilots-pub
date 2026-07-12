@@ -125,6 +125,16 @@ export default async function TipPage({
         </section>
       )}
 
+      {/* Info callout */}
+      {tip.info && (
+        <div className="mt-8 flex gap-3 rounded-2xl border border-border bg-surface-2 p-4">
+          <span className="text-xl leading-none">💡</span>
+          <p className="text-sm leading-relaxed whitespace-pre-line">
+            {pick(tip.info, locale)}
+          </p>
+        </div>
+      )}
+
       {/* Tags */}
       <div className="mt-6 flex flex-wrap gap-2">
         {tip.tags.map((tag) => (
