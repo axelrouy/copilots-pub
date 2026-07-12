@@ -34,6 +34,8 @@ export type Tip = {
   steps: BilingualList;
   stepImages?: (string | null)[];
   imageWidth?: "xs" | "md" | "full";
+  video?: string;
+  videoPoster?: string;
   prompt?: Bilingual;
   tags: string[];
 };
@@ -597,35 +599,39 @@ export const tips: Tip[] = [
     product: "general",
     roles: ["Manager", "Consultant", "Sales", "HR"],
     level: "beginner",
-    icon: "/copilot.png",
-    date: "2026-07-08",
+    icon: "/outlook.png",
+    date: "2026-07-12",
     trending: true,
     readMinutes: 2,
+    video: "/articles/plan-day-outlook.mp4",
+    videoPoster: "/articles/plan-day-outlook-poster.jpg",
     title: {
-      fr: "Organiser sa journée en 2 minutes",
-      en: "Plan your day in 2 minutes",
+      fr: "Organiser sa journée dans Outlook, sans licence Copilot",
+      en: "Plan your day in Outlook, without a Copilot license",
     },
     summary: {
-      fr: "Donnez votre agenda et vos priorités : Copilot Chat propose un plan de journée réaliste et time-blocké.",
-      en: "Share your agenda and priorities: Copilot Chat builds a realistic, time-blocked day plan.",
+      fr: "Avec Copilot Chat (inclus, sans licence), raisonnez sur l'ensemble de votre boîte mail et préparez une to-do calée sur vos rendez-vous du jour.",
+      en: "With Copilot Chat (included, no license), reason across your whole inbox and build a to-do list aligned with the day's meetings.",
     },
     steps: {
       fr: [
-        "Ouvrez Copilot Chat et collez vos rendez-vous et vos 3 priorités.",
-        "Demandez un plan time-blocké avec créneaux de deep work.",
-        "Ajustez : « Réserve 45 min avant midi pour la préparation client ».",
+        "Ouvrez Copilot Chat (l'icône Copilot dans Outlook ou sur Microsoft365.com) — pas besoin de licence Copilot payante : il raisonne déjà sur le contenu de vos e-mails.",
+        "Demandez-lui de balayer l'ensemble de votre boîte : « Parcours mes mails récents et repère ce qui attend une action ou une réponse de ma part ».",
+        "Croisez avec l'agenda du jour : « À partir de mes rendez-vous d'aujourd'hui et de ces mails, prépare-moi une to-do priorisée pour préparer chaque réunion ».",
+        "Affinez : demandez de regrouper par réunion, d'estimer le temps de chaque tâche, ou de mettre en avant les échéances les plus urgentes.",
       ],
       en: [
-        "Open Copilot Chat and paste your meetings and top 3 priorities.",
-        "Ask for a time-blocked plan with deep-work slots.",
-        "Adjust: “Reserve 45 min before noon for client prep.”",
+        "Open Copilot Chat (the Copilot icon in Outlook or on Microsoft365.com) — no paid Copilot license needed: it already reasons over your email content.",
+        "Ask it to scan your whole inbox: “Go through my recent emails and flag anything awaiting an action or a reply from me.”",
+        "Cross-reference with today's calendar: “From today's meetings and these emails, build me a prioritised to-do list to prepare for each meeting.”",
+        "Refine: ask it to group by meeting, estimate time per task, or surface the most urgent deadlines.",
       ],
     },
     prompt: {
-      fr: "Voici mes réunions du jour et mes 3 priorités. Propose un planning time-blocké réaliste, avec des créneaux de concentration, des pauses, et une marge pour l'imprévu.",
-      en: "Here are today's meetings and my top 3 priorities. Propose a realistic time-blocked schedule with focus slots, breaks, and buffer for the unexpected.",
+      fr: "Parcours ma boîte mail récente et mes rendez-vous d'aujourd'hui. Identifie tout ce qui attend une action ou une réponse de ma part, puis prépare une to-do priorisée pour préparer chacune de mes réunions du jour : regroupe par réunion, indique l'échéance et une estimation de temps, et signale les urgences en premier.",
+      en: "Go through my recent inbox and today's meetings. Identify everything awaiting an action or reply from me, then build a prioritised to-do list to prepare each of today's meetings: group by meeting, add the deadline and a time estimate, and flag urgent items first.",
     },
-    tags: ["productivité", "organisation", "temps", "chat"],
+    tags: ["outlook", "productivité", "organisation", "sans licence", "chat"],
   },
   {
     slug: "deep-research-chat",

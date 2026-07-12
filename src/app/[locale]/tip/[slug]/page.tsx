@@ -60,6 +60,20 @@ export default async function TipPage({
         </div>
       </div>
 
+      {/* Demo video (looping) */}
+      {tip.video && (
+        <video
+          className="mt-6 w-full rounded-2xl border border-border"
+          src={tip.video}
+          poster={tip.videoPoster}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        />
+      )}
+
       {/* Steps */}
       <section className="mt-8">
         <h2 className="mb-3 text-lg font-bold">✅ {dict.tip.steps}</h2>
