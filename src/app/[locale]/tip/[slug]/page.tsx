@@ -147,6 +147,27 @@ export default async function TipPage({
         </div>
       )}
 
+      {/* Official sources */}
+      {tip.links && tip.links.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 text-lg font-bold">📚 {dict.tip.sources}</h2>
+          <ul className="space-y-2 rounded-2xl border border-border bg-surface p-4">
+            {tip.links.map((l) => (
+              <li key={l.url}>
+                <a
+                  href={l.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-ms-blue hover:underline break-words"
+                >
+                  {pick(l.label, locale)} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* Tags */}
       <div className="mt-6 flex flex-wrap gap-2">
         {tip.tags.map((tag) => (

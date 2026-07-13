@@ -38,6 +38,7 @@ export type Tip = {
   videoPoster?: string;
   videoStep?: number;
   info?: Bilingual;
+  links?: { label: Bilingual; url: string }[];
   prompt?: Bilingual;
   tags: string[];
 };
@@ -623,6 +624,43 @@ export const tips: Tip[] = [
       fr: "Commencez « sur étagère » : donnez l'accès, activez l'auto-enablement, et regardez ce que le dashboard remonte. N'importez vos données d'organisation que si l'organigramme est incomplet. Pour aller plus loin, vous pourrez ensuite bâtir des rapports personnalisés et des tableaux Power BI (Copilot Analytics). Réf. Learn : « Copilot Dashboard », « Manage settings » et « Copilot Analytics / Power BI ».",
       en: "Start “out of the box”: grant access, enable auto-enablement, and see what the dashboard surfaces. Only upload your organizational data if the org chart is incomplete. To go further, you can then build custom reports and Power BI dashboards (Copilot Analytics). Learn refs: “Copilot Dashboard”, “Manage settings” and “Copilot Analytics / Power BI”.",
     },
+    links: [
+      {
+        label: {
+          fr: "Copilot Dashboard « sur étagère » (Viva Insights)",
+          en: "Copilot Dashboard out of the box (Viva Insights)",
+        },
+        url: "https://learn.microsoft.com/en-us/viva/insights/org-team-insights/copilot-dashboard",
+      },
+      {
+        label: {
+          fr: "Activer et gérer les paramètres du Copilot Dashboard",
+          en: "Enable and manage Copilot Dashboard settings",
+        },
+        url: "https://learn.microsoft.com/en-us/viva/insights/advanced/admin/manage-settings-copilot-dashboard",
+      },
+      {
+        label: {
+          fr: "Importer les données d'organisation (organigramme)",
+          en: "Upload organizational data (org chart)",
+        },
+        url: "https://learn.microsoft.com/en-us/viva/insights/advanced/admin/manage-settings-copilot-dashboard#upload-organizational-data-for-the-copilot-dashboard-and-agent-dashboard",
+      },
+      {
+        label: {
+          fr: "Données d'organisation dans Viva",
+          en: "Organizational data in Viva",
+        },
+        url: "https://learn.microsoft.com/en-us/viva/organizational-data",
+      },
+      {
+        label: {
+          fr: "Rapports personnalisés et Power BI (Copilot Analytics)",
+          en: "Custom reports and Power BI (Copilot Analytics)",
+        },
+        url: "https://learn.microsoft.com/en-us/viva/insights/copilot-analytics-introduction#copilot-analytics-pbi-reports",
+      },
+    ],
     tags: ["copilot dashboard", "viva insights", "admin", "activation", "IT"],
   },
   {
