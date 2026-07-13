@@ -324,8 +324,8 @@ export const ADOPTION_WEEKS: { week: number; topic: Bilingual }[] = [
   {
     week: 6,
     topic: {
-      fr: "Word + PowerPoint + Edit with Copilot",
-      en: "Word + PowerPoint + Edit with Copilot",
+      fr: "Word + Excel + PowerPoint + Edit with Copilot",
+      en: "Word + Excel + PowerPoint + Edit with Copilot",
     },
   },
   { week: 7, topic: { fr: "Templates et réutilisation", en: "Templates and reuse" } },
@@ -381,8 +381,13 @@ export function weeksForTip(tip: Tip): number[] {
   )
     weeks.add(5);
 
-  // Semaine 6 : Word + PowerPoint + Edit with Copilot
-  if (tip.product === "powerpoint" || tip.product === "word" || has("word", "document"))
+  // Semaine 6 : Word + Excel + PowerPoint + Edit with Copilot
+  if (
+    tip.product === "powerpoint" ||
+    tip.product === "word" ||
+    tip.product === "excel" ||
+    has("word", "document")
+  )
     weeks.add(6);
 
   // Semaine 7 : Templates et réutilisation
