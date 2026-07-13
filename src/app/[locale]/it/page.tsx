@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { tipsByAudience, governanceTips } from "@/data/tips";
 import FilterableTips from "@/components/filterable-tips";
+import TipCard from "@/components/tip-card";
 
 export default async function ITPage({
   params,
@@ -13,7 +13,7 @@ export default async function ITPage({
   if (!isLocale(locale)) notFound();
   const dict = getDictionary(locale);
   const list = tipsByAudience("it", { excludeGovernance: true });
-  const govCount = governanceTips().length;
+  const gov = governanceTips();
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
@@ -21,33 +21,40 @@ export default async function ITPage({
         <span className="text-3xl">🔵</span>
         <h1 className="mt-2 text-3xl font-extrabold">{dict.itHub.title}</h1>
         <p className="mt-2 max-w-2xl text-muted">{dict.itHub.desc}</p>
-        <p className="mt-3 text-sm font-medium text-ms-blue">
-          {list.length} {dict.sections.count_tips}
-        </p>
       </div>
 
-      <Link
-        href={`/${locale}/gouvernance`}
-        className="card-lift mb-6 flex items-center gap-4 rounded-2xl border border-border bg-surface p-5"
-      >
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-surface-2 text-2xl">
-          🛡️
-        </span>
-        <div className="flex-1">
-          <h2 className="font-bold">{dict.governanceHub.title}</h2>
-          <p className="text-sm text-muted">{dict.governanceHub.desc}</p>
-        </div>
-        <span className="hidden shrink-0 rounded-full bg-surface-2 px-3 py-1 text-xs font-medium text-muted sm:block">
-          {govCount} {dict.sections.count_tips} →
-        </span>
-      </Link>
+      {/* IT Pro */}
+      <section id="it-pro">
+        <h2 className="mb-4 flex items-center gap-2 text-xl font-bold">
+          🔵 {dict.itHub.itProLabel}
+          <span className="text-sm font-medium text-muted">
+            {list.length} {dict.sections.count_tips}
+          </span>
+        </h2>
+        <FilterableTips
+          tips={list}
+          locale={locale}
+          dict={dict}
+          showSectionFilter={true}
+        />
+      </section>
 
-      <FilterableTips
-        tips={list}
-        locale={locale}
-        dict={dict}
-        showSectionFilter={true}
-      />
+      {/* Governance, kept as a distinct block */}
+      <section id="gouvernance" className="mt-12">
+        <div className="mb-4 rounded-2xl border border-border bg-surface-2 p-5">
+          <h2 className="flex items-center gap-2 text-xl font-bold">
+            🛡️ {dict.governanceHub.title}
+          </h2>
+          <p className="mt-1 max-w-2xl text-sm text-muted">
+            {dict.governanceHub.desc}
+          </p>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {gov.map((t) => (
+            <TipCard key={t.slug} tip={t} locale={locale} dict={dict} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

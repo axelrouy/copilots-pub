@@ -8,8 +8,7 @@
     "home": "Accueil",
     "m365": "Copilot M365",
     "chat": "Copilot Chat",
-    "it": "IT Pro",
-    "governance": "Gouvernance",
+    "it": "IT & Governance",
     "prompts": "Prompt Library",
     "explorer": "Explorer",
     "about": "À propos",
@@ -44,8 +43,9 @@
     "count_tips": "astuces"
   },
   "itHub": {
-    "title": "IT Pro",
-    "desc": "Tous les articles pour les équipes IT, réunis au même endroit, avec ou sans licence Copilot M365 : déploiement, adoption, prompts d'organisation et bonnes pratiques."
+    "title": "IT & Governance",
+    "desc": "Tout pour les équipes IT au même endroit, avec ou sans licence Copilot M365 : déploiement, adoption, prompts d'organisation et bonnes pratiques. La gouvernance est regroupée juste en dessous.",
+    "itProLabel": "IT Pro"
   },
   "governanceHub": {
     "title": "Gouvernance & confiance",

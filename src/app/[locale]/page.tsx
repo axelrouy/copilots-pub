@@ -173,23 +173,17 @@ export default async function HomePage({
         </Link>
       </section>
 
-      {/* IT Pro & Governance */}
-      <section className="mt-4 grid gap-4 sm:grid-cols-2">
+      {/* IT & Governance */}
+      <section className="mt-4">
         <Link
           href={`/${locale}/it`}
-          className="card-lift rounded-3xl border border-border bg-surface p-6"
+          className="card-lift flex items-start gap-4 rounded-3xl border border-border bg-surface p-6"
         >
-          <span className="mb-2 block text-4xl">🔵</span>
-          <h3 className="text-lg font-bold">{dict.itHub.title}</h3>
-          <p className="mt-1 text-sm text-muted">{dict.itHub.desc}</p>
-        </Link>
-        <Link
-          href={`/${locale}/gouvernance`}
-          className="card-lift rounded-3xl border border-border bg-surface p-6"
-        >
-          <span className="mb-2 block text-4xl">🛡️</span>
-          <h3 className="text-lg font-bold">{dict.governanceHub.title}</h3>
-          <p className="mt-1 text-sm text-muted">{dict.governanceHub.desc}</p>
+          <span className="shrink-0 text-4xl">🔵</span>
+          <div>
+            <h3 className="text-lg font-bold">{dict.itHub.title}</h3>
+            <p className="mt-1 text-sm text-muted">{dict.itHub.desc}</p>
+          </div>
         </Link>
       </section>
 

@@ -752,7 +752,7 @@ export const tips: Tip[] = [
   {
     slug: "deep-research-chat",
     section: "chat",
-    audience: ["user", "it"],
+    audience: ["user"],
     product: "scout",
     roles: ["Consultant", "Cloud Architect", "Marketing"],
     level: "intermediate",
@@ -808,7 +808,7 @@ export const tips: Tip[] = [
   {
     slug: "prompt-engineering-framework",
     section: "chat",
-    audience: ["user", "it"],
+    audience: ["user"],
     product: "general",
     roles: ["Consultant", "Cloud Architect", "Marketing", "Manager"],
     level: "intermediate",
