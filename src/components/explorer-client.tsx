@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { tips, ROLES, PRODUCTS, type Level, type Product } from "@/data/tips";
+import { tips, ROLES, PRODUCTS, type Product } from "@/data/tips";
 import { pick, type Dictionary, type Locale } from "@/lib/i18n";
 import TipCard from "./tip-card";
 
@@ -13,30 +13,22 @@ export default function ExplorerClient({
   dict: Dictionary;
 }) {
   const [role, setRole] = useState<string>("any");
-  const [level, setLevel] = useState<Level | "any">("any");
   const [product, setProduct] = useState<Product | "any">("any");
 
   const results = useMemo(() => {
     return tips.filter((t) => {
       if (role !== "any" && !t.roles.includes(role)) return false;
-      if (level !== "any" && t.level !== level) return false;
       if (product !== "any" && t.product !== product) return false;
       return true;
     });
-  }, [role, level, product]);
-
-  const levels: { id: Level; label: string }[] = [
-    { id: "beginner", label: dict.explorer.beginner },
-    { id: "intermediate", label: dict.explorer.intermediate },
-    { id: "advanced", label: dict.explorer.advanced },
-  ];
+  }, [role, product]);
 
   const sel =
     "w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-ms-blue";
 
   return (
     <div>
-      <div className="mb-6 grid gap-4 rounded-3xl border border-border bg-surface p-6 sm:grid-cols-3">
+      <div className="mb-6 grid gap-4 rounded-3xl border border-border bg-surface p-6 sm:grid-cols-2">
         <label className="block">
           <span className="mb-1.5 block text-sm font-medium">{dict.explorer.role}</span>
           <select className={sel} value={role} onChange={(e) => setRole(e.target.value)}>
@@ -44,22 +36,6 @@ export default function ExplorerClient({
             {ROLES.map((r) => (
               <option key={r.en} value={r.en}>
                 {pick(r, locale)}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label className="block">
-          <span className="mb-1.5 block text-sm font-medium">{dict.explorer.level}</span>
-          <select
-            className={sel}
-            value={level}
-            onChange={(e) => setLevel(e.target.value as Level | "any")}
-          >
-            <option value="any">{dict.explorer.any}</option>
-            {levels.map((l) => (
-              <option key={l.id} value={l.id}>
-                {l.label}
               </option>
             ))}
           </select>
