@@ -1034,6 +1034,85 @@ export const tips: Tip[] = [
     },
     tags: ["sécurité", "confidentialité", "conformité", "trust", "enterprise data protection"],
   },
+  {
+    slug: "notebooks-sans-licence-chat",
+    section: "chat",
+    audience: ["user"],
+    product: "notebooks",
+    roles: ["Manager", "Consultant", "Marketing", "Sales", "HR"],
+    level: "beginner",
+    icon: "/notebooks.png",
+    date: "2026-07-13",
+    isNew: true,
+    readMinutes: 3,
+    title: {
+      fr: "Utiliser les Notebooks Copilot sans licence",
+      en: "Use Copilot Notebooks without a license",
+    },
+    summary: {
+      fr: "Bonne nouvelle : les Notebooks Copilot sont désormais accessibles sans licence Microsoft 365 Copilot. Rassemblez vos sources, générez cartes mentales et guides d'étude, et partagez le tout avec vos collègues.",
+      en: "Good news: Copilot Notebooks are now available without a Microsoft 365 Copilot license. Bundle your sources, generate mind maps and study guides, and share everything with your colleagues.",
+    },
+    steps: {
+      fr: [
+        "Disponible sans licence Copilot\nLes Notebooks Copilot ne sont plus réservés aux utilisateurs licenciés : ils sont désormais accessibles dans Copilot Chat, sans licence Microsoft 365 Copilot. Un Notebook est un espace dédié à un sujet, dans lequel Copilot raisonne uniquement sur les sources que vous y ajoutez.",
+        "Ajoutez vos sources de référence\nAlimentez votre notebook avec ce dont vous avez besoin : des pages web, des fichiers (Word, Excel, PowerPoint, PDF) et des e-mails peuvent servir de sources de référence. Copilot s'appuie alors exclusivement sur ce périmètre pour vous répondre — idéal pour travailler sur un dossier précis sans être noyé dans le reste.",
+        "Générez une carte mentale automatiquement\nÀ partir des sources ajoutées, Copilot peut créer automatiquement une carte mentale (mind map) qui structure visuellement les idées clés et leurs liens. Parfait pour prendre de la hauteur sur un sujet ou préparer une présentation.",
+        "Créez un guide d'étude\nBesoin d'assimiler ou de transmettre un sujet ? Demandez un guide d'étude : Copilot synthétise vos sources en un support d'apprentissage clair, avec les points essentiels à retenir.",
+        "Partagez votre notebook\nUn notebook peut être partagé avec d'autres utilisateurs : chacun travaille sur le même périmètre de sources et bénéficie du contexte commun. Pratique pour un projet d'équipe, une veille partagée ou un onboarding.",
+      ],
+      en: [
+        "Available without a Copilot license\nCopilot Notebooks are no longer limited to licensed users: they're now available in Copilot Chat, without a Microsoft 365 Copilot license. A Notebook is a space dedicated to one topic, where Copilot reasons only over the sources you add to it.",
+        "Add your reference sources\nFeed your notebook with what you need: web pages, files (Word, Excel, PowerPoint, PDF) and emails can all be used as reference sources. Copilot then relies exclusively on that scope to answer you — ideal to work on a specific case without being drowned in everything else.",
+        "Generate a mind map automatically\nFrom the added sources, Copilot can automatically create a mind map that visually structures the key ideas and their links. Perfect to step back on a topic or prepare a presentation.",
+        "Create a study guide\nNeed to absorb or share a topic? Ask for a study guide: Copilot synthesizes your sources into a clear learning aid, with the essentials to remember.",
+        "Share your notebook\nA notebook can be shared with other users: everyone works on the same source scope and benefits from the shared context. Handy for a team project, a shared watch or an onboarding.",
+      ],
+    },
+    tags: ["notebooks", "sans licence", "copilot chat", "cartes mentales", "productivité"],
+  },
+  {
+    slug: "prompts-organisation-reutilisation",
+    section: "chat",
+    audience: ["it"],
+    product: "general",
+    roles: ["IT Admin", "Cloud Architect", "Consultant"],
+    level: "intermediate",
+    icon: "/copilot.png",
+    date: "2026-07-13",
+    isNew: true,
+    readMinutes: 4,
+    title: {
+      fr: "Prompts d'organisation : structurer et réutiliser vos interactions Copilot",
+      en: "Organization prompts: structure and reuse your Copilot interactions",
+    },
+    summary: {
+      fr: "Accessible avec et sans licence Copilot M365 : publiez des prompts au niveau de l'organisation pour offrir à vos utilisateurs des points de départ prêts à l'emploi, cohérents et réutilisables.",
+      en: "Available with and without a Copilot M365 license: publish prompts at the organization level to give your users ready-to-use, consistent and reusable starting points.",
+    },
+    steps: {
+      fr: [
+        "Pourquoi des prompts d'organisation ?\nUn bon prompt bien formulé peut être réutilisé par toute l'entreprise. Plutôt que de laisser chacun réinventer ses formulations, l'IT peut publier des prompts validés, cohérents et alignés sur les usages métier — un vrai accélérateur d'adoption. C'est accessible que vos utilisateurs aient une licence Copilot M365 ou non.",
+        "Publier depuis le centre d'administration\nDans le centre d'administration, rendez-vous dans Copilot > Prompts. Vous y gérez les prompts de votre organisation : créez-en un via « Create prompt », donnez-lui un titre parlant (ex. « Rédiger un email pro », « Préparer une réunion »), puis publiez-le. L'onglet « Analytics » vous donne un aperçu de leur utilisation.",
+        "Côté utilisateur : le laboratoire de prompts\nUne fois publiés, ces prompts apparaissent pour vos utilisateurs dans le laboratoire de prompts de Copilot, regroupés dans « Suggéré », par « Sujets de prompt » ou dans « Prompts de l'agent ». L'utilisateur n'a plus qu'à cliquer pour partir sur une base solide, sans réfléchir à la formulation.",
+        "Structurer et réutiliser\nOrganisez vos prompts par thème et par métier pour qu'ils soient faciles à retrouver. L'objectif : une bibliothèque vivante qui capitalise sur les meilleures interactions et diffuse les bonnes pratiques à toute l'organisation.",
+      ],
+      en: [
+        "Why organization prompts?\nA well-crafted prompt can be reused by the whole company. Rather than letting everyone reinvent their wording, IT can publish validated, consistent prompts aligned with business usage — a real adoption accelerator. It works whether your users have a Copilot M365 license or not.",
+        "Publish from the admin center\nIn the admin center, go to Copilot > Prompts. There you manage your organization's prompts: create one via “Create prompt”, give it a clear title (e.g. “Write a professional email”, “Prepare a meeting”), then publish it. The “Analytics” tab gives you a view of their usage.",
+        "User side: the prompt lab\nOnce published, these prompts appear for your users in Copilot's prompt lab, grouped under “Suggested”, by “Prompt topics” or under “Agent prompts”. The user just clicks to start from a solid base, without thinking about the wording.",
+        "Structure and reuse\nOrganize your prompts by theme and by role so they're easy to find. The goal: a living library that capitalizes on the best interactions and spreads good practices across the whole organization.",
+      ],
+    },
+    stepImages: [
+      null,
+      "/articles/prompts-admin-contoso.png",
+      "/articles/prompts-lab.png",
+      null,
+    ],
+    imageWidth: "md",
+    tags: ["prompts", "gouvernance", "adoption", "administration", "réutilisation"],
+  },
 ];
 
 /* ---------- Helpers ---------- */
