@@ -17,17 +17,12 @@ export default function ExplorerClient({
   const [product, setProduct] = useState<Product | "any">("any");
 
   const results = useMemo(() => {
-    return tips
-      .map((t) => {
-        let score = 0;
-        if (role !== "any") score += t.roles.includes(role) ? 3 : -1;
-        if (level !== "any") score += t.level === level ? 2 : 0;
-        if (product !== "any") score += t.product === product ? 3 : -2;
-        return { t, score };
-      })
-      .filter((x) => x.score > 0 || (role === "any" && level === "any" && product === "any"))
-      .sort((a, b) => b.score - a.score)
-      .map((x) => x.t);
+    return tips.filter((t) => {
+      if (role !== "any" && !t.roles.includes(role)) return false;
+      if (level !== "any" && t.level !== level) return false;
+      if (product !== "any" && t.product !== product) return false;
+      return true;
+    });
   }, [role, level, product]);
 
   const levels: { id: Level; label: string }[] = [
