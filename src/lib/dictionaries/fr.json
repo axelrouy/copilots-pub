@@ -35,9 +35,9 @@
     "title": "Filtres"
   },
   "sections": {
-    "m365_title": "Copilot M365 — Premium",
+    "m365_title": "Copilot M365 : Premium",
     "m365_desc": "Copilot intégré dans Outlook, Teams, Word, Excel, PowerPoint, Notebooks et les Agents.",
-    "chat_title": "Copilot Chat — Basic",
+    "chat_title": "Copilot Chat : Basic",
     "chat_desc": "Productivité personnelle, recherche, Scout, Deep Research et prompt engineering.",
     "count_tips": "astuces"
   },
@@ -77,7 +77,7 @@
   },
   "footer": {
     "built": "Construit avec Copilot par Axel",
-    "phase": "Phase 1 — Astuces, prompts & scénarios",
+    "phase": "Phase 1 : Astuces, prompts & scénarios",
     "rights": "AI Tip's Pub est un projet personnel et indépendant, sans affiliation, partenariat ni approbation de Microsoft. « Microsoft », « Copilot » et les logos associés sont des marques de Microsoft Corporation, utilisées ici à des fins purement descriptives et reproduites sans modification."
   },
   "admin": {
@@ -96,7 +96,7 @@
     "approve": "Approuver",
     "reject": "Rejeter",
     "new_article": "Nouvel article",
-    "demo_notice": "Données de démonstration — branchez Supabase pour l'analytics et les commentaires réels."
+    "demo_notice": "Données de démonstration : branchez Supabase pour l'analytics et les commentaires réels."
   },
   "common": {
     "minutes_read": "min de lecture",

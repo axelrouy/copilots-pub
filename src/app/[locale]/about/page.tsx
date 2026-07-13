@@ -23,10 +23,10 @@ const content: Record<Locale, Content> = {
   fr: {
     kicker: "À propos",
     name: "Axel Rouy",
-    role: "Cloud Solution Architect — M365 Copilot · Microsoft France",
+    role: "Cloud Solution Architect, M365 Copilot · Microsoft France",
     intro: [
       "Moi c'est Axel. J'aide les organisations à adopter Copilot et l'IA pour transformer la façon dont les gens travaillent. C'est un métier, mais c'est surtout une conviction.",
-      "Au quotidien, j'accompagne des entreprises de toutes tailles — de la construction à l'hôtellerie en passant par les grands groupes français — sur toute la chaîne : comprendre les usages, inspirer, démontrer avec des cas concrets, déployer de façon sécurisée et pilotée, mesurer l'adoption, puis passer à l'échelle. De l'idée à l'impact, avec toujours l'humain au centre.",
+      "Au quotidien, j'accompagne des entreprises de toutes tailles, de la construction à l'hôtellerie en passant par les grands groupes français, sur toute la chaîne : comprendre les usages, inspirer, démontrer avec des cas concrets, déployer de façon sécurisée et pilotée, mesurer l'adoption, puis passer à l'échelle. De l'idée à l'impact, avec toujours l'humain au centre.",
       "Ce qui me fait vibrer ? La tech, bien sûr. Mais surtout les gens. Je suis convaincu qu'une techno ne vaut que par ce qu'elle change concrètement dans le quotidien de quelqu'un. Alors je passe mon temps à traduire Copilot en gestes simples : gagner 30 minutes, préparer une réunion en deux clics, rédiger plus vite, monter un agent métier qui tient la route.",
     ],
     hatsTitle: "Mes casquettes",
@@ -41,13 +41,13 @@ const content: Record<Locale, Content> = {
     ],
     valuesTitle: "Ce qui me guide",
     values:
-      "Hors du bureau, c'est l'océan qui me recentre — le surf, l'équilibre, prendre du recul pour mieux avancer. Curiosité, bienveillance, apprentissage continu et partage de connaissances : c'est ma boussole. Sécuriser, connecter, automatiser, innover. Et toujours : more adoption, more impact, more human.",
+      "Hors du bureau, c'est l'océan qui me recentre : le surf, l'équilibre, prendre du recul pour mieux avancer. Curiosité, bienveillance, apprentissage continu et partage de connaissances : c'est ma boussole. Sécuriser, connecter, automatiser, innover. Et toujours : more adoption, more impact, more human.",
     manifestoTitle: "Pourquoi AI Tip's Pub ?",
     manifesto: [
       "Parce que les meilleures astuces, on se les échange rarement dans une doc de 80 pages. On se les file au comptoir, entre deux, quand quelqu'un lâche : « attends, montre-moi comment t'as fait ça ».",
-      "AI Tip's Pub, c'est exactement ça. Un endroit sans chichi où je pose les usages Copilot qui marchent vraiment. Pas la théorie, pas le blabla marketing — ce que tu peux faire aujourd'hui, tout de suite, avec le Copilot que tu as déjà sous la main.",
+      "AI Tip's Pub, c'est exactement ça. Un endroit sans chichi où je pose les usages Copilot qui marchent vraiment. Pas la théorie, pas le blabla marketing : ce que tu peux faire aujourd'hui, tout de suite, avec le Copilot que tu as déjà sous la main.",
       "D'un côté du bar : Copilot M365 (Premium), intégré dans Outlook, Teams, Word, Excel, Notebooks, les Agents. De l'autre : Copilot Chat, pour la productivité perso et la recherche. Et à chaque astuce, je te dis clairement si c'est un truc pour l'IT ou pour l'utilisateur final. Zéro jargon inutile.",
-      "Mon pari est simple : si tu repars d'ici avec une astuce que tu utilises dès demain, il est gagné. Allez, sers-toi — la première tournée est offerte. 🍻",
+      "Mon pari est simple : si tu repars d'ici avec une astuce que tu utilises dès demain, il est gagné. Allez, sers-toi, la première tournée est offerte. 🍻",
     ],
     signature: "— Axel",
     ctaExplore: "Explorer Copilot",
@@ -56,10 +56,10 @@ const content: Record<Locale, Content> = {
   en: {
     kicker: "About",
     name: "Axel Rouy",
-    role: "Cloud Solution Architect — M365 Copilot · Microsoft France",
+    role: "Cloud Solution Architect, M365 Copilot · Microsoft France",
     intro: [
-      "I'm Axel. I help organizations adopt Copilot and AI to transform the way people work. It's a job — but mostly it's a conviction.",
-      "Day to day, I work with companies of every size — from construction to hospitality to large French groups — across the whole journey: understand the use cases, inspire, prove it with real scenarios, deploy securely and with proper governance, measure adoption, then scale. From idea to impact, always with people at the center.",
+      "I'm Axel. I help organizations adopt Copilot and AI to transform the way people work. It's a job, but mostly it's a conviction.",
+      "Day to day, I work with companies of every size, from construction to hospitality to large French groups, across the whole journey: understand the use cases, inspire, prove it with real scenarios, deploy securely and with proper governance, measure adoption, then scale. From idea to impact, always with people at the center.",
       "What gets me going? Tech, sure. But mostly people. I'm convinced a technology is only worth what it actually changes in someone's day. So I spend my time turning Copilot into simple moves: save 30 minutes, prep a meeting in two clicks, write faster, ship a business agent that actually holds up.",
     ],
     hatsTitle: "My hats",
@@ -74,13 +74,13 @@ const content: Record<Locale, Content> = {
     ],
     valuesTitle: "What guides me",
     values:
-      "Off the clock, the ocean is what recenters me — surfing, balance, stepping back to move forward better. Curiosity, kindness, continuous learning and knowledge sharing: that's my compass. Secure, connect, automate, innovate. And always: more adoption, more impact, more human.",
+      "Off the clock, the ocean is what recenters me : surfing, balance, stepping back to move forward better. Curiosity, kindness, continuous learning and knowledge sharing: that's my compass. Secure, connect, automate, innovate. And always: more adoption, more impact, more human.",
     manifestoTitle: "Why AI Tip's Pub?",
     manifesto: [
       "Because the best tips rarely get shared in an 80-page doc. They get passed along at the counter, in between things, when someone says: “wait, show me how you did that.”",
-      "AI Tip's Pub is exactly that. A no-nonsense place where I drop the Copilot use cases that actually work. No theory, no marketing fluff — what you can do today, right now, with the Copilot you already have.",
+      "AI Tip's Pub is exactly that. A no-nonsense place where I drop the Copilot use cases that actually work. No theory, no marketing fluff : what you can do today, right now, with the Copilot you already have.",
       "On one side of the bar: Copilot M365 (Premium), built into Outlook, Teams, Word, Excel, Notebooks, Agents. On the other: Copilot Chat, for personal productivity and search. And for every tip, I tell you clearly whether it's an IT thing or an end-user thing. Zero useless jargon.",
-      "My bet is simple: if you leave with one tip you use tomorrow, it's a win. Come on in, help yourself — the first round's on me. 🍻",
+      "My bet is simple: if you leave with one tip you use tomorrow, it's a win. Come on in, help yourself, the first round's on me. 🍻",
     ],
     signature: "— Axel",
     ctaExplore: "Explore Copilot",
@@ -118,7 +118,7 @@ export default async function AboutPage({
       <section className="mt-6 overflow-hidden rounded-3xl border border-border bg-surface">
         <Image
           src="/axel-infographic.png"
-          alt="Axel Rouy — Cloud Solution Architect M365 Copilot"
+          alt="Axel Rouy, Cloud Solution Architect M365 Copilot"
           width={1536}
           height={1024}
           className="h-auto w-full"

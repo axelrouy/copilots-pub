@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité — AI Tip's Pub",
+  title: "Politique de confidentialité : AI Tip's Pub",
 };
 
 const CONTACT = "axelrouy.ms@gmail.com";
@@ -38,7 +38,7 @@ const content: Record<Locale, Content> = {
         heading: "Données collectées & finalités",
         body: [
           "Statistiques d'audience anonymes : à chaque page consultée, le site enregistre l'adresse de la page et la provenance (site référent). Aucune adresse IP, aucun identifiant unique, aucun cookie ne sont associés à cette mesure. Finalité : comprendre quelles astuces sont utiles. Base légale : intérêt légitime à mesurer une audience de façon anonyme.",
-          "Commentaires : lorsque vous publiez un commentaire, seuls le pseudonyme que vous choisissez (facultatif — « Anonymous » par défaut) et le texte de votre message sont enregistrés. Aucune adresse e-mail n'est demandée. Finalité : afficher les commentaires après modération. Base légale : votre consentement, donné en publiant le commentaire.",
+          "Commentaires : lorsque vous publiez un commentaire, seuls le pseudonyme que vous choisissez (facultatif : « Anonymous » par défaut) et le texte de votre message sont enregistrés. Aucune adresse e-mail n'est demandée. Finalité : afficher les commentaires après modération. Base légale : votre consentement, donné en publiant le commentaire.",
           "Le site ne comporte aucun formulaire de contact, ne collecte aucune adresse e-mail et n'utilise aucun service publicitaire.",
         ],
       },
@@ -60,8 +60,8 @@ const content: Record<Locale, Content> = {
       {
         heading: "Hébergement & sous-traitants",
         body: [
-          "Le site est hébergé par Vercel Inc. (États-Unis) — vercel.com.",
-          "Les commentaires sont stockés via Supabase (base de données PostgreSQL managée, hébergement dans l'Union européenne — région eu-west-1).",
+          "Le site est hébergé par Vercel Inc. (États-Unis), vercel.com.",
+          "Les commentaires sont stockés via Supabase (base de données PostgreSQL managée, hébergement dans l'Union européenne, région eu-west-1).",
           "Ces prestataires agissent en qualité de sous-traitants techniques et n'exploitent pas vos données pour leur propre compte.",
         ],
       },
@@ -70,7 +70,7 @@ const content: Record<Locale, Content> = {
         body: [
           "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité concernant vos données.",
           `Pour exercer ces droits, écrivez à ${CONTACT}. Votre demande sera traitée dans les meilleurs délais.`,
-          "Vous pouvez également introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) — cnil.fr.",
+          "Vous pouvez également introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés), cnil.fr.",
         ],
       },
     ],
@@ -94,7 +94,7 @@ const content: Record<Locale, Content> = {
         heading: "Data collected & purposes",
         body: [
           "Anonymous audience metrics: for each page viewed, the site records the page address and the referrer. No IP address, no unique identifier and no cookie are associated with this measurement. Purpose: understand which tips are useful. Legal basis: legitimate interest in measuring anonymous audience.",
-          "Comments: when you post a comment, only the nickname you choose (optional — defaults to “Anonymous”) and your message text are stored. No email address is requested. Purpose: display comments after moderation. Legal basis: your consent, given by posting the comment.",
+          "Comments: when you post a comment, only the nickname you choose (optional : defaults to “Anonymous”) and your message text are stored. No email address is requested. Purpose: display comments after moderation. Legal basis: your consent, given by posting the comment.",
           "The site has no contact form, collects no email address and uses no advertising service.",
         ],
       },
@@ -116,8 +116,8 @@ const content: Record<Locale, Content> = {
       {
         heading: "Hosting & processors",
         body: [
-          "The site is hosted by Vercel Inc. (United States) — vercel.com.",
-          "Comments are stored via Supabase (managed PostgreSQL database, hosted in the European Union — eu-west-1 region).",
+          "The site is hosted by Vercel Inc. (United States), vercel.com.",
+          "Comments are stored via Supabase (managed PostgreSQL database, hosted in the European Union, eu-west-1 region).",
           "These providers act as technical sub-processors and do not use your data for their own purposes.",
         ],
       },
@@ -126,7 +126,7 @@ const content: Record<Locale, Content> = {
         body: [
           "Under the GDPR, you have the right to access, rectify, erase, restrict, object to and port your data.",
           `To exercise these rights, email ${CONTACT}. Your request will be handled as promptly as possible.`,
-          "You may also lodge a complaint with the CNIL (the French data protection authority) — cnil.fr.",
+          "You may also lodge a complaint with the CNIL (the French data protection authority), cnil.fr.",
         ],
       },
     ],

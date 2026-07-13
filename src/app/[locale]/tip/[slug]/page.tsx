@@ -92,7 +92,7 @@ export default async function TipPage({
               {tip.stepImages?.[i] && (
                 <img
                   src={tip.stepImages[i] as string}
-                  alt={`${pick(tip.title, locale)} — étape ${i + 1}`}
+                  alt={`${pick(tip.title, locale)} : étape ${i + 1}`}
                   loading="lazy"
                   className={`ml-10 rounded-xl border border-border ${
                     tip.imageWidth === "xs"

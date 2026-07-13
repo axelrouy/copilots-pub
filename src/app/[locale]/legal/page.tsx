@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Mentions légales — AI Tip's Pub",
+  title: "Mentions légales : AI Tip's Pub",
 };
 
 type Section = { heading: string; body: string[] };
@@ -61,7 +61,7 @@ const content: Record<Locale, Content> = {
       {
         heading: "Hébergement",
         body: [
-          "Le site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com.",
+          "Le site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis, vercel.com.",
         ],
       },
       {
@@ -118,7 +118,7 @@ const content: Record<Locale, Content> = {
       {
         heading: "Hosting",
         body: [
-          "The site is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA — vercel.com.",
+          "The site is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA, vercel.com.",
         ],
       },
       {

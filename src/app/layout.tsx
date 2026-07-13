@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-tips-pub.vercel.app"),
   title: {
-    default: "AI Tip's Pub — Le comptoir des astuces Microsoft Copilot",
-    template: "%s — AI Tip's Pub",
+    default: "AI Tip's Pub : Le comptoir des astuces Microsoft Copilot",
+    template: "%s : AI Tip's Pub",
   },
   description:
     "Le référentiel pratique des fonctionnalités, prompts et scénarios Microsoft Copilot pour IT Pros et End Users.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "AI Tip's Pub",
-    title: "AI Tip's Pub — Le comptoir des astuces Microsoft Copilot",
+    title: "AI Tip's Pub : Le comptoir des astuces Microsoft Copilot",
     description:
       "Le référentiel pratique des fonctionnalités, prompts et scénarios Microsoft Copilot pour IT Pros et End Users.",
     url: "https://ai-tips-pub.vercel.app",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Tip's Pub — Le comptoir des astuces Microsoft Copilot",
+    title: "AI Tip's Pub : Le comptoir des astuces Microsoft Copilot",
     description:
       "Le référentiel pratique des fonctionnalités, prompts et scénarios Microsoft Copilot.",
   },

@@ -35,9 +35,9 @@
     "title": "Filters"
   },
   "sections": {
-    "m365_title": "Copilot M365 — Premium",
+    "m365_title": "Copilot M365 : Premium",
     "m365_desc": "Copilot built into Outlook, Teams, Word, Excel, PowerPoint, Notebooks and Agents.",
-    "chat_title": "Copilot Chat — Basic",
+    "chat_title": "Copilot Chat : Basic",
     "chat_desc": "Personal productivity, search, Scout, Deep Research and prompt engineering.",
     "count_tips": "tips"
   },
@@ -77,7 +77,7 @@
   },
   "footer": {
     "built": "Built with Copilot by Axel",
-    "phase": "Phase 1 — Tips, prompts & scenarios",
+    "phase": "Phase 1 : Tips, prompts & scenarios",
     "rights": "AI Tip's Pub is a personal, independent project with no affiliation with, partnership with, or endorsement by Microsoft. \u201cMicrosoft\u201d, \u201cCopilot\u201d and the associated logos are trademarks of Microsoft Corporation, used here for purely descriptive purposes and reproduced without modification."
   },
   "admin": {
@@ -96,7 +96,7 @@
     "approve": "Approve",
     "reject": "Reject",
     "new_article": "New article",
-    "demo_notice": "Demo data — connect Supabase for real analytics and comments."
+    "demo_notice": "Demo data : connect Supabase for real analytics and comments."
   },
   "common": {
     "minutes_read": "min read",
