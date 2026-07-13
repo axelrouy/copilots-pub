@@ -89,20 +89,33 @@ export default async function TipPage({
                 </span>
                 <span className="text-sm leading-relaxed whitespace-pre-line">{s}</span>
               </div>
-              {tip.stepImages?.[i] && (
-                <img
-                  src={tip.stepImages[i] as string}
-                  alt={`${pick(tip.title, locale)} : étape ${i + 1}`}
-                  loading="lazy"
-                  className={`ml-10 rounded-xl border border-border ${
-                    tip.imageWidth === "xs"
-                      ? "w-full max-w-xs"
-                      : tip.imageWidth === "md"
-                        ? "w-full max-w-md"
-                        : "w-[calc(100%-2.5rem)]"
-                  }`}
-                />
-              )}
+              {tip.stepImages?.[i] &&
+                (Array.isArray(tip.stepImages[i]) ? (
+                  <div className="ml-10 grid gap-3 sm:grid-cols-2">
+                    {(tip.stepImages[i] as string[]).map((src, k) => (
+                      <img
+                        key={k}
+                        src={src}
+                        alt={`${pick(tip.title, locale)} : étape ${i + 1} (${k + 1})`}
+                        loading="lazy"
+                        className="w-full rounded-xl border border-border"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <img
+                    src={tip.stepImages[i] as string}
+                    alt={`${pick(tip.title, locale)} : étape ${i + 1}`}
+                    loading="lazy"
+                    className={`ml-10 rounded-xl border border-border ${
+                      tip.imageWidth === "xs"
+                        ? "w-full max-w-xs"
+                        : tip.imageWidth === "md"
+                          ? "w-full max-w-md"
+                          : "w-[calc(100%-2.5rem)]"
+                    }`}
+                  />
+                ))}
               {tip.video && tip.videoStep === i && (
                 <video
                   className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"

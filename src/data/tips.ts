@@ -32,7 +32,7 @@ export type Tip = {
   title: Bilingual;
   summary: Bilingual;
   steps: BilingualList;
-  stepImages?: (string | null)[];
+  stepImages?: (string | string[] | null)[];
   imageWidth?: "xs" | "md" | "full";
   video?: string;
   videoPoster?: string;
@@ -1044,7 +1044,7 @@ export const tips: Tip[] = [
     icon: "/notebooks.png",
     date: "2026-07-13",
     isNew: true,
-    readMinutes: 3,
+    readMinutes: 4,
     title: {
       fr: "Utiliser les Notebooks Copilot sans licence",
       en: "Use Copilot Notebooks without a license",
@@ -1056,6 +1056,7 @@ export const tips: Tip[] = [
     steps: {
       fr: [
         "Disponible sans licence Copilot\nLes Notebooks Copilot ne sont plus réservés aux utilisateurs licenciés : ils sont désormais accessibles dans Copilot Chat, sans licence Microsoft 365 Copilot. Un Notebook est un espace dédié à un sujet, dans lequel Copilot raisonne uniquement sur les sources que vous y ajoutez.",
+        "Où trouver les Notebooks (deux chemins possibles)\nPas d'inquiétude si vous ne les voyez pas tout de suite, il y a deux façons d'y accéder selon votre version :\n➞ 1re méthode, le « gaufrier » : cliquez sur l'icône en forme de damier (les 9 petits points) tout en haut de votre application Copilot, puis choisissez « Blocs-notes » (c'est le nom français de « Notebooks »), comme sur la première capture.\n➞ 2e méthode, le volet de gauche : selon les mises à jour et votre licence, une entrée « Notebooks » peut aussi s'afficher directement dans le menu de gauche, comme sur la seconde capture. Les deux mènent au même endroit.",
         "Ajoutez vos sources de référence\nAlimentez votre notebook avec ce dont vous avez besoin : des pages web, des fichiers (Word, Excel, PowerPoint, PDF) et des e-mails peuvent servir de sources de référence. Copilot s'appuie alors exclusivement sur ce périmètre pour vous répondre, idéal pour travailler sur un dossier précis sans être noyé dans le reste.",
         "Générez une carte mentale automatiquement\nÀ partir des sources ajoutées, Copilot peut créer automatiquement une carte mentale (mind map) qui structure visuellement les idées clés et leurs liens. Parfait pour prendre de la hauteur sur un sujet ou préparer une présentation.",
         "Créez un guide d'étude\nBesoin d'assimiler ou de transmettre un sujet ? Demandez un guide d'étude : Copilot synthétise vos sources en un support d'apprentissage clair, avec les points essentiels à retenir.",
@@ -1063,6 +1064,7 @@ export const tips: Tip[] = [
       ],
       en: [
         "Available without a Copilot license\nCopilot Notebooks are no longer limited to licensed users: they're now available in Copilot Chat, without a Microsoft 365 Copilot license. A Notebook is a space dedicated to one topic, where Copilot reasons only over the sources you add to it.",
+        "Where to find Notebooks (two possible paths)\nNo worries if you don't see them right away, there are two ways to get there depending on your version:\n➞ Option 1, the « waffle »: click the grid icon (the 9 small dots) at the very top of your Copilot app, then pick « Notebooks » (« Blocs-notes » in French), as shown in the first screenshot.\n➞ Option 2, the left pane: depending on updates and your license, a « Notebooks » entry may also appear directly in the left menu, as shown in the second screenshot. Both lead to the same place.",
         "Add your reference sources\nFeed your notebook with what you need: web pages, files (Word, Excel, PowerPoint, PDF) and emails can all be used as reference sources. Copilot then relies exclusively on that scope to answer you, ideal to work on a specific case without being drowned in everything else.",
         "Generate a mind map automatically\nFrom the added sources, Copilot can automatically create a mind map that visually structures the key ideas and their links. Perfect to step back on a topic or prepare a presentation.",
         "Create a study guide\nNeed to absorb or share a topic? Ask for a study guide: Copilot synthesizes your sources into a clear learning aid, with the essentials to remember.",
@@ -1071,6 +1073,10 @@ export const tips: Tip[] = [
     },
     stepImages: [
       "/articles/notebook-sans-licence-overview.png",
+      [
+        "/articles/notebook-acces-gauffrier.png",
+        "/articles/notebook-acces-volet-gauche.png",
+      ],
       null,
       null,
       null,
