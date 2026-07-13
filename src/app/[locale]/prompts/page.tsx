@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, pick } from "@/lib/i18n";
-import { getTip } from "@/data/tips";
 import {
   ADOPTION_STEPS,
   ADOPTION_WEEKS,
   ADOPTION_INTRO,
   ADOPTION_MISTAKE,
+  articlesForWeek,
+  stepArticles,
 } from "@/data/adoption";
 import ProductIcon from "@/components/product-icon";
 
@@ -34,9 +35,7 @@ export default async function AdoptionPage({
       {/* Steps */}
       <div className="space-y-5">
         {ADOPTION_STEPS.map((step) => {
-          const articles = step.articleSlugs
-            .map((s) => getTip(s))
-            .filter((t): t is NonNullable<typeof t> => Boolean(t));
+          const articles = stepArticles(step.articleSlugs);
           return (
             <section
               key={step.n}
@@ -164,24 +163,52 @@ export default async function AdoptionPage({
 
       {/* 8-week plan */}
       <section className="mt-8 rounded-3xl border border-border bg-surface p-6 sm:p-8">
-        <h2 className="mb-4 text-xl font-bold">📅 {dict.adoption.plan_title}</h2>
-        <div className="overflow-hidden rounded-2xl border border-border">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-surface-2 text-left">
-                <th className="w-24 px-4 py-2.5 font-semibold">{dict.adoption.week}</th>
-                <th className="px-4 py-2.5 font-semibold">{dict.adoption.topic}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ADOPTION_WEEKS.map((w) => (
-                <tr key={w.week} className="border-t border-border">
-                  <td className="px-4 py-2.5 font-bold text-copilot">{w.week}</td>
-                  <td className="px-4 py-2.5">{pick(w.topic, locale)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <h2 className="mb-1 text-xl font-bold">📅 {dict.adoption.plan_title}</h2>
+        <p className="mb-4 text-sm text-muted">{dict.adoption.plan_hint}</p>
+        <div className="space-y-2.5">
+          {ADOPTION_WEEKS.map((w) => {
+            const articles = articlesForWeek(w.week);
+            return (
+              <details
+                key={w.week}
+                className="group overflow-hidden rounded-2xl border border-border bg-surface-2"
+              >
+                <summary className="flex cursor-pointer list-none items-center gap-3 px-4 py-3 hover:bg-surface">
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg brand-gradient text-sm font-extrabold text-white">
+                    {w.week}
+                  </span>
+                  <span className="flex-1 font-semibold">{pick(w.topic, locale)}</span>
+                  {articles.length > 0 && (
+                    <span className="rounded-full bg-surface px-2 py-0.5 text-xs font-medium text-muted">
+                      {articles.length}
+                    </span>
+                  )}
+                  <span className="text-muted transition-transform group-open:rotate-180">
+                    ▾
+                  </span>
+                </summary>
+                <div className="border-t border-border px-4 py-3">
+                  {articles.length === 0 ? (
+                    <p className="text-sm italic text-muted">{dict.adoption.week_empty}</p>
+                  ) : (
+                    <ul className="space-y-1.5">
+                      {articles.map((t) => (
+                        <li key={t.slug}>
+                          <Link
+                            href={`/${locale}/tip/${t.slug}`}
+                            className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm hover:bg-surface hover:text-ms-blue"
+                          >
+                            <ProductIcon icon={t.icon} size={18} />
+                            <span>{pick(t.title, locale)}</span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </details>
+            );
+          })}
         </div>
       </section>
     </div>

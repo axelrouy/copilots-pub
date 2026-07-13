@@ -59,6 +59,8 @@
     "avoid": "Too vague",
     "better": "Effective",
     "plan_title": "Typical 8-week journey",
+    "plan_hint": "Click a week to see the related articles. New articles are added there automatically.",
+    "week_empty": "Articles coming soon for this week.",
     "week": "Week",
     "topic": "Topic",
     "step": "Step"

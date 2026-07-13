@@ -1,4 +1,5 @@
 import type { Bilingual } from "./tips";
+import { tips, getTip, type Tip } from "./tips";
 
 export type AdoptionBlock = {
   heading?: Bilingual;
@@ -336,3 +337,78 @@ export const ADOPTION_WEEKS: { week: number; topic: Bilingual }[] = [
     },
   },
 ];
+
+/**
+ * Classe automatiquement un article dans une ou plusieurs semaines du parcours
+ * d'adoption, à partir de ses métadonnées (product / section / governance / tags).
+ * Un article peut forcer son placement via le champ `adoptionWeeks`.
+ * Quand un nouvel article est ajouté à `tips`, il apparaît tout seul dans les
+ * bonnes semaines sans intervention manuelle.
+ */
+export function weeksForTip(tip: Tip): number[] {
+  if (tip.adoptionWeeks && tip.adoptionWeeks.length > 0) return tip.adoptionWeeks;
+
+  const weeks = new Set<number>();
+  const tags = tip.tags.map((t) => t.toLowerCase());
+  const has = (...keys: string[]) =>
+    keys.some(
+      (k) => tip.slug.includes(k) || tags.some((tag) => tag.includes(k)),
+    );
+
+  // Semaine 1 : Comprendre Copilot et la sécurité
+  if (tip.governance || has("sécur", "securit", "confiance", "trust", "conformit", "protection"))
+    weeks.add(1);
+
+  // Semaine 2 : Les bases du prompting
+  if (has("prompt")) weeks.add(2);
+
+  // Semaine 3 : Outlook + Teams
+  if (tip.product === "outlook" || tip.product === "teams" || has("outlook", "teams"))
+    weeks.add(3);
+
+  // Semaine 4 : Copilot Chat (découverte du chat)
+  if (
+    tip.section === "chat" &&
+    (tip.product === "general" || tip.product === "notebooks" || tip.product === "scout")
+  )
+    weeks.add(4);
+  if (tip.product === "notebooks") weeks.add(4);
+
+  // Semaine 5 : Cas d'usage métier (personas, scénarios)
+  if (
+    tip.product === "excel" ||
+    has("métier", "metier", "entretien", "1:1", "management", "commercial", "vente", "projet")
+  )
+    weeks.add(5);
+
+  // Semaine 6 : Word + PowerPoint + Edit with Copilot
+  if (tip.product === "powerpoint" || tip.product === "word" || has("word", "document"))
+    weeks.add(6);
+
+  // Semaine 7 : Templates et réutilisation
+  if (has("brand", "template", "modèle", "modele", "réutilis", "reutilis")) weeks.add(7);
+
+  // Semaine 8 : Agents 1P et Copilot Studio
+  if (tip.product === "agents" || has("agent", "copilot studio")) weeks.add(8);
+
+  return [...weeks].sort((a, b) => a - b);
+}
+
+/** Retourne les articles rattachés à une semaine donnée du parcours. */
+export function articlesForWeek(week: number): Tip[] {
+  return tips.filter((t) => weeksForTip(t).includes(week));
+}
+
+/** Résout et dédoublonne les articles fil rouge d'une étape (chips). */
+export function stepArticles(articleSlugs: string[]): Tip[] {
+  const seen = new Set<string>();
+  const out: Tip[] = [];
+  for (const slug of articleSlugs) {
+    const t = getTip(slug);
+    if (t && !seen.has(t.slug)) {
+      seen.add(t.slug);
+      out.push(t);
+    }
+  }
+  return out;
+}

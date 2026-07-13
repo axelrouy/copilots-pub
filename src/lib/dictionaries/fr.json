@@ -59,6 +59,8 @@
     "avoid": "Trop vague",
     "better": "Efficace",
     "plan_title": "Parcours type sur 8 semaines",
+    "plan_hint": "Cliquez sur une semaine pour voir les articles associés. Les nouveaux articles s'y ajoutent automatiquement.",
+    "week_empty": "Articles à venir sur cette semaine.",
     "week": "Semaine",
     "topic": "Sujet",
     "step": "Étape"

@@ -43,6 +43,7 @@ export type Tip = {
   links?: { label: Bilingual; url: string }[];
   prompt?: Bilingual;
   tags: string[];
+  adoptionWeeks?: number[];
 };
 
 export const PRODUCTS: { id: Product; label: Bilingual; icon: string }[] = [
