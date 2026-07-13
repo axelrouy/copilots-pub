@@ -942,9 +942,18 @@ export const tips: Tip[] = [
         "No license? Copilot Chat\nNo Microsoft 365 Copilot license? Not a blocker to get going. The “Learn Copilot Chat” page shows everything you can already do for free, today. The best way to get comfortable before going further.",
       ],
     },
+    stepImages: [
+      "/articles/resources-prompt-example.png",
+      "/articles/resources-coach-agents.png",
+      null,
+      "/articles/resources-scenario-library.png",
+      null,
+      null,
+    ],
+    imageWidth: "md",
     info: {
-      fr: "Le meilleur conseil pour débuter tient en une phrase : utilisez-le. Cinq minutes par jour à poser vos vraies questions métier à Copilot valent mieux qu'une longue formation théorique. Et n'ayez pas peur de vous tromper — c'est comme ça qu'on apprend à bien prompter.",
-      en: "The best beginner tip fits in one sentence: use it. Five minutes a day asking Copilot your real work questions beats a long theoretical course. And don't be afraid to get it wrong — that's how you learn to prompt well.",
+      fr: "Le meilleur conseil pour débuter tient en une phrase : utilisez-le. Cinq minutes par jour à poser vos vraies questions métier à Copilot valent mieux qu'une longue formation théorique. Et n'ayez pas peur de vous tromper : c'est comme ça qu'on apprend à bien prompter.",
+      en: "The best beginner tip fits in one sentence: use it. Five minutes a day asking Copilot your real work questions beats a long theoretical course. And don't be afraid to get it wrong, that's how you learn to prompt well.",
     },
     links: [
       {
