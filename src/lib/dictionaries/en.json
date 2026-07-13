@@ -8,6 +8,8 @@
     "home": "Home",
     "m365": "Copilot M365",
     "chat": "Copilot Chat",
+    "it": "IT Pro",
+    "governance": "Governance",
     "prompts": "Prompt Library",
     "explorer": "Explorer",
     "about": "About",
@@ -40,6 +42,14 @@
     "chat_title": "Copilot Chat : Basic",
     "chat_desc": "Personal productivity, search, Scout, Deep Research and prompt engineering.",
     "count_tips": "tips"
+  },
+  "itHub": {
+    "title": "IT Pro",
+    "desc": "Every article for IT teams, gathered in one place, with or without a Copilot M365 license: deployment, adoption, organization prompts and best practices."
+  },
+  "governanceHub": {
+    "title": "Governance & trust",
+    "desc": "Security, compliance and deployment steering: Copilot Dashboard, EDP and reasons to trust Microsoft 365 Copilot. The dedicated building block to frame a rollout with confidence."
   },
   "tip": {
     "steps": "How to",

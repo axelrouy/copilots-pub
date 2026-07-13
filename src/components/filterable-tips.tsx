@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Section, Tip, Audience, Product } from "@/data/tips";
-import { PRODUCTS } from "@/data/tips";
+import { PRODUCTS, inSection } from "@/data/tips";
 import { pick, type Dictionary, type Locale } from "@/lib/i18n";
 import TipCard from "./tip-card";
 import ProductIcon from "./product-icon";
@@ -31,7 +31,7 @@ export default function FilterableTips({
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
     return tips.filter((t) => {
-      if (section !== "all" && t.section !== section) return false;
+      if (section !== "all" && !inSection(t, section)) return false;
       if (audience !== "all" && !t.audience.includes(audience)) return false;
       if (product !== "all" && t.product !== product) return false;
       if (!needle) return true;

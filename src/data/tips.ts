@@ -18,6 +18,8 @@ export type BilingualList = { fr: string[]; en: string[] };
 export type Tip = {
   slug: string;
   section: Section;
+  extraSections?: Section[];
+  governance?: boolean;
   audience: Audience[];
   product: Product;
   roles: string[];
@@ -117,6 +119,7 @@ export const tips: Tip[] = [
   {
     slug: "gpt-5-6-arrive-dans-copilot",
     section: "chat",
+    extraSections: ["m365"],
     audience: ["user", "it"],
     product: "general",
     roles: ["Manager", "Consultant", "Sales", "IT Admin"],
@@ -577,6 +580,7 @@ export const tips: Tip[] = [
   {
     slug: "mise-en-place-copilot-dashboard",
     section: "m365",
+    governance: true,
     audience: ["it"],
     product: "general",
     roles: ["Cloud Architect", "IT Admin"],
@@ -666,6 +670,7 @@ export const tips: Tip[] = [
   {
     slug: "gouvernance-securite-copilot",
     section: "m365",
+    governance: true,
     audience: ["it"],
     product: "general",
     roles: ["Cloud Architect", "IT Admin"],
@@ -990,6 +995,7 @@ export const tips: Tip[] = [
   {
     slug: "confiance-securite-m365-copilot",
     section: "m365",
+    governance: true,
     audience: ["user", "it"],
     product: "general",
     roles: ["Manager", "IT Admin", "Cloud Architect", "Consultant"],
@@ -1087,6 +1093,7 @@ export const tips: Tip[] = [
   {
     slug: "prompts-organisation-reutilisation",
     section: "chat",
+    extraSections: ["m365"],
     audience: ["it"],
     product: "general",
     roles: ["IT Admin", "Cloud Architect", "Consultant"],
@@ -1134,8 +1141,27 @@ export function getTip(slug: string): Tip | undefined {
   return tips.find((t) => t.slug === slug);
 }
 
+export function inSection(t: Tip, section: Section): boolean {
+  return t.section === section || (t.extraSections?.includes(section) ?? false);
+}
+
 export function tipsBySection(section: Section): Tip[] {
-  return tips.filter((t) => t.section === section);
+  return tips.filter((t) => inSection(t, section));
+}
+
+export function tipsByAudience(
+  audience: Audience,
+  opts: { excludeGovernance?: boolean } = {},
+): Tip[] {
+  return tips.filter(
+    (t) =>
+      t.audience.includes(audience) &&
+      !(opts.excludeGovernance && t.governance),
+  );
+}
+
+export function governanceTips(): Tip[] {
+  return tips.filter((t) => t.governance);
 }
 
 export function tipOfTheDay(date: Date = new Date()): Tip {

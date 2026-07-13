@@ -21,6 +21,8 @@ export default function Header({
     { href: `/${locale}`, label: dict.nav.home, exact: true },
     { href: `/${locale}/m365`, label: dict.nav.m365 },
     { href: `/${locale}/chat`, label: dict.nav.chat },
+    { href: `/${locale}/it`, label: dict.nav.it },
+    { href: `/${locale}/gouvernance`, label: dict.nav.governance },
     { href: `/${locale}/prompts`, label: dict.nav.prompts },
     { href: `/${locale}/explorer`, label: dict.nav.explorer },
     { href: `/${locale}/about`, label: dict.nav.about },
