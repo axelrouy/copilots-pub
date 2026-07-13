@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { analytics, getAllComments, moderateComment } from "@/lib/store";
 import { tips } from "@/data/tips";
+import { isAuthed } from "@/lib/admin-auth";
 
 export async function GET() {
+  if (!(await isAuthed())) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
   const [analyticsData, comments] = await Promise.all([
     analytics(),
     getAllComments(),
@@ -21,6 +25,9 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  if (!(await isAuthed())) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
   try {
     const { id, approved } = await req.json();
     if (!id) return NextResponse.json({ error: "missing id" }, { status: 400 });

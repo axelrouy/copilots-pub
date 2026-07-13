@@ -34,6 +34,9 @@ export default function AdminPage() {
   const [tab, setTab] = useState<"analytics" | "content" | "comments">(
     "analytics",
   );
+  const [authed, setAuthed] = useState<boolean | null>(null);
+  const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState(false);
 
   const load = useCallback(async () => {
     const res = await fetch("/api/admin");
@@ -42,12 +45,37 @@ export default function AdminPage() {
       setAnalytics(d.analytics);
       setComments(d.comments);
       setContent(d.content);
+      setAuthed(true);
+    } else if (res.status === 401) {
+      setAuthed(false);
     }
   }, []);
 
   useEffect(() => {
     load();
   }, [load]);
+
+  async function login(e: React.FormEvent) {
+    e.preventDefault();
+    setLoginError(false);
+    const res = await fetch("/api/admin/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password }),
+    });
+    if (res.ok) {
+      setPassword("");
+      load();
+    } else {
+      setLoginError(true);
+    }
+  }
+
+  async function logout() {
+    await fetch("/api/admin/login", { method: "DELETE" });
+    setAuthed(false);
+    setAnalytics(null);
+  }
 
   async function moderate(id: string, approved: boolean) {
     await fetch("/api/admin", {
@@ -68,6 +96,52 @@ export default function AdminPage() {
       active ? "bg-ms-blue text-white" : "text-muted hover:bg-surface-2"
     }`;
 
+  if (authed === false) {
+    return (
+      <div className="grid min-h-screen place-items-center bg-background px-4">
+        <form
+          onSubmit={login}
+          className="w-full max-w-sm rounded-2xl border border-border bg-surface p-6"
+        >
+          <div className="mb-4 flex items-center gap-3">
+            <span className="grid h-9 w-9 place-items-center rounded-xl brand-gradient">
+              🍻
+            </span>
+            <h1 className="text-lg font-bold">{a.title}</h1>
+          </div>
+          <label className="mb-1.5 block text-sm text-muted" htmlFor="pwd">
+            Mot de passe
+          </label>
+          <input
+            id="pwd"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            autoFocus
+            className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none focus:border-ms-blue"
+          />
+          {loginError && (
+            <p className="mt-2 text-sm text-pub">Mot de passe incorrect.</p>
+          )}
+          <button
+            type="submit"
+            className="mt-4 w-full rounded-lg bg-ms-blue px-4 py-2 text-sm font-medium text-white"
+          >
+            Se connecter
+          </button>
+        </form>
+      </div>
+    );
+  }
+
+  if (authed === null) {
+    return (
+      <div className="grid min-h-screen place-items-center bg-background">
+        <p className="text-sm text-muted">…</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-surface">
@@ -76,9 +150,15 @@ export default function AdminPage() {
             🍻
           </span>
           <h1 className="text-lg font-bold">{a.title}</h1>
+          <button
+            onClick={logout}
+            className="ml-auto text-sm text-muted hover:text-foreground"
+          >
+            Déconnexion
+          </button>
           <Link
             href="/fr"
-            className="ml-auto text-sm text-muted hover:text-foreground"
+            className="text-sm text-muted hover:text-foreground"
           >
             ← AI Tip&apos;s Pub
           </Link>
