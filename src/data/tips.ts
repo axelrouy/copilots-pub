@@ -905,6 +905,80 @@ export const tips: Tip[] = [
     tags: ["management", "researcher", "agent", "work iq", "entretien annuel", "1:1"],
   },
   {
+    slug: "ressources-gratuites-montee-competence",
+    section: "chat",
+    audience: ["user", "it"],
+    product: "general",
+    roles: ["Manager", "Consultant", "Sales", "HR", "IT Admin"],
+    level: "beginner",
+    icon: "/copilot.png",
+    date: "2026-07-13",
+    isNew: true,
+    featured: true,
+    readMinutes: 4,
+    title: {
+      fr: "Ressources gratuites pour accompagner votre montée en compétence",
+      en: "Free resources to support your upskilling on Copilot",
+    },
+    summary: {
+      fr: "Pas besoin de formation payante pour bien démarrer avec Copilot. Voici les ressources officielles gratuites, un réflexe tout simple pour apprendre, et deux agents trop souvent oubliés.",
+      en: "You don't need paid training to get started with Copilot. Here are the free official resources, one dead-simple habit to learn, and two agents that are too often overlooked.",
+    },
+    steps: {
+      fr: [
+        "Commencez par le plus simple : demandez à Copilot\nLe meilleur point de départ ne coûte rien et il est déjà sous vos yeux : Copilot se connaît plutôt bien lui-même. Quand on débute, le réflexe le plus utile, c'est de lui poser la question directement. Essayez : « Que peux-tu faire pour moi ? », « Quelles sont tes limites ? », « Comment peux-tu m'aider dans mon métier ? », « Quels sont les cas d'usage les plus pertinents pour mon profil ? ». En deux minutes, vous avez une visite guidée personnalisée.",
+        "Deux agents largement sous-estimés : Prompt Coach & Idea Coach\nDans les parcours d'adoption, on passe souvent à côté de deux agents pourtant très utiles. Prompt Coach vous aide à rédiger et à améliorer vos prompts — parfait quand on ne sait pas comment formuler sa demande. Idea Coach accompagne la réflexion et aide à structurer ses idées, idéal pour débroussailler un sujet ou préparer un brainstorming. Testez-les tôt : ils font gagner un temps fou dans la prise en main.",
+        "Piochez dans la Scenario Library\nBesoin d'inspiration concrète ? La Microsoft Scenario Library regorge de cas d'usage prêts à l'emploi, classés par métier et par département. C'est la meilleure façon de répondre à la question « oui, mais moi, dans mon job, ça donne quoi ? ».",
+        "Le hub officiel d'adoption Copilot\nLe portail Microsoft 365 Copilot Adoption centralise guides de démarrage, kits de communication, supports de formation et bonnes pratiques de déploiement — en français. À garder en favori, que vous soyez utilisateur curieux ou en charge de l'adoption dans votre organisation.",
+        "Prenez de la hauteur sur la démarche\nL'article « Five Ways to Implement the Great Copilot Journey » donne une vision d'ensemble : comment structurer un vrai parcours d'adoption, au-delà de la simple distribution de licences. Utile pour ne pas rester au stade du gadget et transformer l'essai durablement.",
+        "Et si vous n'avez pas de licence : Copilot Chat\nPas de licence Microsoft 365 Copilot ? Ce n'est pas un frein pour commencer. La page « Découvrir Copilot Chat » vous montre tout ce que vous pouvez déjà faire gratuitement, dès aujourd'hui. Le meilleur moyen de se familiariser avant d'aller plus loin.",
+      ],
+      en: [
+        "Start with the simplest thing: ask Copilot\nThe best starting point costs nothing and it's already in front of you: Copilot knows itself pretty well. When you're new, the most useful habit is to ask it directly. Try: “What can you do for me?”, “What are your limits?”, “How can you help me in my job?”, “What are the most relevant use cases for my profile?”. In two minutes you get a personalized guided tour.",
+        "Two heavily underrated agents: Prompt Coach & Idea Coach\nAdoption journeys often overlook two very helpful agents. Prompt Coach helps you write and improve your prompts — perfect when you're unsure how to phrase a request. Idea Coach supports your thinking and helps structure ideas, ideal to clear up a topic or prepare a brainstorm. Try them early: they save a huge amount of time when getting started.",
+        "Dig into the Scenario Library\nNeed concrete inspiration? The Microsoft Scenario Library is packed with ready-to-use use cases, sorted by role and department. It's the best way to answer “OK, but what does it look like in MY job?”.",
+        "The official Copilot adoption hub\nThe Microsoft 365 Copilot Adoption portal centralizes getting-started guides, communication kits, training materials and rollout best practices. Keep it bookmarked, whether you're a curious user or in charge of adoption in your organization.",
+        "Step back and look at the approach\nThe article “Five Ways to Implement the Great Copilot Journey” gives the big picture: how to structure a real adoption journey, beyond just handing out licenses. Useful to move past the gadget stage and make it stick.",
+        "No license? Copilot Chat\nNo Microsoft 365 Copilot license? Not a blocker to get going. The “Learn Copilot Chat” page shows everything you can already do for free, today. The best way to get comfortable before going further.",
+      ],
+    },
+    info: {
+      fr: "Le meilleur conseil pour débuter tient en une phrase : utilisez-le. Cinq minutes par jour à poser vos vraies questions métier à Copilot valent mieux qu'une longue formation théorique. Et n'ayez pas peur de vous tromper — c'est comme ça qu'on apprend à bien prompter.",
+      en: "The best beginner tip fits in one sentence: use it. Five minutes a day asking Copilot your real work questions beats a long theoretical course. And don't be afraid to get it wrong — that's how you learn to prompt well.",
+    },
+    links: [
+      {
+        label: {
+          fr: "Microsoft Scenario Library (cas d'usage par métier)",
+          en: "Microsoft Scenario Library (use cases by role)",
+        },
+        url: "https://adoption.microsoft.com/en-us/scenario-library/",
+      },
+      {
+        label: {
+          fr: "Microsoft 365 Copilot Adoption (hub officiel)",
+          en: "Microsoft 365 Copilot Adoption (official hub)",
+        },
+        url: "https://adoption.microsoft.com/fr-fr/copilot/",
+      },
+      {
+        label: {
+          fr: "Five Ways to Implement the Great Copilot Journey",
+          en: "Five Ways to Implement the Great Copilot Journey",
+        },
+        url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/five-ways-to-implement-the-great-copilot-journey/4476516",
+      },
+      {
+        label: {
+          fr: "Découvrir Copilot Chat (gratuit)",
+          en: "Learn Copilot Chat (free)",
+        },
+        url: "https://www.microsoft.com/fr-fr/microsoft-365-copilot/learn-copilot-chat-today",
+      },
+    ],
+    tags: ["adoption", "ressources", "formation", "prompt coach", "idea coach", "gratuit"],
+  },
+  {
     slug: "confiance-securite-m365-copilot",
     section: "m365",
     audience: ["user", "it"],
