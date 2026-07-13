@@ -1069,6 +1069,13 @@ export const tips: Tip[] = [
         "Share your notebook\nA notebook can be shared with other users: everyone works on the same source scope and benefits from the shared context. Handy for a team project, a shared watch or an onboarding.",
       ],
     },
+    stepImages: [
+      "/articles/notebook-sans-licence-overview.png",
+      null,
+      null,
+      null,
+      null,
+    ],
     tags: ["notebooks", "sans licence", "copilot chat", "cartes mentales", "productivité"],
   },
   {
