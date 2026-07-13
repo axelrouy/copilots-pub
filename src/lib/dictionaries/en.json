@@ -9,7 +9,7 @@
     "m365": "Copilot M365",
     "chat": "Copilot Chat",
     "it": "IT & Governance",
-    "prompts": "Prompt Library",
+    "prompts": "Adoption programs",
     "explorer": "Explorer",
     "about": "About",
     "legal": "Legal notice",
@@ -50,6 +50,18 @@
   "governanceHub": {
     "title": "Governance & trust",
     "desc": "Security, compliance and deployment steering: Copilot Dashboard, EDP and reasons to trust Microsoft 365 Copilot. The dedicated building block to frame a rollout with confidence."
+  },
+  "adoption": {
+    "title": "Adoption programs",
+    "objective": "Goal",
+    "on_blog": "Follow on AI Tip's Pub",
+    "resources": "Resources",
+    "avoid": "Too vague",
+    "better": "Effective",
+    "plan_title": "Typical 8-week journey",
+    "week": "Week",
+    "topic": "Topic",
+    "step": "Step"
   },
   "tip": {
     "steps": "How to",
