@@ -386,7 +386,7 @@ export function weeksForTip(tip: Tip): number[] {
     weeks.add(6);
 
   // Semaine 7 : Templates et réutilisation
-  if (has("brand", "template", "modèle", "modele", "réutilis", "reutilis")) weeks.add(7);
+  if (has("brand", "template", "gabarit", "réutilis", "reutilis")) weeks.add(7);
 
   // Semaine 8 : Agents 1P et Copilot Studio
   if (tip.product === "agents" || has("agent", "copilot studio")) weeks.add(8);
