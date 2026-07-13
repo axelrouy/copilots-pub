@@ -937,7 +937,7 @@ export const tips: Tip[] = [
         "Piochez dans la Scenario Library\nBesoin d'inspiration concrète ? La Microsoft Scenario Library regorge de cas d'usage prêts à l'emploi, classés par métier et par département. C'est la meilleure façon de répondre à la question « oui, mais moi, dans mon job, ça donne quoi ? ».",
         "Le hub officiel d'adoption Copilot\nLe portail Microsoft 365 Copilot Adoption centralise guides de démarrage, kits de communication, supports de formation et bonnes pratiques de déploiement, en français. À garder en favori, que vous soyez utilisateur curieux ou en charge de l'adoption dans votre organisation.",
         "Prenez de la hauteur sur la démarche\nL'article « Five Ways to Implement the Great Copilot Journey » donne une vision d'ensemble : comment structurer un vrai parcours d'adoption, au-delà de la simple distribution de licences. Utile pour ne pas rester au stade du gadget et transformer l'essai durablement.",
-        "Et si vous n'avez pas de licence : Copilot Chat\nPas de licence Microsoft 365 Copilot ? Ce n'est pas un frein pour commencer. La page « Découvrir Copilot Chat » vous montre tout ce que vous pouvez déjà faire gratuitement, dès aujourd'hui. Le meilleur moyen de se familiariser avant d'aller plus loin.",
+        "Et si vous n'avez pas de licence : Copilot Chat\nPas de licence Microsoft 365 Copilot ? Ce n'est pas un frein pour commencer. La page « Découvrir Copilot Chat » vous montre tout ce que vous pouvez déjà faire gratuitement, dès aujourd'hui. Le meilleur moyen de se familiariser avant d'aller plus loin.\nÀ découvrir ici : https://www.microsoft.com/fr-fr/microsoft-365-copilot/learn-copilot-chat-today",
       ],
       en: [
         "Start with the simplest thing: ask Copilot\nThe best starting point costs nothing and it's already in front of you: Copilot knows itself pretty well. When you're new, the most useful habit is to ask it directly. Try: “What can you do for me?”, “What are your limits?”, “How can you help me in my job?”, “What are the most relevant use cases for my profile?”. In two minutes you get a personalized guided tour.",
@@ -945,7 +945,7 @@ export const tips: Tip[] = [
         "Dig into the Scenario Library\nNeed concrete inspiration? The Microsoft Scenario Library is packed with ready-to-use use cases, sorted by role and department. It's the best way to answer “OK, but what does it look like in MY job?”.",
         "The official Copilot adoption hub\nThe Microsoft 365 Copilot Adoption portal centralizes getting-started guides, communication kits, training materials and rollout best practices. Keep it bookmarked, whether you're a curious user or in charge of adoption in your organization.",
         "Step back and look at the approach\nThe article “Five Ways to Implement the Great Copilot Journey” gives the big picture: how to structure a real adoption journey, beyond just handing out licenses. Useful to move past the gadget stage and make it stick.",
-        "No license? Copilot Chat\nNo Microsoft 365 Copilot license? Not a blocker to get going. The “Learn Copilot Chat” page shows everything you can already do for free, today. The best way to get comfortable before going further.",
+        "No license? Copilot Chat\nNo Microsoft 365 Copilot license? Not a blocker to get going. The “Learn Copilot Chat” page shows everything you can already do for free, today. The best way to get comfortable before going further.\nExplore it here: https://www.microsoft.com/fr-fr/microsoft-365-copilot/learn-copilot-chat-today",
       ],
     },
     stepImages: [
@@ -954,7 +954,7 @@ export const tips: Tip[] = [
       null,
       "/articles/resources-scenario-library.png",
       null,
-      null,
+      "/articles/resources-copilot-chat-today.png",
     ],
     imageWidth: "md",
     info: {

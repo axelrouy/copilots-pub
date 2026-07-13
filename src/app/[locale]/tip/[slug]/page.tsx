@@ -9,6 +9,25 @@ import Comments from "@/components/comments";
 import PageTracker from "@/components/page-tracker";
 import ProductIcon from "@/components/product-icon";
 
+function renderWithLinks(text: string) {
+  const parts = text.split(/(https?:\/\/[^\s]+)/g);
+  return parts.map((part, i) =>
+    /^https?:\/\//.test(part) ? (
+      <a
+        key={i}
+        href={part}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-ms-blue underline break-words"
+      >
+        {part}
+      </a>
+    ) : (
+      part
+    ),
+  );
+}
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     tips.map((t) => ({ locale, slug: t.slug })),
@@ -87,7 +106,7 @@ export default async function TipPage({
                 <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full brand-gradient text-sm font-bold text-white">
                   {i + 1}
                 </span>
-                <span className="text-sm leading-relaxed whitespace-pre-line">{s}</span>
+                <span className="text-sm leading-relaxed whitespace-pre-line">{renderWithLinks(s)}</span>
               </div>
               {tip.stepImages?.[i] &&
                 (Array.isArray(tip.stepImages[i]) ? (
