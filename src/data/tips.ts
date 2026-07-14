@@ -69,6 +69,63 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "planifier-un-prompt-recurrent",
+    section: "m365",
+    extraSections: ["chat"],
+    audience: ["user"],
+    product: "general",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
+    level: "beginner",
+    icon: "/copilot.png",
+    date: "2026-07-14",
+    isNew: true,
+    trending: true,
+    readMinutes: 4,
+    title: {
+      fr: "Planifier un prompt récurrent : votre assistant qui travaille en avance",
+      en: "Schedule a recurring prompt: your assistant that works ahead of you",
+    },
+    summary: {
+      fr: "Et si Copilot préparait votre journée avant même que vous ouvriez votre PC ? La planification d'un prompt récurrent exécute automatiquement une consigne selon la fréquence de votre choix (quotidienne, hebdomadaire, mensuelle) et vous livre le résultat, sans avoir à le relancer.",
+      en: "What if Copilot prepared your day before you even opened your laptop? Scheduling a recurring prompt automatically runs an instruction at the frequency you choose (daily, weekly, monthly) and delivers the result, without you relaunching it.",
+    },
+    steps: {
+      fr: [
+        "Le principe : un prompt qui se lance tout seul\nLa planification d'un prompt récurrent est une fonctionnalité récente de Copilot qui permet d'exécuter automatiquement un prompt selon une fréquence définie (quotidienne, hebdomadaire, mensuelle…) et de recevoir le résultat sans avoir à le relancer manuellement. En clair : vous écrivez votre demande une fois, vous dites quand la répéter, et Copilot s'occupe du reste, en tâche de fond.",
+        "Étape 1 : écrivez et lancez votre prompt\nCommencez par un prompt normal, celui que vous aimeriez recevoir régulièrement (par exemple « Donne-moi les actualités de la semaine qui concernent Contoso et qui ont fait les gros titres de la presse »). Passez la souris sur votre prompt : une barre d'icônes apparaît en dessous. Cliquez sur l'icône en forme d'horloge, c'est elle qui ouvre la planification.",
+        "Étape 2 : réglez la fréquence dans « Create a schedule »\nLa fenêtre « Create a schedule » s'ouvre avec votre prompt déjà pré-rempli. Vous définissez ensuite :\n➞ Starts : la date et l'heure de première exécution (ex. 07/15/2026 à 09:30 PM).\n➞ Every : la périodicité (Week, Day, Month…) et, pour une répétition hebdomadaire, les jours concernés (L, M, M, J, V…).\n➞ Until : une date de fin, pour ne pas laisser tourner indéfiniment.\nUne phrase récapitulative vous confirme le tout : « Repeat this prompt every week on Monday… Friday at 9:30 PM until Jul 29, 2026 ».",
+        "Étape 3 : choisissez comment être prévenu, puis enregistrez\nCochez « Receive an email when responses are ready » pour recevoir un e-mail dès que le résultat est prêt, puis cliquez sur « Save ». À partir de là, plus rien à faire : Copilot exécutera votre prompt tout seul, à chaque échéance.",
+        "Quelques exemples concrets\nC'est là que ça devient vraiment puissant :\n➞ Tous les matins à 8h : « Résume mes emails prioritaires reçus depuis hier et indique les actions à réaliser aujourd'hui. »\n➞ Chaque lundi : « Analyse mon agenda de la semaine, identifie les réunions importantes et propose mes 5 priorités. »\n➞ Tous les vendredis : « Résume les échanges concernant le projet Copilot Studio et liste les actions ouvertes. »\n➞ Chaque mois : « Prépare un rapport sur mes principaux clients en combinant réunions, emails et documents récents. »",
+        "Pourquoi c'est un vrai changement d'habitude\nAvant, l'utilisateur devait lancer le prompt lui-même, et les résultats dépendaient de son initiative (donc parfois, on oublie). Avec la planification, le prompt s'exécute automatiquement, le contexte Microsoft 365 est actualisé à chaque exécution (vos derniers emails, réunions et documents sont pris en compte), et le résultat vous est envoyé directement dans Copilot et/ou par notification selon le paramétrage disponible.",
+        "Ce que je retiendrais\nOn passe d'un Copilot que l'on sollicite à un Copilot qui anticipe. C'est le petit basculement qui change beaucoup : vos synthèses arrivent au bon moment, sans effort, avec un contexte toujours frais. Parfait pour un rituel du matin, un point hebdo ou un reporting mensuel que vous ne voulez plus jamais oublier.",
+      ],
+      en: [
+        "The idea: a prompt that runs on its own\nScheduling a recurring prompt is a recent Copilot feature that automatically runs a prompt at a defined frequency (daily, weekly, monthly…) and delivers the result without you relaunching it manually. Simply put: you write your request once, you say when to repeat it, and Copilot handles the rest, in the background.",
+        "Step 1: write and run your prompt\nStart with a normal prompt, the one you'd like to receive regularly (for example « Give me the week's news about Contoso that made the press headlines »). Hover over your prompt: a bar of icons appears below it. Click the clock icon, that's the one that opens scheduling.",
+        "Step 2: set the frequency in « Create a schedule »\nThe « Create a schedule » window opens with your prompt already prefilled. You then define:\n➞ Starts: the date and time of the first run (e.g. 07/15/2026 at 09:30 PM).\n➞ Every: the frequency (Week, Day, Month…) and, for a weekly repeat, the specific days (M, T, W, T, F…).\n➞ Until: an end date, so it doesn't run forever.\nA summary sentence confirms it all: « Repeat this prompt every week on Monday… Friday at 9:30 PM until Jul 29, 2026 ».",
+        "Step 3: choose how to be notified, then save\nCheck « Receive an email when responses are ready » to get an email as soon as the result is ready, then click « Save ». From there, nothing more to do: Copilot will run your prompt on its own, at each due time.",
+        "A few concrete examples\nThis is where it gets really powerful:\n➞ Every morning at 8am: « Summarize my priority emails received since yesterday and list the actions to take today. »\n➞ Every Monday: « Analyze my week's calendar, identify the important meetings and propose my top 5 priorities. »\n➞ Every Friday: « Summarize the exchanges about the Copilot Studio project and list the open actions. »\n➞ Every month: « Prepare a report on my main clients combining recent meetings, emails and documents. »",
+        "Why it's a real habit shift\nBefore, the user had to launch the prompt themselves, and results depended on their initiative (so sometimes, you forget). With scheduling, the prompt runs automatically, the Microsoft 365 context is refreshed at each run (your latest emails, meetings and documents are taken into account), and the result is sent straight to you in Copilot and/or via notification depending on the available settings.",
+        "What I'd keep in mind\nWe move from a Copilot you call on to a Copilot that anticipates. That small shift changes a lot: your summaries arrive at the right moment, effortlessly, with an always-fresh context. Perfect for a morning ritual, a weekly check-in or a monthly report you never want to forget again.",
+      ],
+    },
+    stepImages: [
+      null,
+      "/articles/prompt-recurrent-icone-horloge.png",
+      "/articles/prompt-recurrent-create-schedule.png",
+      null,
+      null,
+      null,
+      null,
+    ],
+    imageWidth: "md",
+    prompt: {
+      fr: "Résume mes emails prioritaires reçus depuis hier et indique les actions à réaliser aujourd'hui.",
+      en: "Summarize my priority emails received since yesterday and list the actions to take today.",
+    },
+    tags: ["prompts", "automatisation", "planification", "productivité", "récurrent", "adoption"],
+  },
+  {
     slug: "schedule-with-copilot-outlook",
     section: "m365",
     audience: ["user"],
