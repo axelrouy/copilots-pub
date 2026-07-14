@@ -69,6 +69,56 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "ajouter-copilot-conversation-teams",
+    section: "m365",
+    extraSections: ["chat"],
+    audience: ["user"],
+    product: "teams",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
+    level: "beginner",
+    icon: "/teams.png",
+    date: "2026-07-14",
+    isNew: true,
+    trending: true,
+    readMinutes: 4,
+    title: {
+      fr: "Ajouter Copilot dans une conversation Teams",
+      en: "Add Copilot to a Teams conversation",
+    },
+    summary: {
+      fr: "Ajouter Copilot dans une conversation Teams, c'est comme inviter un assistant virtuel dans le chat pour vous aider à résumer, analyser et exploiter les échanges en temps réel. Il travaille alors avec le contexte de cette discussion précise : idéal pour les conversations longues et les projets d'équipe.",
+      en: "Adding Copilot to a Teams conversation is like inviting a virtual assistant into the chat to help you summarize, analyze and make the most of the exchanges in real time. It then works with the context of that specific discussion: ideal for long conversations and team projects.",
+    },
+    steps: {
+      fr: [
+        "Le principe : un assistant dans votre chat\nL'application Copilot dans Teams permet de poser des questions directement sur le contenu d'une conversation et d'obtenir de l'aide sans quitter le chat. La bonne image pour un atelier : ajouter Copilot dans une conversation Teams, c'est comme inviter un assistant virtuel dans le chat pour l'aider à résumer, analyser et exploiter les échanges en temps réel.",
+        "Comment l'ajouter à une conversation\nDans votre conversation Teams, cliquez sur l'icône « Agents and bots » (l'icône d'application en haut à droite de la fenêtre de chat). Le volet « Agents and bots » s'ouvre sur la droite : sélectionnez « Copilot » parmi les applications proposées. C'est fait, Copilot rejoint la discussion et devient interrogeable directement dans le fil.",
+        "La différence avec le Copilot général dans Teams\nC'est le point clé à retenir : lorsque Copilot est ajouté dans un chat, il travaille avec le contexte de cette conversation spécifique et peut analyser l'ensemble des messages visibles par les participants. Autrement dit, Copilot dans un chat = Copilot avec le contexte de ce chat. Là où le Copilot général répond de façon large, celui-ci raisonne sur ce qui se dit ici, dans cette discussion.",
+        "Quelques exemples d'usage\nUne fois ajouté, adressez-vous à lui directement dans le fil (par exemple « Copilot, List the latest action items »). Il peut alors :\n➞ Résumer une longue conversation Teams.\n➞ Identifier les décisions prises.\n➞ Extraire les actions à réaliser.\n➞ Générer un compte rendu.\n➞ Retrouver rapidement une information partagée dans le chat.\n➞ Rédiger une réponse à partir du contexte de la discussion.\nSur la capture, on lui demande la liste des dernières actions : il cite qui a partagé quel fichier, repère la tâche en cours et propose même des suites (détailler les prochaines étapes, lister les risques, préparer un ordre du jour).",
+        "Ce que je retiendrais pour un client\nTrois idées simples à garder en tête :\n➞ Copilot dans un chat = Copilot avec le contexte de ce chat.\n➞ Très utile pour les conversations longues ou les projets d'équipe.\n➞ Permet de retrouver rapidement décisions, actions et informations importantes.\nBref, plus besoin de faire défiler des centaines de messages : vous demandez, Copilot synthétise.",
+      ],
+      en: [
+        "The idea: an assistant inside your chat\nThe Copilot app in Teams lets you ask questions directly about a conversation's content and get help without leaving the chat. The right image for a workshop: adding Copilot to a Teams conversation is like inviting a virtual assistant into the chat to help summarize, analyze and make the most of the exchanges in real time.",
+        "How to add it to a conversation\nIn your Teams conversation, click the « Agents and bots » icon (the apps icon at the top right of the chat window). The « Agents and bots » pane opens on the right: pick « Copilot » among the offered apps. Done, Copilot joins the discussion and can be queried right inside the thread.",
+        "The difference with the general Copilot in Teams\nThis is the key takeaway: when Copilot is added to a chat, it works with the context of that specific conversation and can analyze all the messages visible to the participants. In other words, Copilot in a chat = Copilot with the context of that chat. Where the general Copilot answers broadly, this one reasons over what's being said here, in this discussion.",
+        "A few usage examples\nOnce added, address it directly in the thread (for example « Copilot, List the latest action items »). It can then:\n➞ Summarize a long Teams conversation.\n➞ Identify the decisions made.\n➞ Extract the action items to complete.\n➞ Generate a recap.\n➞ Quickly find a piece of info shared in the chat.\n➞ Draft a reply from the context of the discussion.\nIn the screenshot, we ask for the list of the latest action items: it names who shared which file, spots the task in progress and even suggests follow-ups (detail the next steps, list the risks, prepare an agenda).",
+        "What I'd keep in mind for a client\nThree simple ideas to remember:\n➞ Copilot in a chat = Copilot with the context of that chat.\n➞ Very useful for long conversations or team projects.\n➞ Lets you quickly find decisions, actions and important information.\nIn short, no more scrolling through hundreds of messages: you ask, Copilot synthesizes.",
+      ],
+    },
+    stepImages: [
+      null,
+      "/articles/copilot-teams-chat-ajout.png",
+      null,
+      "/articles/copilot-teams-chat-actions.png",
+      null,
+    ],
+    prompt: {
+      fr: "Copilot, résume cette conversation : liste les décisions prises, les actions à réaliser avec leur responsable, et les informations clés partagées dans le chat.",
+      en: "Copilot, summarize this conversation: list the decisions made, the action items with their owner, and the key information shared in the chat.",
+    },
+    tags: ["teams", "copilot dans le chat", "contexte", "résumé", "actions", "collaboration"],
+  },
+  {
     slug: "ou-acceder-a-copilot",
     section: "m365",
     extraSections: ["chat"],
