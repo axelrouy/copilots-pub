@@ -94,7 +94,6 @@ export const tips: Tip[] = [
         "Où la trouver dans Outlook\nDepuis un email, ouvrez le menu « … » (plus d'actions) dans la barre d'outils. Sous la section « Respond », cliquez sur « Schedule with Copilot ». L'option apparaît directement au niveau du message : pas besoin de recopier quoi que ce soit, Copilot part du fil que vous avez sous les yeux.",
         "Ce que fait Copilot\nÀ partir du fil d'emails, Copilot peut :\n➞ Identifier les participants concernés.\n➞ Proposer un titre de réunion.\n➞ Rechercher des disponibilités.\n➞ Suggérer un créneau.\n➞ Générer un ordre du jour basé sur la conversation.\n➞ Créer l'invitation Teams prête à être envoyée.\nSur la capture, on voit le résultat : les participants du fil sont repris automatiquement, un titre est proposé (« Thunderbolt E-Bike Launch Strategy Planning »), un créneau est positionné, la réunion Teams est activée et un agenda est généré à partir des sujets évoqués dans les emails.",
         "Cas d'usage concret\nImaginons un échange de 15 emails sur un projet VINCI. Au lieu de dire « On devrait se faire une réunion la semaine prochaine… » et de relancer tout le monde, vous cliquez sur Schedule with Copilot. Copilot récupère les participants du fil, propose un créneau commun, génère une invitation Teams et crée un agenda à partir des sujets évoqués dans les emails. En quelques clics, la discussion informelle devient une réunion cadrée.",
-        "Phrase client prête à l'emploi\nPour la présenter à un client : « Schedule with Copilot permet de passer d'une discussion par email à une réunion structurée en quelques clics, en générant automatiquement les participants, le créneau et un agenda basé sur le contexte de la conversation. »",
         "Ce que je retiendrais\nLes bénéfices concrets à garder en tête :\n➞ Moins d'allers-retours pour trouver une date.\n➞ Agenda généré automatiquement.\n➞ Exploite le contexte du fil d'emails.\n➞ Accélère l'organisation des réunions.\n➞ Particulièrement utile lorsqu'un échange email devient trop long et nécessite une discussion en direct.",
       ],
       en: [
@@ -102,14 +101,12 @@ export const tips: Tip[] = [
         "Where to find it in Outlook\nFrom an email, open the « … » menu (more actions) in the toolbar. Under the « Respond » section, click « Schedule with Copilot ». The option appears right at the message level: no need to copy anything, Copilot starts from the thread in front of you.",
         "What Copilot does\nFrom the email thread, Copilot can:\n➞ Identify the relevant participants.\n➞ Propose a meeting title.\n➞ Look for availability.\n➞ Suggest a time slot.\n➞ Generate an agenda based on the conversation.\n➞ Create the Teams invite ready to send.\nIn the screenshot, you can see the result: the thread's participants are pulled in automatically, a title is proposed (« Thunderbolt E-Bike Launch Strategy Planning »), a slot is set, the Teams meeting is turned on and an agenda is generated from the topics discussed in the emails.",
         "Concrete use case\nImagine a 15-email exchange about a VINCI project. Instead of saying « We should have a meeting next week… » and chasing everyone, you click Schedule with Copilot. Copilot pulls the thread's participants, proposes a common slot, generates a Teams invite and creates an agenda from the topics raised in the emails. In a few clicks, the informal discussion becomes a framed meeting.",
-        "Ready-to-use client sentence\nTo present it to a client: « Schedule with Copilot lets you move from an email discussion to a structured meeting in a few clicks, automatically generating the participants, the time slot and an agenda based on the conversation's context. »",
         "What I'd keep in mind\nThe concrete benefits to remember:\n➞ Fewer back-and-forths to find a date.\n➞ Agenda generated automatically.\n➞ Leverages the email thread's context.\n➞ Speeds up meeting organization.\n➞ Especially useful when an email exchange gets too long and needs a live discussion.",
       ],
     },
     stepImages: [
       null,
       "/articles/schedule-with-copilot-outlook.png",
-      null,
       null,
       null,
       null,
