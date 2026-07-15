@@ -72,6 +72,53 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "planifier-une-reunion-avec-copilot",
+    section: "chat",
+    extraSections: ["m365"],
+    audience: ["user"],
+    product: "teams",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR", "IT Admin"],
+    level: "beginner",
+    icon: "/teams.png",
+    date: "2026-07-15",
+    isNew: true,
+    trending: true,
+    readMinutes: 4,
+    title: {
+      fr: "Planifier une réunion avec Copilot",
+      en: "Schedule a meeting using Copilot",
+    },
+    summary: {
+      fr: "Fini les allers-retours pour trouver un créneau. Depuis l'application Copilot, demandez simplement en langage naturel de planifier une réunion Teams : Copilot regarde les agendas, propose les créneaux où tout le monde est disponible, et prépare l'invitation. Il ne vous reste plus qu'à cliquer sur « Envoyer ».",
+      en: "No more back-and-forth to find a slot. From the Copilot app, simply ask in natural language to schedule a Teams meeting: Copilot checks calendars, suggests slots where everyone is free, and prepares the invite. All you have to do is click « Send ».",
+    },
+    steps: {
+      fr: [
+        "Demandez, en langage naturel\nDans l'application Copilot, il suffit de formuler votre besoin comme vous le diriez à un assistant. Par exemple : « Planifie une réunion Teams de 30 minutes avec Will Beringer la semaine prochaine pour discuter de Thunderbolt. »\nPas de formulaire, pas de menu à parcourir : vous décrivez la réunion (durée, participants, sujet, période), et Copilot se charge du reste.",
+        "Copilot compare les agendas\nCopilot consulte les calendriers des participants et cherche les moments où tout le monde est libre. Il vous répond en expliquant son choix : « J'ai trouvé des créneaux compatibles... les créneaux proposés ont été retenus car tous les participants sont disponibles. »\nAutrement dit, vous ne proposez plus un horaire au hasard : vous partez directement de disponibilités réelles.",
+        "Choisissez le bon créneau\nCopilot affiche plusieurs options de créneaux, avec un aperçu de la journée pour visualiser où la réunion se placerait. Vous n'avez qu'à sélectionner celui qui vous convient le mieux parmi les propositions.\nBesoin d'ajuster ? Vous pouvez encore modifier le titre ou ajouter un ordre du jour avant l'envoi, toujours en langage naturel.",
+        "Envoyez l'invitation\nUne fois le créneau choisi, un simple clic sur « Envoyer l'invitation » (Send invite) génère et envoie l'invitation Teams aux participants. La réunion est créée, le lien Teams est inclus, et tout le monde reçoit sa convocation.\nDe la demande à l'invitation envoyée : quelques secondes, sans quitter la conversation.",
+        "Ce qu'il faut retenir\nPlanifier une réunion avec Copilot, c'est déléguer la partie pénible : trouver un créneau commun. On décrit la réunion en une phrase, Copilot croise les agendas, propose les meilleurs horaires, et on valide d'un clic. Idéal pour les réunions rapides du quotidien, sans ouvrir son calendrier ni jongler entre les disponibilités de chacun.",
+      ],
+      en: [
+        "Ask, in natural language\nIn the Copilot app, just phrase your need as you would to an assistant. For example: « Schedule a 30-minute Teams meeting with Will Beringer next week to discuss Thunderbolt. »\nNo form, no menu to browse: you describe the meeting (duration, attendees, topic, timeframe), and Copilot handles the rest.",
+        "Copilot compares calendars\nCopilot checks the attendees' calendars and looks for times when everyone is free. It replies while explaining its choice: « I found compatible slots... the proposed slots were selected because all attendees are available. »\nIn other words, you no longer suggest a random time: you start straight from real availability.",
+        "Pick the right slot\nCopilot displays several slot options, with a day preview to see where the meeting would land. You just select the one that suits you best among the suggestions.\nNeed to adjust? You can still change the title or add an agenda before sending, still in natural language.",
+        "Send the invite\nOnce the slot is chosen, a simple click on « Send invite » generates and sends the Teams invitation to the attendees. The meeting is created, the Teams link is included, and everyone gets their invite.\nFrom request to sent invite: a few seconds, without leaving the conversation.",
+        "What to remember\nScheduling a meeting with Copilot means delegating the painful part: finding a common slot. You describe the meeting in one sentence, Copilot cross-references calendars, suggests the best times, and you confirm in one click. Perfect for quick everyday meetings, without opening your calendar or juggling everyone's availability.",
+      ],
+    },
+    stepImages: [
+      "/articles/planifier-reunion-copilot.png",
+      null,
+      null,
+      null,
+      null,
+    ],
+    imageWidth: "md",
+    tags: ["teams", "réunion", "meeting", "planifier", "agenda", "assistant"],
+  },
+  {
     slug: "parlez-a-copilot-voix-mobile",
     section: "chat",
     extraSections: ["m365"],
