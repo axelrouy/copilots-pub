@@ -102,22 +102,30 @@ export default async function TipPage({
               key={i}
               className="flex flex-col gap-3 rounded-2xl border border-border bg-surface p-4"
             >
-              <div className="flex gap-3">
-                {tip.stepIcons?.[i] ? (
+              {tip.imagesBeforeText &&
+                tip.stepImages?.[i] &&
+                !Array.isArray(tip.stepImages[i]) && (
                   <img
-                    src={tip.stepIcons[i] as string}
-                    alt=""
+                    src={tip.stepImages[i] as string}
+                    alt={`${pick(tip.title, locale)} : étape ${i + 1}`}
                     loading="lazy"
-                    className="h-9 w-9 shrink-0 rounded-xl border border-border bg-white object-contain"
+                    className={`rounded-xl border border-border ${
+                      tip.imageWidth === "xs"
+                        ? "w-full max-w-xs"
+                        : tip.imageWidth === "md"
+                          ? "w-full max-w-md"
+                          : "w-full"
+                    }`}
                   />
-                ) : (
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full brand-gradient text-sm font-bold text-white">
-                    {i + 1}
-                  </span>
                 )}
+              <div className="flex gap-3">
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full brand-gradient text-sm font-bold text-white">
+                  {i + 1}
+                </span>
                 <span className="text-sm leading-relaxed whitespace-pre-line">{renderWithLinks(s)}</span>
               </div>
-              {tip.stepImages?.[i] &&
+              {!tip.imagesBeforeText &&
+                tip.stepImages?.[i] &&
                 (Array.isArray(tip.stepImages[i]) ? (
                   <div className="ml-10 grid gap-3 sm:grid-cols-2">
                     {(tip.stepImages[i] as string[]).map((src, k) => (

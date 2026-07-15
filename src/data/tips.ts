@@ -35,7 +35,7 @@ export type Tip = {
   summary: Bilingual;
   steps: BilingualList;
   stepImages?: (string | string[] | null)[];
-  stepIcons?: (string | null)[];
+  imagesBeforeText?: boolean;
   imageWidth?: "xs" | "md" | "full";
   video?: string;
   videoPoster?: string;
@@ -148,14 +148,6 @@ export const tips: Tip[] = [
     },
     stepImages: [
       "/articles/agents-1p-built-by-microsoft.png",
-      null, null, null, null, null,
-      null, null, null,
-      null, null, null, null,
-      null, null, null, null, null,
-      null, null,
-    ],
-    stepIcons: [
-      null,
       "/articles/agents/plan-my-day.png",
       "/articles/agents/writing-coach.png",
       "/articles/agents/idea-coach.png",
@@ -176,6 +168,7 @@ export const tips: Tip[] = [
       null,
       null,
     ],
+    imagesBeforeText: true,
     tags: ["agents", "agents 1p", "analyst", "researcher", "workflows", "copilot studio"],
   },
   {
