@@ -76,6 +76,58 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "meeting-recaps-teams",
+    section: "m365",
+    audience: ["user"],
+    product: "teams",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
+    level: "beginner",
+    icon: "/teams.png",
+    date: "2026-07-15",
+    isNew: true,
+    trending: true,
+    readMinutes: 5,
+    title: {
+      fr: "Meeting Recaps : tous vos comptes rendus de réunion au même endroit",
+      en: "Meeting Recaps: all your meeting summaries in one place",
+    },
+    summary: {
+      fr: "Une application Teams souvent méconnue qui rassemble toutes vos réunions, passées comme à venir, avec pour chacune un récapitulatif intelligent. Fini de chercher dans quel chat ou quel mail se trouve le compte rendu : tout est centralisé, et vous pouvez même écouter un résumé audio.",
+      en: "An often-overlooked Teams app that brings together all your meetings, past and upcoming, each with an intelligent recap. No more digging through chats or emails to find a summary: everything is centralized, and you can even listen to an audio recap.",
+    },
+    steps: {
+      fr: [
+        "À quoi ça sert\nEntre les réunions que vous ratez, celles que vous suivez de loin et celles où vous étiez sans avoir eu le temps de tout noter, l'information finit éparpillée. Meeting Recaps règle ça : c'est un endroit unique dans Teams qui liste toutes vos réunions et, pour chacune, un récapitulatif généré par l'IA (points clés, tâches à faire, moments où vous avez été mentionné). Un seul réflexe, un seul endroit pour retrouver ce qui s'est dit.",
+        "Comment y accéder\nDans la barre latérale de Teams, cliquez sur les « ... » (Autres applications) et cherchez « Meeting Recaps ». Épinglez-la d'un clic droit pour la garder à portée de main.",
+        "Retrouver toutes vos réunions\nL'onglet « Home » affiche vos réunions récentes, les plus récentes en haut. Des filtres rapides vous aident à cibler : « Mentions » (là où on vous a cité), « Missed » (celles que vous avez manquées), « Followed » (celles que vous suivez). Une barre de recherche permet de retrouver une réunion par son nom. À droite de chaque réunion, le bouton « Recap » ouvre son compte rendu intelligent complet.",
+        "Écouter un résumé audio\nPas le temps de lire ? Meeting Recaps peut vous générer un résumé audio, comme un mini-podcast de votre réunion. Sélectionnez une ou plusieurs réunions, puis cliquez sur « Generate audio recap ».",
+        "Le récap audio, chapitre par chapitre\nDans l'onglet « Audio recaps », le résumé se présente en chapitres : une intro, les grands sujets abordés, une conclusion. Vous naviguez de l'un à l'autre, vous réglez la vitesse de lecture, et vous pouvez basculer sur la transcription écrite à tout moment. Idéal à écouter dans les transports ou entre deux rendez-vous.",
+        "L'écouter sur mobile\nEn haut à droite, « Listen on mobile » affiche un QR code : scannez-le avec l'appareil photo de votre téléphone pour reprendre l'écoute là où vous en êtes, en déplacement.",
+        "Ce qu'il faut retenir\nMeeting Recaps, c'est la mémoire centralisée de vos réunions dans Teams : tout au même endroit, un récapitulatif intelligent par réunion, et un résumé audio quand vous préférez écouter plutôt que lire. Le bon réflexe après une réunion manquée, ou pour se remettre en tête un échange important avant d'enchaîner.",
+      ],
+      en: [
+        "What it's for\nBetween the meetings you miss, the ones you follow loosely and the ones you attended without time to note everything, information ends up scattered. Meeting Recaps fixes that: it's a single place in Teams that lists all your meetings and, for each one, an AI-generated recap (key points, to-dos, moments where you were mentioned). One reflex, one place to find what was said.",
+        "How to access it\nIn the Teams side bar, click « ... » (More apps) and search for « Meeting Recaps ». Right-click to pin it and keep it within reach.",
+        "Find all your meetings\nThe « Home » tab shows your recent meetings, most recent on top. Quick filters help you narrow down: « Mentions » (where you were named), « Missed » (the ones you missed), « Followed » (the ones you follow). A search bar lets you find a meeting by name. To the right of each meeting, the « Recap » button opens its full intelligent summary.",
+        "Listen to an audio summary\nNo time to read? Meeting Recaps can generate an audio summary, like a mini-podcast of your meeting. Select one or several meetings, then click « Generate audio recap ».",
+        "The audio recap, chapter by chapter\nIn the « Audio recaps » tab, the summary comes in chapters: an intro, the main topics covered, an outro. You jump from one to another, adjust playback speed, and can switch to the written transcript at any time. Perfect to listen to on your commute or between two appointments.",
+        "Listen on mobile\nTop right, « Listen on mobile » shows a QR code: scan it with your phone camera to pick up where you left off, on the go.",
+        "What to remember\nMeeting Recaps is the centralized memory of your meetings in Teams: everything in one place, an intelligent recap per meeting, and an audio summary when you'd rather listen than read. The right reflex after a missed meeting, or to refresh an important discussion before moving on.",
+      ],
+    },
+    stepImages: [
+      null,
+      "/articles/meeting-recaps-acces.png",
+      "/articles/meeting-recaps-home.png",
+      "/articles/meeting-recaps-audio-select.png",
+      "/articles/meeting-recaps-audio.png",
+      "/articles/meeting-recaps-listen-mobile.png",
+      null,
+    ],
+    imageWidth: "md",
+    tags: ["Teams", "réunion", "recap", "compte rendu", "audio recap", "meeting"],
+  },
+  {
     slug: "edit-with-copilot-word-allow-editing",
     section: "m365",
     audience: ["user"],
