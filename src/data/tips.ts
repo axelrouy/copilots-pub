@@ -81,6 +81,7 @@ export const tips: Tip[] = [
     isNew: true,
     trending: true,
     readMinutes: 5,
+    adoptionWeeks: [2, 7],
     title: {
       fr: "Personnaliser Copilot : Custom Instructions et Memories",
       en: "Personalize Copilot: Custom Instructions and Memories",
@@ -355,6 +356,7 @@ export const tips: Tip[] = [
     isNew: true,
     trending: true,
     readMinutes: 5,
+    adoptionWeeks: [1],
     title: {
       fr: "Où accéder à Copilot ? Tous les points d'entrée",
       en: "Where can you access Copilot? All the entry points",
@@ -413,6 +415,7 @@ export const tips: Tip[] = [
     isNew: true,
     trending: true,
     readMinutes: 6,
+    adoptionWeeks: [1, 4],
     title: {
       fr: "Faire le tour de l'interface Microsoft 365 Copilot",
       en: "A guided tour of the Microsoft 365 Copilot interface",
