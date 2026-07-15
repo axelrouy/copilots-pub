@@ -69,6 +69,58 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "agents-1p-microsoft-copilot",
+    section: "m365",
+    extraSections: ["chat"],
+    audience: ["user", "it"],
+    product: "agents",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR", "IT Admin"],
+    level: "intermediate",
+    icon: "/agents.png",
+    date: "2026-07-15",
+    isNew: true,
+    trending: true,
+    readMinutes: 7,
+    title: {
+      fr: "Les agents 1P de Microsoft 365 Copilot : le tour d'horizon",
+      en: "The 1P agents of Microsoft 365 Copilot: the full tour",
+    },
+    summary: {
+      fr: "Vous connaissez le Copilot généraliste. Mais saviez-vous que Microsoft livre déjà une petite équipe de spécialistes prêts à l'emploi ? Ce sont les agents 1P (first-party), « Built by Microsoft » : Analyst, Researcher, Plan My Day, Workflows… Voici qui fait quoi, rangé par familles, avec des exemples concrets.",
+      en: "You know the generalist Copilot. But did you know Microsoft already ships a small team of ready-to-use specialists? These are the 1P (first-party) agents, « Built by Microsoft »: Analyst, Researcher, Plan My Day, Workflows… Here's who does what, sorted by family, with concrete examples.",
+    },
+    steps: {
+      fr: [
+        "Des spécialistes prêts à l'emploi, signés Microsoft\nLà où Copilot répond à (presque) tout, les agents sont des assistants spécialisés, chacun taillé pour une mission précise. Les agents 1P, pour « first-party », sont ceux conçus et livrés par Microsoft, directement disponibles dans Microsoft 365 Copilot sous la mention « Built by Microsoft ». Pas d'installation, pas de configuration : vous les sélectionnez et vous les mettez au travail. On les passe en revue par familles.",
+        "Famille 1 : Productivité personnelle\nCeux qui vous font gagner du temps au quotidien :\n➞ Plan My Day : compile un vrai briefing matinal (réunions importantes, e-mails qui demandent une action, urgences). Ex. « Prépare mon briefing du matin avec mes réunions importantes et les emails nécessitant une action. »\n➞ Writing Coach : améliore vos écrits pro (ton, clarté, structure, impact). Ex. « Réécris cet email pour le rendre plus convaincant auprès d'un comité exécutif. »\n➞ Idea Coach : votre partenaire de brainstorming, il génère et structure les idées. Ex. « Génère 20 idées pour améliorer l'adoption de Copilot chez nos clients. »\n➞ Career Coach : coach de développement professionnel (compétences, entretiens, plan de progression). Ex. « Quelles compétences dois-je développer pour devenir responsable d'une équipe IA ? »\n➞ Learning Coach : accompagne l'apprentissage continu et construit des parcours. Ex. « Construis un plan d'apprentissage de 30 jours sur Copilot Studio. »",
+        "Famille 2 : Recherche & analyse\nLes agents qui creusent la donnée et l'information :\n➞ Analyst : analyse avancée de fichiers complexes (Excel, CSV, PDF, rapports), il repère tendances, corrélations et insights. Ex. « Analyse les fichiers de ventes des 12 derniers mois et identifie les facteurs communs aux régions ayant dépassé leurs objectifs. »\n➞ Researcher : recherche approfondie qui combine vos données Microsoft 365 et des sources externes pour produire de vraies analyses. Ex. « Prépare une analyse de l'adoption de l'IA générative dans la construction et compare avec nos initiatives internes. »\n➞ SME Finder : identifie les experts (Subject Matter Experts) les plus pertinents dans votre organisation. Ex. « Qui sont les experts SharePoint Online les plus actifs dans l'organisation ? »",
+        "Famille 3 : Création & automatisation\nCeux qui construisent, sans (ou presque) une ligne de code :\n➞ App Builder (Frontier) : transforme une idée en application, interface et modèle de données compris. Ex. « Crée une application de suivi des demandes clients. »\n➞ Workflows (Frontier) : crée des automatisations en langage naturel et connecte plusieurs services. Ex. « Quand un nouveau collaborateur arrive, crée automatiquement ses tâches d'onboarding. »\n➞ SharePoint List Agent : transforme le contexte d'une conversation en liste SharePoint structurée. Ex. « Transforme cette réunion en liste SharePoint de suivi d'actions. »\n➞ AI Learning Advisor : l'expert des produits IA Microsoft, il explique les concepts et accompagne les créateurs d'agents. Ex. « Explique la différence entre un agent déclaratif et un agent autonome. »",
+        "Famille 4 : Gestion métier & organisation\nLes agents au service du collectif :\n➞ Planner (Frontier) : extension intelligente de Microsoft Planner (création de tâches, suivi, échéances). Ex. « Crée un plan projet pour le déploiement de 10 000 licences Copilot. »\n➞ Workforce Insights (Frontier) : analyse organisationnelle (structure, compétences, cartographie des équipes). Ex. « Quels sont les départements les plus impliqués dans les projets IA ? »\n➞ Surveys : génère, diffuse et analyse des enquêtes. Ex. « Crée un sondage pour mesurer la satisfaction des utilisateurs Copilot après 30 jours. »\n➞ Learning : connecté aux contenus de formation Microsoft, il recommande parcours et certifications. Ex. « Trouve les meilleures ressources pour préparer la certification MS-4007. »\n➞ Frontline Agent (Preview) : pensé pour les collaborateurs terrain (retail, industrie, logistique, maintenance). Ex. « Quelle est la procédure de redémarrage d'un équipement de production ? »",
+        "Les 5 agents que je mettrais en avant\nSi vous ne deviez en retenir que quelques-uns pour un client, je miserais sur ceux qui font vraiment la différence aujourd'hui : Researcher (l'expertise à la demande), Analyst (la donnée qui parle), SME Finder (le bon expert en un instant), Plan My Day (le rituel du matin) et Workflows (l'automatisation sans code). Ce sont les plus différenciants, et souvent ceux qui déclenchent le « effet waouh » en atelier.",
+        "Ce qu'il faut retenir\nLes agents 1P se répartissent en 4 grandes familles : Productivité personnelle (Plan My Day, Writing Coach, Career Coach, Learning Coach), Recherche & analyse (Analyst, Researcher, SME Finder), Création & automatisation (App Builder, Workflows, SharePoint List Agent), Gestion métier & organisation (Planner, Workforce Insights, Surveys, Frontline Agent). Le bon réflexe d'adoption : ne les présentez pas tous d'un coup. On commence par un ou deux agents qui parlent au métier de l'utilisateur, et on élargit une fois les bases acquises. C'est l'étape 6 du parcours d'adoption.",
+      ],
+      en: [
+        "Ready-to-use specialists, built by Microsoft\nWhere Copilot answers (almost) anything, agents are specialized assistants, each tailored for one precise mission. The 1P agents, for « first-party », are the ones designed and shipped by Microsoft, directly available in Microsoft 365 Copilot under the « Built by Microsoft » label. No install, no setup: you select them and put them to work. Let's review them by family.",
+        "Family 1: Personal productivity\nThe ones that save you time every day:\n➞ Plan My Day: compiles a real morning briefing (important meetings, emails needing action, urgencies). E.g. « Prepare my morning briefing with my important meetings and the emails needing an action. »\n➞ Writing Coach: improves your professional writing (tone, clarity, structure, impact). E.g. « Rewrite this email to make it more convincing for an executive committee. »\n➞ Idea Coach: your brainstorming partner, it generates and structures ideas. E.g. « Generate 20 ideas to improve Copilot adoption at our clients. »\n➞ Career Coach: professional development coach (skills, interviews, progression plan). E.g. « Which skills should I develop to become the lead of an AI team? »\n➞ Learning Coach: supports continuous learning and builds paths. E.g. « Build a 30-day learning plan on Copilot Studio. »",
+        "Family 2: Research & analysis\nThe agents that dig into data and information:\n➞ Analyst: advanced analysis of complex files (Excel, CSV, PDF, reports), spotting trends, correlations and insights. E.g. « Analyze the last 12 months of sales files and identify the common factors of regions that beat their targets. »\n➞ Researcher: deep research combining your Microsoft 365 data and external sources to produce real analyses. E.g. « Prepare an analysis of generative AI adoption in construction and compare with our internal initiatives. »\n➞ SME Finder: identifies the most relevant experts (Subject Matter Experts) in your organization. E.g. « Who are the most active SharePoint Online experts in the organization? »",
+        "Family 3: Creation & automation\nThe ones that build, with (almost) no code:\n➞ App Builder (Frontier): turns an idea into an app, UI and data model included. E.g. « Create an app to track client requests. »\n➞ Workflows (Frontier): creates automations in natural language and connects several services. E.g. « When a new employee joins, automatically create their onboarding tasks. »\n➞ SharePoint List Agent: turns a conversation's context into a structured SharePoint list. E.g. « Turn this meeting into a SharePoint action-tracking list. »\n➞ AI Learning Advisor: the expert on Microsoft AI products, it explains concepts and supports agent creators. E.g. « Explain the difference between a declarative agent and an autonomous agent. »",
+        "Family 4: Business & organization management\nThe agents serving the collective:\n➞ Planner (Frontier): a smart extension of Microsoft Planner (task creation, tracking, deadlines). E.g. « Create a project plan for the rollout of 10,000 Copilot licenses. »\n➞ Workforce Insights (Frontier): organizational analysis (structure, skills, team mapping). E.g. « Which departments are the most involved in AI projects? »\n➞ Surveys: generates, distributes and analyzes surveys. E.g. « Create a survey to measure Copilot user satisfaction after 30 days. »\n➞ Learning: connected to Microsoft training content, it recommends paths and certifications. E.g. « Find the best resources to prepare the MS-4007 certification. »\n➞ Frontline Agent (Preview): designed for frontline workers (retail, industry, logistics, maintenance). E.g. « What is the restart procedure for a production equipment? »",
+        "The 5 agents I'd put forward\nIf you had to keep just a few for a client, I'd bet on the ones that truly make a difference today: Researcher (expertise on demand), Analyst (data that speaks), SME Finder (the right expert in an instant), Plan My Day (the morning ritual) and Workflows (no-code automation). They're the most differentiating, and often the ones that trigger the « wow effect » in a workshop.",
+        "What to remember\nThe 1P agents fall into 4 broad families: Personal productivity (Plan My Day, Writing Coach, Career Coach, Learning Coach), Research & analysis (Analyst, Researcher, SME Finder), Creation & automation (App Builder, Workflows, SharePoint List Agent), Business & organization management (Planner, Workforce Insights, Surveys, Frontline Agent). The right adoption reflex: don't present them all at once. Start with one or two agents that speak to the user's job, then expand once the basics are in place. That's step 6 of the adoption journey.",
+      ],
+    },
+    stepImages: [
+      "/articles/agents-1p-built-by-microsoft.png",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+    ],
+    tags: ["agents", "agents 1p", "analyst", "researcher", "workflows", "copilot studio"],
+  },
+  {
     slug: "personnaliser-copilot-instructions-memories",
     section: "m365",
     extraSections: ["chat"],
