@@ -200,6 +200,21 @@ export default async function TipPage({
                   </div>
                 </div>
               )}
+              {tip.stepVideos
+                ?.filter((v) => v.step === i)
+                .map((v, vi) => (
+                  <video
+                    key={vi}
+                    className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"
+                    src={v.src}
+                    poster={v.poster}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                  />
+                ))}
               {tip.video && tip.videoStep === i && (
                 <video
                   className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"
