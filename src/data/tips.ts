@@ -109,6 +109,14 @@ export const tips: Tip[] = [
         "What to remember\nCowork is Copilot moving from « I answer » to « I'll handle it ». You hand over a mission, it breaks it down, works through it, and comes back for your approval at the important moments. Think of it as an efficient junior teammate: you frame it, it executes, you validate. The best of both worlds, your judgment and its ability to power through the work.",
       ],
     },
+    stepImages: [
+      "/articles/copilot-cowork-card.png",
+      null,
+      null,
+      null,
+      null,
+    ],
+    imageWidth: "md",
     tags: ["cowork", "copilot cowork", "agentique", "mission", "prise en main", "avec licence"],
   },
   {
