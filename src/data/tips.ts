@@ -35,6 +35,7 @@ export type Tip = {
   summary: Bilingual;
   steps: BilingualList;
   stepImages?: (string | string[] | null)[];
+  stepIcons?: (string | null)[];
   imageWidth?: "xs" | "md" | "full";
   video?: string;
   videoPoster?: string;
@@ -152,6 +153,28 @@ export const tips: Tip[] = [
       null, null, null, null,
       null, null, null, null, null,
       null, null,
+    ],
+    stepIcons: [
+      null,
+      "/articles/agents/plan-my-day.png",
+      "/articles/agents/writing-coach.png",
+      "/articles/agents/idea-coach.png",
+      "/articles/agents/career-coach.png",
+      "/articles/agents/learning-coach.png",
+      "/articles/agents/analyst.png",
+      "/articles/agents/researcher.png",
+      "/articles/agents/sme-finder.png",
+      "/articles/agents/app-builder.png",
+      "/articles/agents/workflows.png",
+      "/articles/agents/sharepoint-list-agent.png",
+      "/articles/agents/ai-learning-advisor.png",
+      "/articles/agents/planner.png",
+      "/articles/agents/workforce-insights.png",
+      "/articles/agents/surveys.png",
+      "/articles/agents/learning.png",
+      "/articles/agents/frontline-agent.png",
+      null,
+      null,
     ],
     tags: ["agents", "agents 1p", "analyst", "researcher", "workflows", "copilot studio"],
   },

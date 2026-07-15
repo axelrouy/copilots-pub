@@ -103,9 +103,18 @@ export default async function TipPage({
               className="flex flex-col gap-3 rounded-2xl border border-border bg-surface p-4"
             >
               <div className="flex gap-3">
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full brand-gradient text-sm font-bold text-white">
-                  {i + 1}
-                </span>
+                {tip.stepIcons?.[i] ? (
+                  <img
+                    src={tip.stepIcons[i] as string}
+                    alt=""
+                    loading="lazy"
+                    className="h-9 w-9 shrink-0 rounded-xl border border-border bg-white object-contain"
+                  />
+                ) : (
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full brand-gradient text-sm font-bold text-white">
+                    {i + 1}
+                  </span>
+                )}
                 <span className="text-sm leading-relaxed whitespace-pre-line">{renderWithLinks(s)}</span>
               </div>
               {tip.stepImages?.[i] &&
