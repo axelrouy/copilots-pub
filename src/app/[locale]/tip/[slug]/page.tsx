@@ -148,6 +148,40 @@ export default async function TipPage({
                     }`}
                   />
                 ))}
+              {tip.stepTable && tip.stepTable.step === i && (
+                <div className="ml-10 overflow-hidden rounded-xl border border-border">
+                  <table className="w-full border-collapse text-sm">
+                    <thead>
+                      <tr className="bg-black/5 dark:bg-white/5">
+                        {tip.stepTable.columns.map((c, ci) => (
+                          <th
+                            key={ci}
+                            className="border-b border-border px-4 py-2.5 text-left font-bold"
+                          >
+                            {pick(c, locale)}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {tip.stepTable.rows.map((row, ri) => (
+                        <tr key={ri} className="border-b border-border last:border-0">
+                          {row.map((cell, cii) => (
+                            <td
+                              key={cii}
+                              className={`px-4 py-2.5 align-top ${
+                                cii === 0 ? "font-medium" : "text-muted"
+                              }`}
+                            >
+                              {pick(cell, locale)}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
               {tip.video && tip.videoStep === i && (
                 <video
                   className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"

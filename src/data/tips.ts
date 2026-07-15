@@ -36,6 +36,7 @@ export type Tip = {
   steps: BilingualList;
   stepImages?: (string | string[] | null)[];
   imagesBeforeText?: boolean;
+  stepTable?: { step: number; columns: Bilingual[]; rows: Bilingual[][] };
   imageWidth?: "xs" | "md" | "full";
   video?: string;
   videoPoster?: string;
@@ -116,7 +117,7 @@ export const tips: Tip[] = [
         "Frontline Agent (Preview) · Gestion métier & organisation\nPensé pour les collaborateurs terrain (retail, industrie, logistique, maintenance). Il offre recherche documentaire, support opérationnel, réponses aux procédures et assistance en mobilité.\nExemple : « Quelle est la procédure de redémarrage d'un équipement de production ? »",
 
         "Les 5 agents que je mettrais en avant\nSi vous ne deviez en retenir que quelques-uns pour un client, je miserais sur ceux qui font vraiment la différence aujourd'hui : Researcher (l'expertise à la demande), Analyst (la donnée qui parle), SME Finder (le bon expert en un instant), Plan My Day (le rituel du matin) et Workflows (l'automatisation sans code). Ce sont les plus différenciants, et souvent ceux qui déclenchent le « effet waouh » en atelier.",
-        "Ce qu'il faut retenir\nLes agents 1P se répartissent en 4 grandes familles : Productivité personnelle (Plan My Day, Writing Coach, Idea Coach, Career Coach, Learning Coach), Recherche & analyse (Analyst, Researcher, SME Finder), Création & automatisation (App Builder, Workflows, SharePoint List Agent, AI Learning Advisor), Gestion métier & organisation (Planner, Workforce Insights, Surveys, Learning, Frontline Agent). Le bon réflexe d'adoption : ne les présentez pas tous d'un coup. On commence par un ou deux agents qui parlent au métier de l'utilisateur, et on élargit une fois les bases acquises. C'est l'étape 6 du parcours d'adoption.",
+        "Ce qu'il faut retenir\nLes agents 1P se répartissent en 4 grandes familles, résumées dans le tableau ci-dessous. Le bon réflexe d'adoption : ne les présentez pas tous d'un coup. On commence par un ou deux agents qui parlent au métier de l'utilisateur, et on élargit une fois les bases acquises. C'est l'étape 6 du parcours d'adoption.",
       ],
       en: [
         "Ready-to-use specialists, built by Microsoft\nWhere Copilot answers (almost) anything, agents are specialized assistants, each tailored for one precise mission. The 1P agents, for « first-party », are the ones designed and shipped by Microsoft, directly available in Microsoft 365 Copilot under the « Built by Microsoft » label. No install, no setup: you select them and put them to work.\nIn the sections below, I introduce each agent, one by one, grouped into 4 broad families.",
@@ -143,7 +144,7 @@ export const tips: Tip[] = [
         "Frontline Agent (Preview) · Business & organization management\nDesigned for frontline workers (retail, industry, logistics, maintenance). It offers document search, operational support, procedure answers and on-the-go assistance.\nExample: « What is the restart procedure for a production equipment? »",
 
         "The 5 agents I'd put forward\nIf you had to keep just a few for a client, I'd bet on the ones that truly make a difference today: Researcher (expertise on demand), Analyst (data that speaks), SME Finder (the right expert in an instant), Plan My Day (the morning ritual) and Workflows (no-code automation). They're the most differentiating, and often the ones that trigger the « wow effect » in a workshop.",
-        "What to remember\nThe 1P agents fall into 4 broad families: Personal productivity (Plan My Day, Writing Coach, Idea Coach, Career Coach, Learning Coach), Research & analysis (Analyst, Researcher, SME Finder), Creation & automation (App Builder, Workflows, SharePoint List Agent, AI Learning Advisor), Business & organization management (Planner, Workforce Insights, Surveys, Learning, Frontline Agent). The right adoption reflex: don't present them all at once. Start with one or two agents that speak to the user's job, then expand once the basics are in place. That's step 6 of the adoption journey.",
+        "What to remember\nThe 1P agents fall into 4 broad families, summarized in the table below. The right adoption reflex: don't present them all at once. Start with one or two agents that speak to the user's job, then expand once the basics are in place. That's step 6 of the adoption journey.",
       ],
     },
     stepImages: [
@@ -169,6 +170,40 @@ export const tips: Tip[] = [
       null,
     ],
     imagesBeforeText: true,
+    stepTable: {
+      step: 19,
+      columns: [
+        { fr: "Famille", en: "Family" },
+        { fr: "Agents", en: "Agents" },
+      ],
+      rows: [
+        [
+          { fr: "Productivité personnelle", en: "Personal productivity" },
+          {
+            fr: "Plan My Day, Writing Coach, Career Coach, Learning Coach",
+            en: "Plan My Day, Writing Coach, Career Coach, Learning Coach",
+          },
+        ],
+        [
+          { fr: "Recherche & analyse", en: "Research & analysis" },
+          { fr: "Analyst, Researcher, SME Finder", en: "Analyst, Researcher, SME Finder" },
+        ],
+        [
+          { fr: "Création & automatisation", en: "Creation & automation" },
+          {
+            fr: "App Builder, Workflows, SharePoint List Agent",
+            en: "App Builder, Workflows, SharePoint List Agent",
+          },
+        ],
+        [
+          { fr: "Gestion métier & organisation", en: "Business & organization management" },
+          {
+            fr: "Planner, Workforce Insights, Surveys, Frontline Agent",
+            en: "Planner, Workforce Insights, Surveys, Frontline Agent",
+          },
+        ],
+      ],
+    },
     tags: ["agents", "agents 1p", "analyst", "researcher", "workflows", "copilot studio"],
   },
   {
