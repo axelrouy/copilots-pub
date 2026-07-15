@@ -110,7 +110,7 @@ export default async function TipPage({
                     alt={`${pick(tip.title, locale)} : étape ${i + 1}`}
                     loading="lazy"
                     className={`rounded-xl border border-border ${
-                      i === 0 ? "w-full" : "w-full max-w-md"
+                      i === 0 ? "w-full" : "w-full max-w-sm"
                     }`}
                   />
                 )}
