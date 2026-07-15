@@ -129,7 +129,7 @@ export default async function HomePage({
             (p) => (
               <Link
                 key={p.id}
-                href={`/${locale}/explorer`}
+                href={`/${locale}/explorer?product=${p.id}`}
                 className="card-lift flex flex-col items-center gap-2 rounded-2xl border border-border bg-surface p-5 text-center"
               >
                 <ProductIcon icon={p.icon} label={pick(p.label, locale)} size={44} className="text-4xl" />

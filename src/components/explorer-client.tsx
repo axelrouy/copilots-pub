@@ -8,12 +8,17 @@ import TipCard from "./tip-card";
 export default function ExplorerClient({
   locale,
   dict,
+  initialProduct,
 }: {
   locale: Locale;
   dict: Dictionary;
+  initialProduct?: string;
 }) {
+  const validProduct = PRODUCTS.some((p) => p.id === initialProduct)
+    ? (initialProduct as Product)
+    : "any";
   const [role, setRole] = useState<string>("any");
-  const [product, setProduct] = useState<Product | "any">("any");
+  const [product, setProduct] = useState<Product | "any">(validProduct);
 
   const results = useMemo(() => {
     return tips.filter((t) => {

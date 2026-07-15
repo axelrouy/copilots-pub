@@ -4,11 +4,14 @@ import ExplorerClient from "@/components/explorer-client";
 
 export default async function ExplorerPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ product?: string }>;
 }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
+  const { product } = await searchParams;
   const dict = getDictionary(locale);
 
   return (
@@ -18,7 +21,7 @@ export default async function ExplorerPage({
         <h1 className="text-3xl font-extrabold">{dict.explorer.title}</h1>
         <p className="mt-2 max-w-2xl text-muted">{dict.explorer.subtitle}</p>
       </div>
-      <ExplorerClient locale={locale} dict={dict} />
+      <ExplorerClient locale={locale} dict={dict} initialProduct={product} />
     </div>
   );
 }
