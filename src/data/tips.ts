@@ -8,6 +8,7 @@ export type Product =
   | "powerpoint"
   | "notebooks"
   | "agents"
+  | "cowork"
   | "scout"
   | "general";
 export type Level = "beginner" | "intermediate" | "advanced";
@@ -56,6 +57,7 @@ export const PRODUCTS: { id: Product; label: Bilingual; icon: string }[] = [
   { id: "powerpoint", label: { fr: "PowerPoint", en: "PowerPoint" }, icon: "/powerpoint.png" },
   { id: "notebooks", label: { fr: "Notebooks", en: "Notebooks" }, icon: "/notebooks.png" },
   { id: "agents", label: { fr: "Agents", en: "Agents" }, icon: "/agents.png" },
+  { id: "cowork", label: { fr: "Cowork", en: "Cowork" }, icon: "/cowork.png" },
   { id: "scout", label: { fr: "Word", en: "Word" }, icon: "/word.png" },
   { id: "general", label: { fr: "Général", en: "General" }, icon: "/general.png" },
 ];
@@ -71,6 +73,44 @@ export const ROLES: Bilingual[] = [
 ];
 
 export const tips: Tip[] = [
+  {
+    slug: "decouvrir-copilot-cowork",
+    section: "m365",
+    audience: ["user"],
+    product: "cowork",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR", "IT Admin"],
+    level: "beginner",
+    icon: "/cowork.png",
+    date: "2026-07-15",
+    isNew: true,
+    trending: true,
+    readMinutes: 5,
+    title: {
+      fr: "Découvrir Copilot Cowork",
+      en: "Discover Copilot Cowork",
+    },
+    summary: {
+      fr: "Cowork, c'est l'espace où Copilot passe d'assistant qui répond à collègue qui agit. On lui confie une mission un peu large, il la découpe, avance étape par étape, et revient vers vous quand il a besoin d'un feu vert. Voici comment l'aborder sereinement.",
+      en: "Cowork is where Copilot goes from an assistant that answers to a teammate that gets things done. You hand it a broad task, it breaks it down, works step by step, and comes back to you when it needs a green light. Here's how to get comfortable with it.",
+    },
+    steps: {
+      fr: [
+        "Cowork, c'est quoi au juste ?\nJusqu'ici, on posait une question à Copilot et il répondait dans la foulée. Avec Cowork, on change de posture : on lui confie une mission, pas juste une question.\nConcrètement, Copilot travaille « à côté de vous » sur des tâches qui demandent plusieurs étapes : rassembler des informations, produire un premier jet, le structurer, puis le peaufiner. Vous gardez la main, lui fait le gros du travail.",
+        "Il découpe le travail tout seul\nPlutôt que de tout faire d'un bloc, Cowork transforme votre demande en un plan d'actions. Vous voyez les étapes s'enchaîner, ce qui est fait, ce qui reste à faire.\nCette transparence change tout : vous n'avez plus une boîte noire qui recrache un résultat, mais un collègue qui montre son raisonnement et sur lequel vous pouvez intervenir à tout moment.",
+        "Vous restez aux commandes\nCowork ne part pas en autonomie totale sans filet. Aux moments clés, il s'arrête et vous demande votre avis : valider une direction, choisir entre deux options, confirmer avant d'aller plus loin.\nVous pouvez le rediriger, corriger le tir, ajouter une contrainte. C'est vous qui décidez du niveau de délégation, étape après étape.",
+        "Quand l'utiliser ?\nCowork brille sur les tâches un peu longues, où l'on aurait tendance à procrastiner : préparer un dossier complet, dégrossir une analyse à partir de plusieurs sources, monter la trame d'un livrable, faire le tour d'un sujet avant une réunion.\nPour une réponse rapide, le chat classique suffit. Pour une mission qui aurait pris une demi-journée, Cowork prend le relais.",
+        "Ce qu'il faut retenir\nCowork, c'est Copilot qui passe de « je réponds » à « je m'en occupe ». On confie une mission, il la découpe, avance, et revient chercher votre validation aux moments importants. Voyez-le comme un collègue junior efficace : vous cadrez, il exécute, vous validez. Le meilleur des deux mondes, votre jugement et sa capacité à abattre le travail.",
+      ],
+      en: [
+        "So what exactly is Cowork?\nUntil now, you asked Copilot a question and it answered right away. With Cowork, the posture shifts: you hand it a mission, not just a question.\nIn practice, Copilot works « alongside you » on tasks that take several steps: gathering information, producing a first draft, structuring it, then refining it. You stay in control, it does the heavy lifting.",
+        "It breaks the work down on its own\nInstead of doing everything in one go, Cowork turns your request into an action plan. You watch the steps unfold, what's done, what's left to do.\nThat transparency changes everything: no more black box spitting out a result, but a teammate showing its reasoning, one you can step into at any time.",
+        "You stay in the driver's seat\nCowork doesn't run fully autonomous without a safety net. At key moments it pauses and asks for your input: approve a direction, pick between two options, confirm before going further.\nYou can redirect it, course-correct, add a constraint. You decide the level of delegation, step after step.",
+        "When should you use it?\nCowork shines on longer tasks, the ones you tend to put off: preparing a full brief, roughing out an analysis from several sources, building the outline of a deliverable, getting across a topic before a meeting.\nFor a quick answer, classic chat is enough. For a mission that would have taken half a day, Cowork takes over.",
+        "What to remember\nCowork is Copilot moving from « I answer » to « I'll handle it ». You hand over a mission, it breaks it down, works through it, and comes back for your approval at the important moments. Think of it as an efficient junior teammate: you frame it, it executes, you validate. The best of both worlds, your judgment and its ability to power through the work.",
+      ],
+    },
+    tags: ["cowork", "copilot cowork", "agentique", "mission", "prise en main", "avec licence"],
+  },
   {
     slug: "planifier-une-reunion-avec-copilot",
     section: "chat",
