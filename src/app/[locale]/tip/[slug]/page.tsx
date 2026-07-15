@@ -70,7 +70,7 @@ export default async function TipPage({
       </div>
 
       <div className="flex items-start gap-4">
-        <span><ProductIcon icon={tip.icon} size={64} /></span>
+        <span><ProductIcon icon={tip.icon} size={80} /></span>
         <div>
           <h1 className="text-3xl font-extrabold leading-tight">
             {pick(tip.title, locale)}
