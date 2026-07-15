@@ -76,6 +76,50 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "cowork-prompt-multitache-cost",
+    section: "m365",
+    audience: ["user"],
+    product: "cowork",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
+    level: "intermediate",
+    icon: "/cowork.png",
+    date: "2026-07-15",
+    isNew: true,
+    trending: true,
+    readMinutes: 6,
+    title: {
+      fr: "Cowork en pratique : un prompt multi-tâches et le suivi des crédits avec /cost",
+      en: "Cowork in practice: a multi-task prompt and tracking credits with /cost",
+    },
+    summary: {
+      fr: "Vous connaissez Cowork, voyons-le à l'œuvre. Un exemple de prompt qui enchaîne plusieurs tâches d'un coup, le bon réflexe pour choisir entre Cowork et le Copilot classique, et la commande /cost pour savoir combien de crédits votre demande a consommé.",
+      en: "You know Cowork, now let's see it in action. An example prompt that chains several tasks at once, the right reflex to choose between Cowork and classic Copilot, and the /cost command to see how many credits your request used.",
+    },
+    steps: {
+      fr: [
+        "Cowork ou Copilot : lequel choisir ?\nLa règle est simple. Si votre demande tient en une réponse (« résume ce mail », « traduis ce paragraphe », « donne-moi 3 idées »), le Copilot classique est parfait : c'est rapide, immédiat.\nSi votre demande est en réalité une mission à plusieurs étapes (« prépare-moi le dossier complet pour... »), c'est le moment de passer sur Cowork. Il va découper le travail, avancer étape par étape et revenir vers vous aux moments clés. En un mot : Copilot répond, Cowork s'occupe de la mission.",
+        "L'intérêt : un seul prompt, plusieurs tâches\nLa force de Cowork, c'est de tenir un enchaînement de tâches sans que vous ayez à le relancer à chaque étape. Vous décrivez la mission en une fois, avec les étapes numérotées, et il déroule.\nVoici un exemple concret que vous pouvez adapter : préparer un point client complet en une seule demande.",
+        "L'exemple, décortiqué\nDans ce prompt, on demande cinq choses d'affilée : rassembler la matière (mails + notes), faire une synthèse, identifier les blocages avec une action pour chacun, préparer un agenda, puis des questions. Un Copilot classique traiterait la première et attendrait la suite. Cowork, lui, enchaîne : il prévient quand une étape est faite, vous montre son plan, et s'arrête pour valider si un choix important se présente.\nLe bon réflexe : numérotez vos étapes et soyez explicite sur le livrable attendu (un agenda de 30 min, 5 questions, etc.). Plus la mission est cadrée, meilleur est le résultat.",
+        "Combien ça coûte ? La commande /cost\nUne mission Cowork mobilise plus de ressources qu'une simple question : elle raisonne, enchaîne des actions, parfois va chercher des informations. Cette consommation se mesure en crédits.\nPour savoir ce que votre demande a coûté, tapez simplement /cost dans la conversation. Cowork affiche alors le nombre de crédits consommés par la mission. Pratique pour garder un œil sur votre budget et comprendre ce qui « coûte » cher.",
+        "Bien doser pour que ça vaille le coût\nToutes les tâches ne méritent pas une mission Cowork. Pour une réponse en deux lignes, restez sur le chat classique : c'est plus léger et tout aussi efficace. Réservez Cowork aux missions qui vous auraient pris du temps à la main, là où le découpage automatique et l'enchaînement font vraiment gagner.\nLe /cost vous aide à prendre ce réflexe : au début, vérifiez ce que coûtent vos missions, et vous saurez vite quand la délégation en vaut la peine.",
+        "Ce qu'il faut retenir\nCowork est fait pour les missions à plusieurs étapes : un seul prompt bien cadré, et il déroule le travail en revenant vous voir aux moments importants. Gardez le Copilot classique pour les réponses rapides. Et pensez à /cost pour voir, en crédits, ce que votre demande a consommé : c'est le meilleur moyen d'apprendre à déléguer au bon moment, sans gaspiller.",
+      ],
+      en: [
+        "Cowork or Copilot: which to choose?\nThe rule is simple. If your request fits in one answer (« summarize this email », « translate this paragraph », « give me 3 ideas »), classic Copilot is perfect: fast and immediate.\nIf your request is really a multi-step mission (« prepare the full brief for... »), it's time to switch to Cowork. It breaks the work down, moves step by step and comes back to you at key moments. In a word: Copilot answers, Cowork handles the mission.",
+        "The point: one prompt, several tasks\nCowork's strength is holding a chain of tasks without you relaunching it at every step. You describe the mission once, with numbered steps, and it runs through.\nHere's a concrete example you can adapt: preparing a full client check-in in a single request.",
+        "The example, broken down\nIn this prompt, we ask for five things in a row: gather the material (emails + notes), summarize, identify blockers with an action for each, prepare an agenda, then questions. Classic Copilot would handle the first and wait for the rest. Cowork chains them: it flags when a step is done, shows you its plan, and pauses to validate if an important choice comes up.\nThe right reflex: number your steps and be explicit about the expected deliverable (a 30-min agenda, 5 questions, etc.). The more framed the mission, the better the result.",
+        "How much does it cost? The /cost command\nA Cowork mission uses more resources than a simple question: it reasons, chains actions, sometimes goes to fetch information. This consumption is measured in credits.\nTo find out what your request cost, simply type /cost in the conversation. Cowork then shows the number of credits the mission used. Handy to keep an eye on your budget and understand what's « expensive ».",
+        "Dose it right so it's worth it\nNot every task deserves a Cowork mission. For a two-line answer, stick to classic chat: it's lighter and just as effective. Save Cowork for missions that would have taken you time by hand, where automatic breakdown and chaining really pay off.\n/cost helps you build that reflex: early on, check what your missions cost, and you'll quickly know when delegating is worth it.",
+        "What to remember\nCowork is made for multi-step missions: one well-framed prompt, and it runs the work through, coming back to you at the important moments. Keep classic Copilot for quick answers. And remember /cost to see, in credits, what your request used: it's the best way to learn to delegate at the right time, without waste.",
+      ],
+    },
+    prompt: {
+      fr: "Prépare-moi le dossier complet pour mon point client avec Contoso jeudi.\n1) Retrouve nos derniers échanges par mail et les notes de nos deux dernières réunions.\n2) Résume l'état d'avancement du déploiement Copilot chez eux.\n3) Liste les 3 principaux points de blocage et propose une action pour chacun.\n4) Rédige une trame d'agenda pour une réunion de 30 minutes.\n5) Prépare 5 questions à leur poser pour faire avancer le projet.",
+      en: "Prepare the full brief for my client check-in with Contoso on Thursday.\n1) Find our latest email exchanges and the notes from our last two meetings.\n2) Summarize the status of their Copilot rollout.\n3) List the top 3 blockers and propose an action for each.\n4) Draft an agenda outline for a 30-minute meeting.\n5) Prepare 5 questions to ask them to move the project forward.",
+    },
+    tags: ["cowork", "copilot cowork", "prompt", "multi-tâches", "crédits", "cost", "avec licence"],
+  },
+  {
     slug: "meeting-recaps-teams",
     section: "m365",
     audience: ["user"],
