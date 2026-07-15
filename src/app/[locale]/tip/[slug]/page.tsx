@@ -120,6 +120,21 @@ export default async function TipPage({
                 </span>
                 <span className="text-sm leading-relaxed whitespace-pre-line">{renderWithLinks(s)}</span>
               </div>
+              {tip.stepVideos
+                ?.filter((v) => v.step === i)
+                .map((v, vi) => (
+                  <video
+                    key={vi}
+                    className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"
+                    src={v.src}
+                    poster={v.poster}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                  />
+                ))}
               {!tip.imagesBeforeText &&
                 tip.stepImages?.[i] &&
                 (Array.isArray(tip.stepImages[i]) ? (
@@ -147,6 +162,13 @@ export default async function TipPage({
                           : "w-[calc(100%-2.5rem)]"
                     }`}
                   />
+                ))}
+              {tip.imageCaptions
+                ?.filter((c) => c.step === i)
+                .map((c, ci) => (
+                  <p key={ci} className="ml-10 -mt-1 text-xs italic text-muted">
+                    {pick(c.text, locale)}
+                  </p>
                 ))}
               {tip.stepTable && tip.stepTable.step === i && (
                 <div className="ml-10 overflow-hidden rounded-xl border border-border">
@@ -200,21 +222,6 @@ export default async function TipPage({
                   </div>
                 </div>
               )}
-              {tip.stepVideos
-                ?.filter((v) => v.step === i)
-                .map((v, vi) => (
-                  <video
-                    key={vi}
-                    className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"
-                    src={v.src}
-                    poster={v.poster}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                  />
-                ))}
               {tip.video && tip.videoStep === i && (
                 <video
                   className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"

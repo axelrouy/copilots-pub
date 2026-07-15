@@ -43,6 +43,7 @@ export type Tip = {
   videoPoster?: string;
   videoStep?: number;
   stepVideos?: { src: string; step: number; poster?: string }[];
+  imageCaptions?: { step: number; text: Bilingual }[];
   phoneVideo?: { src: string; step: number; poster?: string };
   info?: Bilingual;
   links?: { label: Bilingual; url: string }[];
@@ -100,7 +101,7 @@ export const tips: Tip[] = [
         "Qu'est-ce que Edit with Copilot ?\nEdit with Copilot permet de sélectionner une partie de votre document et de demander la modification en langage naturel. Plutôt que de réécrire vous-même, vous décrivez le résultat voulu :\n➞ « Rends ce paragraphe plus professionnel. »\n➞ « Simplifie ce texte pour un public non technique. »\n➞ « Raccourcis ce passage de 50 %. »\n➞ « Transforme ce contenu en liste à puces. »\nCopilot propose alors une nouvelle version que vous pouvez accepter, comparer, ou ignorer. Vous gardez la main de bout en bout.",
         "Le mode « Allow Editing »\nPar défaut, Copilot peut se contenter de discuter (« Chat only ») : il suggère, mais ne touche pas au document. En activant « Allow Editing », vous l'autorisez à écrire directement dans le fichier : insérer, remplacer, reformuler au bon endroit.\nC'est ce mode qui transforme Copilot en véritable co-rédacteur : vous décrivez l'intention, il applique la modification dans le texte, et vous validez.",
         "Enrichir le document depuis une autre source\nLà où Allow Editing devient puissant : vous pouvez demander à Copilot d'ajouter du contenu dans votre document en s'appuyant sur une autre source. Un mail reçu, un PDF, un autre document Word, une note.\nExemple concret : un collègue vous envoie par mail le cadrage d'un projet (ici, le projet « Thunderbolt »). Vous référencez ce mail et demandez à Copilot d'en intégrer les éléments dans la bonne section de votre document. Copilot va chercher la matière dans la source et la rédige directement au bon endroit, dans le style de votre document.",
-        "Quelques exemples concrets\n➞ Adapter son message à l'audience : la même information, reformulée pour un dirigeant ou pour une équipe technique.\n➞ Résumer un texte trop long : condenser une section sans perdre l'essentiel.\n➞ Améliorer un document client : monter d'un cran sur le ton et la clarté avant l'envoi.\n➞ Traduire ou localiser un contenu : passer d'une langue à l'autre en gardant la mise en forme.",
+        "Quelques exemples concrets\n➞ Adapter son message à l'audience : la même information, reformulée pour un dirigeant ou pour une équipe technique.\n➞ Résumer un texte trop long : condenser une section sans perdre l'essentiel.\n➞ Améliorer un document client : monter d'un cran sur le ton et la clarté avant l'envoi.\n➞ Traduire ou localiser un contenu : passer d'une langue à l'autre en gardant la mise en forme.\n➞ Interagir sur le contenu : demander une mise en forme précise, par exemple surligner les titres en jaune.\nLa vidéo ci-dessous en montre deux d'un coup : traduire le document en anglais, puis surligner ses titres.",
         "Ce qu'il faut retenir\nEdit with Copilot transforme Word en assistant de réécriture, et avec « Allow Editing », en co-rédacteur qui agit directement dans le fichier. Il ne remplace pas l'auteur : il l'aide à trouver plus vite la bonne formulation, le bon niveau de détail, le bon ton, et à récupérer du contenu depuis ses autres sources. Entre une idée correcte et un excellent document, la différence se joue souvent sur ces quelques ajustements.",
       ],
       en: [
@@ -108,7 +109,7 @@ export const tips: Tip[] = [
         "What is Edit with Copilot?\nEdit with Copilot lets you select part of your document and ask for the change in natural language. Instead of rewriting it yourself, you describe the outcome you want:\n➞ « Make this paragraph more professional. »\n➞ « Simplify this text for a non-technical audience. »\n➞ « Cut this passage by 50%. »\n➞ « Turn this content into a bullet list. »\nCopilot then offers a new version you can accept, compare, or ignore. You stay in control throughout.",
         "The « Allow Editing » mode\nBy default, Copilot can simply chat (« Chat only »): it suggests, but doesn't touch the document. By turning on « Allow Editing », you let it write directly in the file: insert, replace, rephrase in the right place.\nThis is the mode that turns Copilot into a true co-writer: you describe the intent, it applies the change in the text, and you validate.",
         "Enriching the document from another source\nThis is where Allow Editing gets powerful: you can ask Copilot to add content to your document based on another source. A received email, a PDF, another Word document, a note.\nConcrete example: a colleague emails you the framing of a project (here, the « Thunderbolt » project). You reference that email and ask Copilot to bring its elements into the right section of your document. Copilot pulls the material from the source and writes it straight into the right place, in your document's style.",
-        "A few concrete examples\n➞ Adapt your message to the audience: the same information, rephrased for an executive or a technical team.\n➞ Summarize an overly long text: condense a section without losing the essentials.\n➞ Improve a client document: raise the tone and clarity a notch before sending.\n➞ Translate or localize content: switch languages while keeping the formatting.",
+        "A few concrete examples\n➞ Adapt your message to the audience: the same information, rephrased for an executive or a technical team.\n➞ Summarize an overly long text: condense a section without losing the essentials.\n➞ Improve a client document: raise the tone and clarity a notch before sending.\n➞ Translate or localize content: switch languages while keeping the formatting.\n➞ Interact with the content: ask for precise formatting, for example highlighting titles in yellow.\nThe video below shows two of these at once: translating the document into English, then highlighting its headings.",
         "What to remember\nEdit with Copilot turns Word into a rewriting assistant, and with « Allow Editing », into a co-writer that acts directly in the file. It doesn't replace the author: it helps them find the right wording, the right level of detail, the right tone faster, and pull content from their other sources. Between a decent idea and an excellent document, the difference often comes down to these small adjustments.",
       ],
     },
@@ -122,8 +123,17 @@ export const tips: Tip[] = [
     ],
     imageWidth: "md",
     stepVideos: [
-      { src: "/articles/edit-with-copilot-word-1.mp4", step: 1, poster: "/articles/edit-with-copilot-word-1-poster.jpg" },
-      { src: "/articles/edit-with-copilot-word-2.mp4", step: 3, poster: "/articles/edit-with-copilot-word-2-poster.jpg" },
+      { src: "/articles/edit-with-copilot-word-1.mp4", step: 3, poster: "/articles/edit-with-copilot-word-1-poster.jpg" },
+      { src: "/articles/edit-with-copilot-word-2.mp4", step: 4, poster: "/articles/edit-with-copilot-word-2-poster.jpg" },
+    ],
+    imageCaptions: [
+      {
+        step: 3,
+        text: {
+          fr: "Le mail source, comme le montre la vidéo ci-dessus.",
+          en: "The source email, as shown in the video above.",
+        },
+      },
     ],
     info: {
       fr: "« Allow Editing » vs « Chat only » : en Chat only, Copilot répond et suggère sans modifier le fichier. En Allow Editing, il applique les changements directement dans le document. Basculez selon que vous voulez juste des idées ou une réécriture appliquée.",
