@@ -10,6 +10,7 @@ import {
 } from "@/data/tips";
 import TipCard from "@/components/tip-card";
 import ProductIcon from "@/components/product-icon";
+import SectionIcon from "@/components/section-icon";
 import { AudienceBadge, SectionBadge } from "@/components/badges";
 
 // Regénère la page au moins une fois par heure pour que l'astuce du jour
@@ -96,7 +97,7 @@ export default async function HomePage({
       <section className="mt-10">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="flex items-center gap-2 text-xl font-bold">
-            🔥 {dict.home.trending}
+            <SectionIcon name="trending" /> {dict.home.trending}
           </h2>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -109,7 +110,7 @@ export default async function HomePage({
       {/* What's new */}
       <section className="mt-10">
         <h2 className="mb-4 flex items-center gap-2 text-xl font-bold">
-          🆕 {dict.home.whats_new}
+          <SectionIcon name="new" /> {dict.home.whats_new}
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {fresh.map((t) => (
@@ -121,7 +122,7 @@ export default async function HomePage({
       {/* Browse by product */}
       <section className="mt-10">
         <h2 className="mb-4 flex items-center gap-2 text-xl font-bold">
-          🗂️ {dict.home.browse_by}
+          <SectionIcon name="browse" /> {dict.home.browse_by}
         </h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {PRODUCTS.filter((p) => tips.some((t) => t.product === p.id)).map(
