@@ -1896,8 +1896,21 @@ export function inSection(t: Tip, section: Section): boolean {
   return t.section === section || (t.extraSections?.includes(section) ?? false);
 }
 
+/** Une astuce est "Premium" (nécessite une licence M365 Copilot) si sa section principale est m365. */
+export function isPremium(t: Tip): boolean {
+  return t.section === "m365";
+}
+
 export function tipsBySection(section: Section): Tip[] {
   return tips.filter((t) => inSection(t, section));
+}
+
+/**
+ * Copilot Chat "Basic" : uniquement les fonctionnalités qui ne nécessitent pas de licence.
+ * On exclut donc tout article Premium (section m365), même s'il est cross-listé dans chat.
+ */
+export function chatBasicTips(): Tip[] {
+  return tips.filter((t) => inSection(t, "chat") && !isPremium(t));
 }
 
 export function tipsByAudience(

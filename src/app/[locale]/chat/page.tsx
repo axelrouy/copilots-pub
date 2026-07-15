@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale } from "@/lib/i18n";
-import { tipsBySection } from "@/data/tips";
+import { chatBasicTips } from "@/data/tips";
 import FilterableTips from "@/components/filterable-tips";
 
 export default async function ChatPage({
@@ -11,7 +11,7 @@ export default async function ChatPage({
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const dict = getDictionary(locale);
-  const list = tipsBySection("chat");
+  const list = chatBasicTips();
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
