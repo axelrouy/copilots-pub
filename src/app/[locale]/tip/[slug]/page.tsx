@@ -182,6 +182,24 @@ export default async function TipPage({
                   </table>
                 </div>
               )}
+              {tip.phoneVideo && tip.phoneVideo.step === i && (
+                <div className="flex justify-center py-3">
+                  <div className="relative w-full max-w-[260px] rounded-[2.5rem] bg-neutral-900 p-2 shadow-2xl ring-1 ring-black/20 dark:bg-neutral-800">
+                    <div className="pointer-events-none absolute left-1/2 top-2 z-10 h-5 w-28 -translate-x-1/2 rounded-b-2xl bg-neutral-900 dark:bg-neutral-800" />
+                    <video
+                      className="aspect-[1080/2340] w-full rounded-[2rem] bg-black object-cover"
+                      src={tip.phoneVideo.src}
+                      poster={tip.phoneVideo.poster}
+                      controls
+                      loop
+                      autoPlay
+                      muted
+                      playsInline
+                      preload="metadata"
+                    />
+                  </div>
+                </div>
+              )}
               {tip.video && tip.videoStep === i && (
                 <video
                   className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"

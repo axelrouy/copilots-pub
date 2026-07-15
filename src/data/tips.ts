@@ -41,6 +41,7 @@ export type Tip = {
   video?: string;
   videoPoster?: string;
   videoStep?: number;
+  phoneVideo?: { src: string; step: number; poster?: string };
   info?: Bilingual;
   links?: { label: Bilingual; url: string }[];
   prompt?: Bilingual;
@@ -70,6 +71,58 @@ export const ROLES: Bilingual[] = [
 ];
 
 export const tips: Tip[] = [
+  {
+    slug: "parlez-a-copilot-voix-mobile",
+    section: "chat",
+    extraSections: ["m365"],
+    audience: ["user"],
+    product: "general",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR", "IT Admin"],
+    level: "beginner",
+    icon: "/general.png",
+    date: "2026-07-15",
+    isNew: true,
+    trending: true,
+    readMinutes: 6,
+    title: {
+      fr: "Parlez à Copilot : la conversation vocale sur mobile",
+      en: "Talk to Copilot: voice conversation on mobile",
+    },
+    summary: {
+      fr: "Et si vous parliez à Copilot comme à un véritable assistant personnel ? La conversation vocale, ancrée dans vos données professionnelles et le web, rend vos échanges plus simples, plus rapides et plus naturels. Voici comment la lancer, comment bien dialoguer, et 4 scénarios concrets pour vous lancer.",
+      en: "What if you talked to Copilot like a real personal assistant? Voice conversation, grounded in your work data and the web, makes your exchanges simpler, faster and more natural. Here's how to start it, how to dialogue well, and 4 concrete scenarios to get going.",
+    },
+    steps: {
+      fr: [
+        "Parlez à Copilot, tout simplement\nTravaillez avec l'IA de la manière qui vous convient le mieux : les capacités multimodales rendent vos flux de travail plus simples, plus rapides et plus intuitifs. Sur mobile, mais aussi sur le web et le bureau, vous pouvez parler à Copilot comme à un assistant personnel, grâce à une conversation vocale naturelle, ancrée dans vos données professionnelles et sur le web.\nRegardez plutôt, c'est plus parlant en vidéo (le son est coupé par défaut, activez-le avec l'icône du lecteur) :",
+        "Sur quels appareils ?\nLa conversation vocale se déploie progressivement sur le web, iOS, Android, Windows et Mac. Autrement dit : que vous soyez sur votre téléphone dans les transports ou devant votre poste de travail, la voix vous suit partout.",
+        "Comment démarrer une conversation vocale\n➞ Cliquez sur le bouton « Démarrer une nouvelle conversation vocale » dans la zone de saisie.\n➞ Sur Windows, si l'application Microsoft 365 Copilot est installée, vous pouvez aussi lancer la voix depuis l'aperçu rapide, avec la touche Copilot ou le raccourci Win+C.\n➞ Parlez avec Copilot : vous pouvez l'interrompre, le rediriger ou poser des questions de suivi à tout moment.\n➞ Pour couper le micro ou terminer, utilisez Muet/Pause ou Terminer la conversation vocale. Copilot cesse alors de vous écouter.",
+        "La bonne façon de dialoguer\nUn bon échange vocal tient en trois réflexes :\n➞ Commencez par une question précise, puis rebondissez dessus pour faire quelque chose d'utile. Par exemple : « Quelle est ma prochaine réunion ? Aide-moi à la préparer. » ou « De quoi parle le mail de X ? Rédige-moi une réponse. »\n➞ Restez conversationnel : interrompez, demandez de clarifier, coupez, passez à la suite.\n➞ À noter : la voix ne prend pas encore en charge les commandes d'application comme planifier une réunion, envoyer un e-mail ou générer une image.",
+        "Scénario 1 : préparer une réunion client\nQuelques prompts pour enchaîner naturellement :\n➞ « Ai-je des escalades client prioritaires qui demandent mon attention cette semaine ? »\n➞ « Quand est ma prochaine réunion avec le client X ? »\n➞ « Quelles sont leurs dernières annonces publiques ? » [Interruption] « Stop, seulement les titres. »\nDialogue type : « Hey Copilot, des sujets prioritaires sur le projet X pour moi ?... ok, noté... et quand est-ce que je revois ce client ?... [interruption] merci... et qu'ont-ils annoncé publiquement récemment ?... merci. »",
+        "Scénario 2 : préparer ma journée\n➞ « Quand a lieu ma prochaine revue sur le projet X ? Confirme l'ordre du jour final et la liste des participants depuis mon agenda. »\n➞ « Signale les principaux points non résolus de la dernière réunion sur ce projet. »\nDialogue type : « Hey Copilot... euh... quand est ma prochaine revue sur le projet X ?... et c'est quoi l'ordre du jour, qui était invité déjà ?... et résume-moi la discussion principale de la dernière fois... [interruption] merci, noté... et les points restés ouverts la dernière fois ? »",
+        "Scénario 3 : m'aider à préparer une réunion\n➞ « Copilot, quand a lieu ma prochaine réunion d'équipe de direction (LT) ? »\n➞ « Aide-moi à préparer : rédige une accroche de 90 secondes sur les annonces GenAI marquantes de la semaine dans la productivité. » [Interruption] « Stop, en 3 puces façon TL;DR. »\nDialogue type : « Copilot, quand est ma prochaine réunion LT ?... j'ai besoin d'ajouter une intro sur les tendances récentes en IA générative, donne-moi un topo... [interruption] c'est noté, merci. »",
+        "Scénario 4 : brainstormer et créer du contenu\n➞ « Copilot, capture mes réflexions sur notre stratégie IA marketing/partenaires, puis transforme ça en plan avec trois options stratégiques. »\n➞ [Interruption] « Ajoute aussi des éléments de mes dernières revues de stratégie marketing/partenaires. »\nDialogue type : « Hey Copilot, je vais réfléchir à voix haute quelques minutes sur notre stratégie partenaires IA, capture l'essentiel et organise-le en un e-mail concis et pertinent, avec des prochaines étapes que je pourrai partager, ok ?... <vidage de cerveau> »",
+        "Ce qu'il faut retenir\nLa voix, c'est Copilot en mode mains libres : idéal pour préparer une réunion en marchant, faire le point sur sa journée ou capturer une idée à voix haute. On commence par une question précise, on reste naturel, on interrompt sans complexe. Et pour les actions (envoyer, planifier, générer), on repasse au clavier. Un vrai assistant personnel, dans votre poche.",
+      ],
+      en: [
+        "Talk to Copilot, simply\nWork with AI the way that suits you best: multimodal capabilities make your workflows simpler, faster and more intuitive. On mobile, but also on the web and desktop, you can talk to Copilot like a personal assistant, through a natural voice conversation grounded in your work data and the web.\nSee for yourself, it's clearer in video (sound is off by default, turn it on with the player icon):",
+        "On which devices?\nVoice conversation is gradually rolling out on web, iOS, Android, Windows and Mac. In other words: whether you're on your phone during your commute or at your desk, voice follows you everywhere.",
+        "How to start a voice conversation\n➞ Click the « Start a new voice chat » button in the input box.\n➞ On Windows, if the Microsoft 365 Copilot app is installed, you can also start voice from quick view, with the Copilot key or the Win+C shortcut.\n➞ Speak with Copilot: you can interrupt it, redirect it or ask follow-up questions at any time.\n➞ To mute or end, use Mute/Pause or End voice chat. Copilot then stops listening.",
+        "The right way to dialogue\nA good voice exchange comes down to three reflexes:\n➞ Start with a precise question, then build on it to do something useful. For example: « What's my next meeting? Help me prep for it. » or « What's the mail from X about? Draft a reply. »\n➞ Stay conversational: interrupt, ask to clarify, cut, move on.\n➞ Note: voice does not yet support app commands like scheduling a meeting, sending an email or generating an image.",
+        "Scenario 1: prepare for a customer meeting\nA few prompts to chain naturally:\n➞ « Do I have any high-priority customer escalations requiring my immediate attention this week? »\n➞ « When is my next meeting with customer X? »\n➞ « What are their most recent public announcements? » [Interrupt] « Stop, just the headlines. »\nExample dialogue: « Hey Copilot, any high-priority reviews about project X for me?... got it... and when am I meeting this customer?... [interrupt] thanks... and what did they publicly announce recently?... thank you. »",
+        "Scenario 2: prepare for my day\n➞ « When's my next review about project X? Confirm the final agenda and attendee list from my calendar. »\n➞ « Flag the top unresolved items from the last meeting on this project. »\nExample dialogue: « Hey Copilot... uh... when's my next review about project X?... oh, what's the agenda and who was invited again... and give me a gist of the main discussion last time... [interrupt] thanks, got it... and can you recap the unresolved items from the last meeting? »",
+        "Scenario 3: help me prepare for a meeting\n➞ « Copilot, when is my next LT (leadership team) meeting? »\n➞ « Help me prepare: draft a 90-second opening on notable GenAI product announcements in the productivity space from the past week. » [Interrupt] « Stop, TL;DR in 3 bullets. »\nExample dialogue: « Copilot, when is my next LT meeting?... I need to add an opening about recent trends in the gen AI space, give me a rundown... [interrupt] got it, thanks. »",
+        "Scenario 4: brainstorm and create content\n➞ « Copilot, capture my thoughts on our AI marketing/partner strategy, then turn that into an outline with three strategic options. »\n➞ [Interrupt] « Also add details from my recent marketing/partner strategy reviews. »\nExample dialogue: « Hey Copilot, I'm gonna ramble for a couple of minutes on our AI partner strategy and I want you to capture the essence of those thoughts and organize it into a concise, insightful email with next steps that I can share out, got it?... <insert braindump> »",
+        "What to remember\nVoice is Copilot hands-free: perfect to prep a meeting while walking, review your day or capture an idea out loud. Start with a precise question, stay natural, interrupt without hesitation. And for actions (send, schedule, generate), switch back to the keyboard. A real personal assistant, in your pocket.",
+      ],
+    },
+    phoneVideo: {
+      src: "/articles/parlez-a-copilot-mobile.mp4",
+      poster: "/articles/parlez-a-copilot-mobile-poster.jpg",
+      step: 0,
+    },
+    tags: ["voix", "voice", "mobile", "multimodal", "assistant personnel"],
+  },
   {
     slug: "agents-1p-microsoft-copilot",
     section: "m365",
