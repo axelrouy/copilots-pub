@@ -699,8 +699,8 @@ export const tips: Tip[] = [
   },
   {
     slug: "ou-acceder-a-copilot",
-    section: "m365",
-    extraSections: ["chat"],
+    section: "chat",
+    extraSections: ["m365"],
     audience: ["user"],
     product: "general",
     roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
