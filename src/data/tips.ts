@@ -939,14 +939,14 @@ export const tips: Tip[] = [
       fr: [
         "Ouvrez le volet Copilot dans PowerPoint (bouton Copilot dans le ruban Accueil), sur Windows, Mac ou le web, au moment de créer ou de mettre en forme une présentation.",
         "Lancez « Créer une présentation » (ou « Mettre en forme »), puis ouvrez le menu « + » : le volet propose l'option Sélectionner une marque (Select brand).",
-        "Choisissez votre kit dans la liste : Personnel, Partagé ou Officiel. Le bouton « Gérer les kits » permet d'en créer ou d'en modifier un.",
+        "Choisissez votre kit dans la liste : Personnel, Partagé ou Officiel. Un kit « Officiel » (validé par votre organisation) se reconnaît à la petite valise affichée en haut de sa vignette : les autres kits, personnels ou partagés, n'ont pas d'icône. Le bouton « Gérer les kits » permet d'en créer ou d'en modifier un.",
         "Copilot génère les slides à partir de votre template et applique automatiquement couleurs, polices, images et voix de marque.",
         "💡 Bon à savoir : Copilot s'appuie en priorité sur les slides d'exemple de votre template. Plus votre modèle contient de dispositions variées (Titre, Sommaire, Contenu, Data-viz, Q&R, Conclusion…), plus le résultat est fidèle à votre marque.",
       ],
       en: [
         "Open the Copilot pane in PowerPoint (Copilot button in the Home ribbon), on Windows, Mac or the web, when creating or formatting a presentation.",
         "Start “Create a presentation” (or “Format”), then open the “+” menu: the pane offers the Select brand option.",
-        "Pick your kit from the list : Personal, Shared or Official. The “Manage brand kits” button lets you create or edit one.",
+        "Pick your kit from the list : Personal, Shared or Official. An « Official » kit (approved by your organization) is recognizable by the small briefcase shown at the top of its thumbnail: the other kits, personal or shared, have no icon. The “Manage brand kits” button lets you create or edit one.",
         "Copilot generates the slides from your template and automatically applies colors, fonts, images and brand voice.",
         "💡 Good to know: Copilot relies first on the example slides in your template. The more varied layouts your template contains (Title, Agenda, Content, Data-viz, Q&A, Conclusion…), the more faithful the result is to your brand.",
       ],
@@ -954,11 +954,11 @@ export const tips: Tip[] = [
     stepImages: [
       null,
       "/articles/ppt-brandkit-menu.png",
-      "/articles/ppt-brandkit-selector.png",
+      "/articles/ppt-brandkit-official.png",
       null,
       null,
     ],
-    imageWidth: "xs",
+    imageWidth: "md",
     prompt: {
       fr: "Crée une présentation de 8 slides sur [sujet] en appliquant mon brand kit [nom du kit] : une slide de titre, un sommaire, 4 slides de contenu avec un visuel, une slide data-viz et une conclusion avec appel à l'action.",
       en: "Create an 8-slide presentation about [topic] applying my brand kit [kit name]: a title slide, an agenda, 4 content slides with a visual, one data-viz slide and a conclusion with a call to action.",
