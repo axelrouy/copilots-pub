@@ -32,24 +32,24 @@ export default function Header({
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-surface/85 backdrop-blur">
-      <div className="mx-auto flex h-24 max-w-6xl items-center gap-4 px-4">
-        <Link href={`/${locale}`} className="flex items-center gap-2.5">
+      <div className="mx-auto flex h-24 max-w-6xl items-center gap-3 px-4">
+        <Link href={`/${locale}`} className="flex shrink-0 items-center gap-2.5">
           <img
             src="/logo.png"
             alt="AI Tip's Pub"
             className="h-20 w-20 rounded-full ring-1 ring-border shadow-sm"
           />
-          <span className="text-lg font-bold tracking-tight">
+          <span className="whitespace-nowrap text-lg font-bold tracking-tight">
             AI Tip&apos;s <span className="brand-gradient-text">Pub</span>
           </span>
         </Link>
 
-        <nav className="ml-4 hidden items-center gap-1 md:flex">
+        <nav className="ml-2 hidden items-center gap-0.5 md:flex">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
+              className={`whitespace-nowrap rounded-lg px-2.5 py-2 text-sm font-medium transition ${
                 isActive(l.href, l.exact)
                   ? "bg-surface-2 text-ms-blue"
                   : "text-muted hover:bg-surface-2 hover:text-foreground"
