@@ -76,6 +76,62 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "recherche-copilot-search",
+    section: "m365",
+    audience: ["user"],
+    product: "general",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
+    level: "beginner",
+    icon: "/copilot-m365.png",
+    date: "2026-07-18",
+    isNew: true,
+    trending: true,
+    readMinutes: 6,
+    title: {
+      fr: "La Recherche Copilot : retrouvez le bon fichier en langage naturel",
+      en: "Copilot Search: find the right file using natural language",
+    },
+    summary: {
+      fr: "Vous savez que le document existe, mais impossible de remettre la main dessus. La section « Rechercher » de Copilot balaie tout votre contenu d'entreprise (SharePoint, Outlook, Teams…) et comprend une demande formulée en langage courant. Filtres, sources, contenu récent ou partagé, et même un prompt lancé directement depuis un fichier : voici comment en tirer parti.",
+      en: "You know the document exists, but you just can't find it. Copilot's « Search » section scans all your enterprise content (SharePoint, Outlook, Teams…) and understands a request phrased in plain language. Filters, sources, recent or shared content, and even a prompt launched straight from a file: here's how to make the most of it.",
+    },
+    steps: {
+      fr: [
+        "La Recherche Copilot, c'est quoi ?\nC'est le moteur de recherche intelligent de Copilot, accessible via « Rechercher » dans le menu de gauche. Contrairement à une recherche classique par mots-clés, il s'appuie sur l'IA pour comprendre ce que vous cherchez et fouille dans tout votre univers de travail : fichiers, personnes, messages, contenu de votre entreprise.\nLa page d'accueil vous propose déjà des raccourcis vers vos collègues et vos applications (Teams, Outlook, SharePoint, Power BI…). Il suffit d'écrire dans la barre pour lancer une recherche.",
+        "Cherchez en langage naturel\nInutile de deviner le nom exact du fichier. Écrivez votre demande comme vous la diriez à un collègue : « Trouve moi un document qui parle du brand kit ».\nCopilot interprète l'intention, pas seulement les mots, et remonte les documents les plus pertinents : fichiers, dossiers, présentations, avec pour chacun l'auteur, la date de modification et un extrait. Vous voyez tout de suite si c'est le bon.",
+        "Une réponse rédigée par l'IA, avec ses sources\nEn plus de la liste de résultats, Copilot rédige une vraie synthèse : il vous dit quel document semble le plus complet, en cite d'autres utiles, et affiche ses sources numérotées en bas de la réponse.\nC'est la différence avec une recherche classique : vous n'obtenez pas qu'une liste de liens, mais une réponse qui vous oriente, avec la possibilité de vérifier chaque source d'un clic.",
+        "Affiner avec les filtres\nTrop de résultats ? Utilisez les filtres au-dessus de la liste : Personne (qui a créé ou modifié le fichier), Type (PDF, Word, PowerPoint…) et Modifié (aujourd'hui, cette semaine, ce mois…).\nPar exemple, en combinant Type : PDF et Semaine dernière, vous ne gardez que les PDF récents. Chaque filtre actif s'affiche sous forme d'étiquette que vous pouvez retirer d'un clic sur la croix.",
+        "Cibler une source précise\nVous pouvez dire à Copilot où chercher. Le bouton « Filtrer par Source » (et le panneau Sources à droite) permet de limiter la recherche à SharePoint, Outlook, Teams, etc.\nAstuce : tapez simplement « source: » directement dans la barre de recherche, et Copilot vous propose la liste des sources disponibles (M365 Copilot Chats, SharePoint, Outlook Mail, Teams, Calendrier, Power BI, Viva Engage, ServiceNow…). Pratique pour dire « cherche ça, mais uniquement dans mes mails ».",
+        "Récent, Partagé, Favoris : agissez directement sur vos documents\nSans même lancer de recherche, la page vous propose votre contenu à portée de main, réparti en trois onglets : Récent (vos derniers fichiers ouverts), Partagé (ce qu'on vous a partagé) et Favoris (ce que vous avez épinglé).\nMieux : à côté de chaque document, un bouton permet de lancer un prompt directement dessus. Un clic sur « Demander » ou « Demander une entrée » et Copilot ouvre l'échange sur ce fichier, sans avoir à le rouvrir vous-même. Le pont parfait entre retrouver un document et travailler avec.",
+        "Ce qu'il faut retenir\nLa Recherche Copilot, c'est Google pour votre univers de travail, en plus malin : on formule sa demande en langage naturel, l'IA comprend l'intention, rédige une synthèse sourcée et remonte les bons fichiers. On affine avec les filtres (personne, type, date), on cible une source précise, et depuis le contenu récent, partagé ou favori, on peut lancer un prompt d'un seul clic. De quoi arrêter de perdre du temps à chercher, pour en passer plus à faire.",
+      ],
+      en: [
+        "What is Copilot Search?\nIt's Copilot's intelligent search engine, reachable via « Search » in the left menu. Unlike a classic keyword search, it uses AI to understand what you're looking for and digs through your whole work universe: files, people, messages, your company's content.\nThe landing page already offers shortcuts to your colleagues and apps (Teams, Outlook, SharePoint, Power BI…). Just type in the bar to start a search.",
+        "Search in natural language\nNo need to guess the exact file name. Write your request as you'd say it to a colleague: « Find me a document about the brand kit ».\nCopilot reads the intent, not just the words, and surfaces the most relevant items: files, folders, presentations, each with the author, the modified date and a snippet. You can tell right away if it's the right one.",
+        "An AI-written answer, with its sources\nOn top of the results list, Copilot writes a real summary: it tells you which document looks most complete, cites other useful ones, and shows its numbered sources at the bottom of the answer.\nThat's the difference from a classic search: you don't just get a list of links, but an answer that guides you, with the ability to check every source in one click.",
+        "Refine with filters\nToo many results? Use the filters above the list: Person (who created or edited the file), Type (PDF, Word, PowerPoint…) and Modified (today, this week, this month…).\nFor example, combining Type: PDF and Last week keeps only recent PDFs. Each active filter shows as a tag you can remove by clicking its cross.",
+        "Target a specific source\nYou can tell Copilot where to look. The « Filter by Source » button (and the Sources panel on the right) limits the search to SharePoint, Outlook, Teams, and so on.\nTip: simply type « source: » right in the search bar, and Copilot offers the list of available sources (M365 Copilot Chats, SharePoint, Outlook Mail, Teams, Calendar, Power BI, Viva Engage, ServiceNow…). Handy to say « find this, but only in my emails ».",
+        "Recent, Shared, Favorites: act directly on your documents\nEven without running a search, the page puts your content within reach, split into three tabs: Recent (your latest opened files), Shared (what's been shared with you) and Favorites (what you pinned).\nBetter still: next to each document, a button lets you launch a prompt straight on it. One click on « Ask » or « Ask for an entry » and Copilot opens the exchange on that file, without you reopening it. The perfect bridge between finding a document and working with it.",
+        "What to remember\nCopilot Search is Google for your work universe, but smarter: you phrase your request in natural language, the AI grasps the intent, writes a sourced summary and surfaces the right files. You refine with filters (person, type, date), target a specific source, and from recent, shared or favorite content, you can launch a prompt in a single click. Enough to stop wasting time searching, and spend more of it doing.",
+      ],
+    },
+    stepImages: [
+      "/articles/search-landing.png",
+      "/articles/search-query.png",
+      "/articles/search-ai-answer.png",
+      "/articles/search-filters.png",
+      "/articles/search-source.png",
+      "/articles/search-recent.png",
+      null,
+    ],
+    imageCaptions: [
+      { step: 0, text: { fr: "La section « Rechercher » et sa barre de recherche universelle.", en: "The « Search » section and its universal search bar." } },
+      { step: 3, text: { fr: "Filtres combinés Type : PDF et Semaine dernière, retirables d'un clic.", en: "Combined Type: PDF and Last week filters, removable in one click." } },
+      { step: 4, text: { fr: "Tapez « source: » pour choisir où chercher (SharePoint, Outlook, Teams…).", en: "Type « source: » to choose where to search (SharePoint, Outlook, Teams…)." } },
+    ],
+    tags: ["recherche", "search", "rechercher", "sources", "filtres", "récent", "favoris", "langage naturel"],
+  },
+  {
     slug: "bibliotheque-pages-copilot",
     section: "m365",
     audience: ["user"],
