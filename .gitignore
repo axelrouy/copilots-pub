@@ -46,3 +46,6 @@ next-env.d.ts
 .env*
 /scripts/set-secrets.mjs
 /.github/workflows/deploy.yml
+
+# secours push (NE JAMAIS COMMITER)
+GIT-REMOTE-BACKUP.txt
