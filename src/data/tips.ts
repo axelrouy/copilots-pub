@@ -283,6 +283,11 @@ export const tips: Tip[] = [
         "What to remember\nCowork is made for multi-step missions: one well-framed prompt, and it runs the work through, coming back to you at the important moments. Keep classic Copilot for quick answers. And remember /cost to see, in credits, what your request used: it's the best way to learn to delegate at the right time, without waste.",
       ],
     },
+    stepImages: [null, null, null, "/articles/cowork-cost-result.png", null, null],
+    imageWidth: "md",
+    imageCaptions: [
+      { step: 3, text: { fr: "La réponse de /cost : le nombre de crédits consommés par la mission en cours.", en: "The /cost answer: the number of credits used by the current mission." } },
+    ],
     prompt: {
       fr: "Prépare-moi le dossier complet pour mon point client avec Contoso jeudi.\n1) Retrouve nos derniers échanges par mail et les notes de nos deux dernières réunions.\n2) Résume l'état d'avancement du déploiement Copilot chez eux.\n3) Liste les 3 principaux points de blocage et propose une action pour chacun.\n4) Rédige une trame d'agenda pour une réunion de 30 minutes.\n5) Prépare 5 questions à leur poser pour faire avancer le projet.",
       en: "Prepare the full brief for my client check-in with Contoso on Thursday.\n1) Find our latest email exchanges and the notes from our last two meetings.\n2) Summarize the status of their Copilot rollout.\n3) List the top 3 blockers and propose an action for each.\n4) Draft an agenda outline for a 30-minute meeting.\n5) Prepare 5 questions to ask them to move the project forward.",
