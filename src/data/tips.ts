@@ -183,6 +183,7 @@ export const tips: Tip[] = [
       { step: 4, text: { fr: "Tapez « source: » pour choisir où chercher (SharePoint, Outlook, Teams…).", en: "Type « source: » to choose where to search (SharePoint, Outlook, Teams…)." } },
     ],
     tags: ["recherche", "search", "rechercher", "sources", "filtres", "récent", "favoris", "langage naturel"],
+    adoptionWeeks: [1, 4],
   },
   {
     slug: "bibliotheque-pages-copilot",
@@ -242,6 +243,7 @@ export const tips: Tip[] = [
       { step: 5, text: { fr: "La Page jointe à une nouvelle conversation : Copilot repart avec tout le contexte.", en: "The Page attached to a new conversation: Copilot resumes with the full context." } },
     ],
     tags: ["bibliothèque", "library", "pages", "copilot pages", "export", "word", "pdf", "notes", "images"],
+    adoptionWeeks: [4, 7],
   },
   {
     slug: "cowork-prompt-multitache-cost",
