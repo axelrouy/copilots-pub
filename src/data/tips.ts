@@ -125,8 +125,8 @@ export const tips: Tip[] = [
     trending: true,
     readMinutes: 6,
     title: {
-      fr: "Les paramètres Copilot dans Outlook : réglez-le à votre main",
-      en: "Copilot settings in Outlook: tune it to your liking",
+      fr: "Les paramètres Copilot dans Outlook",
+      en: "Copilot settings in Outlook",
     },
     summary: {
       fr: "Copilot dans Outlook, ce n'est pas une boîte noire : quatre réglages vous permettent de décider comment il fonctionne, ce qu'il considère comme prioritaire, comment il rédige vos e-mails et comment il gère votre agenda. Un petit tour dans les paramètres, et Copilot travaille vraiment à votre façon.",
