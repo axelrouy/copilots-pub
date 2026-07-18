@@ -125,7 +125,13 @@ export default async function TipPage({
                 .map((v, vi) => (
                   <video
                     key={vi}
-                    className="ml-10 w-[calc(100%-2.5rem)] rounded-xl border border-border"
+                    className={`ml-10 rounded-xl border border-border ${
+                      v.width === "sm"
+                        ? "w-full max-w-xs"
+                        : v.width === "md"
+                          ? "w-full max-w-md"
+                          : "w-[calc(100%-2.5rem)]"
+                    }`}
                     src={v.src}
                     poster={v.poster}
                     autoPlay
