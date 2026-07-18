@@ -76,6 +76,60 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "parametres-copilot-outlook",
+    section: "m365",
+    audience: ["user"],
+    product: "outlook",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
+    level: "beginner",
+    icon: "/outlook.png",
+    date: "2026-07-18",
+    isNew: true,
+    trending: true,
+    readMinutes: 6,
+    title: {
+      fr: "Les paramètres Copilot dans Outlook : réglez-le à votre main",
+      en: "Copilot settings in Outlook: tune it to your liking",
+    },
+    summary: {
+      fr: "Copilot dans Outlook, ce n'est pas une boîte noire : quatre réglages vous permettent de décider comment il fonctionne, ce qu'il considère comme prioritaire, comment il rédige vos e-mails et comment il gère votre agenda. Un petit tour dans les paramètres, et Copilot travaille vraiment à votre façon.",
+      en: "Copilot in Outlook isn't a black box: four settings let you decide how it works, what it treats as a priority, how it drafts your emails and how it handles your calendar. A quick trip to the settings, and Copilot truly works your way.",
+    },
+    steps: {
+      fr: [
+        "Préférences : le réglage de base\nOn commence par le plus simple. Dans Outlook, ouvrez les Paramètres (la roue crantée en haut à droite), puis la section « Copilot » dans le menu de gauche. Quatre onglets apparaissent : Préférences, Prioriser, Brouillons d'instruction et Instructions de calendrier. On va les voir un par un.\nL'onglet « Préférences » gère le fonctionnement global de Copilot dans Outlook :\n➞ Activer ou désactiver Copilot d'un simple bouton.\n➞ Les réglages généraux de l'expérience Copilot.\n➞ Les informations de confidentialité (vos e-mails et votre agenda ne servent pas à entraîner les modèles).\nEn résumé : c'est ici qu'on contrôle le comportement général de Copilot.",
+        "Prioriser : ce qui compte vraiment dans votre boîte\nCet onglet aide Copilot à repérer les e-mails les plus importants pour vous. Une fois activé, Copilot peut :\n➞ Analyser les nouveaux messages à leur arrivée.\n➞ Leur attribuer une priorité (haute, normale ou faible).\n➞ Expliquer pourquoi un e-mail est jugé important.\n➞ Afficher un résumé généré par l'IA directement dans la liste des messages prioritaires.\nEt surtout, la partie « Personnaliser » vous laisse dire à Copilot ce qui est prioritaire pour VOUS : un projet précis, certaines personnes, certains sujets. Dans l'exemple, on indique que tout ce qui touche au « Projet ThunderBolt » est à traiter en priorité.\nEn résumé : Copilot vous aide à traiter d'abord les e-mails à plus forte valeur.",
+        "Brouillons d'instruction : comment Copilot écrit vos e-mails\nCet onglet définit des consignes permanentes que Copilot appliquera à chaque fois qu'il rédige un e-mail ou une réponse à votre place. Vous les écrivez une fois, elles sont réutilisées automatiquement. Par exemple :\n➞ Toujours écrire en français.\n➞ Adopter un ton professionnel mais chaleureux.\n➞ Préférer des réponses courtes et directes.\n➞ Terminer par une proposition d'action.\n➞ Rester proche de votre style d'écriture.\nEn résumé : c'est ici qu'on personnalise la plume de Copilot pour qu'elle ressemble à la vôtre.",
+        "Instructions de calendrier : comment Copilot gère votre agenda\nCe dernier onglet définit vos préférences de planification, que Copilot respectera quand il vous aide à organiser réunions et événements. Quelques exemples de règles que vous pouvez poser :\n➞ Éviter les réunions avant 9h.\n➞ Garder le vendredi après-midi pour du travail de fond.\n➞ Prévoir 15 minutes de battement entre deux réunions.\n➞ Ajouter systématiquement un lien Teams.\n➞ Réserver automatiquement du temps de concentration.\nLe bouton « Créer des instructions » vous propose même des suggestions, et en cas de conflit, la dernière instruction créée l'emporte.\nEn résumé : c'est ici qu'on personnalise la façon dont Copilot organise votre calendrier.",
+        "Astuce : gérer ses instructions depuis le chat Copilot\nBon à savoir : vos instructions de calendrier ne se pilotent pas seulement depuis les Paramètres. Dans le chat Copilot (onglet « Work »), vous pouvez demander en langage naturel : « Répertorie toutes mes instructions de calendrier », et Copilot liste ce qui est actif. Vous pouvez aussi en ajouter à la volée : « Ajoute une instruction pour accepter automatiquement les réunions de Lisa Taylor ».\nPratique pour vérifier ce qui est réellement configuré et ajuster sans passer par les menus.",
+        "Le résumé simple, pour s'y retrouver\nQuatre onglets, quatre rôles faciles à mémoriser :\n➞ Préférences : comment Copilot fonctionne dans Outlook.\n➞ Prioriser : ce qui est important dans ma boîte mail.\n➞ Brouillons d'instruction : comment Copilot rédige mes e-mails.\n➞ Instructions de calendrier : comment Copilot organise mon agenda.\nPrenez cinq minutes pour les régler une fois : ensuite, Copilot travaille à votre place, mais à votre façon. C'est tout la différence entre un assistant générique et un assistant qui vous connaît.",
+      ],
+      en: [
+        "Preferences: the basic setting\nLet's start simple. In Outlook, open Settings (the gear icon top right), then the « Copilot » section in the left menu. Four tabs appear: Preferences, Prioritize, Drafting instructions and Calendar instructions. We'll go through them one by one.\nThe « Preferences » tab manages how Copilot works overall in Outlook:\n➞ Turn Copilot on or off with a single switch.\n➞ The general settings of the Copilot experience.\n➞ The privacy information (your emails and calendar are not used to train the models).\nIn short: this is where you control Copilot's overall behaviour.",
+        "Prioritize: what really matters in your inbox\nThis tab helps Copilot spot the emails that matter most to you. Once enabled, Copilot can:\n➞ Analyse new messages as they arrive.\n➞ Assign them a priority (high, normal or low).\n➞ Explain why an email is deemed important.\n➞ Show an AI-generated summary right in the priority message list.\nAbove all, the « Personalize » part lets you tell Copilot what's a priority for YOU: a specific project, certain people, certain topics. In the example, we tell it that anything about the « ThunderBolt project » should be handled first.\nIn short: Copilot helps you tackle the highest-value emails first.",
+        "Drafting instructions: how Copilot writes your emails\nThis tab sets standing guidelines that Copilot applies every time it drafts an email or a reply for you. You write them once, they're reused automatically. For example:\n➞ Always write in French.\n➞ Use a professional yet warm tone.\n➞ Prefer short, direct replies.\n➞ End with a suggested next step.\n➞ Stay close to your writing style.\nIn short: this is where you personalize Copilot's pen so it sounds like yours.",
+        "Calendar instructions: how Copilot handles your agenda\nThis last tab sets your scheduling preferences, which Copilot follows when it helps you organize meetings and events. A few example rules you can set:\n➞ Avoid meetings before 9am.\n➞ Keep Friday afternoon for deep work.\n➞ Leave a 15-minute buffer between meetings.\n➞ Always add a Teams link.\n➞ Automatically block focus time.\nThe « Create instructions » button even suggests some for you, and if two instructions conflict, the most recently created one wins.\nIn short: this is where you personalize how Copilot organizes your calendar.",
+        "Tip: manage your instructions from the Copilot chat\nGood to know: your calendar instructions aren't only managed from Settings. In the Copilot chat (« Work » tab), you can ask in plain language: « List all my calendar instructions », and Copilot shows what's active. You can also add one on the fly: « Add an instruction to automatically accept Lisa Taylor's meetings ».\nHandy to check what's actually configured and adjust without going through the menus.",
+        "The simple summary, to keep it straight\nFour tabs, four easy-to-remember roles:\n➞ Preferences: how Copilot works in Outlook.\n➞ Prioritize: what's important in my inbox.\n➞ Drafting instructions: how Copilot writes my emails.\n➞ Calendar instructions: how Copilot organizes my agenda.\nTake five minutes to set them once: after that, Copilot works for you, but your way. That's the whole difference between a generic assistant and one that knows you.",
+      ],
+    },
+    stepImages: [
+      "/articles/outlook-copilot-preferences.png",
+      "/articles/outlook-copilot-prioriser.png",
+      "/articles/outlook-copilot-brouillons.png",
+      "/articles/outlook-copilot-calendrier.png",
+      "/articles/outlook-copilot-calendrier-chat.png",
+      null,
+    ],
+    imageWidth: "md",
+    imageCaptions: [
+      { step: 0, text: { fr: "Paramètres › Copilot : les quatre onglets, et le bouton « Activer Copilot ».", en: "Settings › Copilot: the four tabs, and the « Turn on Copilot » switch." } },
+      { step: 1, text: { fr: "L'onglet Prioriser : le classement automatique et la zone « Personnaliser ».", en: "The Prioritize tab: automatic ranking and the « Personalize » area." } },
+      { step: 4, text: { fr: "Depuis le chat Copilot (Work), on liste et on ajoute ses instructions de calendrier.", en: "From the Copilot chat (Work), you list and add your calendar instructions." } },
+    ],
+    tags: ["outlook", "paramètres", "settings", "copilot", "prioriser", "instructions", "calendrier", "brouillons"],
+  },
+  {
     slug: "creer-infographie-notebooks",
     section: "m365",
     audience: ["user"],
