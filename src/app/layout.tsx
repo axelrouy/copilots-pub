@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ai-tips-pub.vercel.app"),
+  metadataBase: new URL("https://ai-tips-pub.com"),
   title: {
     default: "AI Tip's Pub : Le comptoir des astuces Microsoft Copilot",
     template: "%s : AI Tip's Pub",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "AI Tip's Pub : Le comptoir des astuces Microsoft Copilot",
     description:
       "Le référentiel pratique des fonctionnalités, prompts et scénarios Microsoft Copilot pour IT Pros et End Users.",
-    url: "https://ai-tips-pub.vercel.app",
+    url: "https://ai-tips-pub.com",
     locale: "fr_FR",
   },
   twitter: {
