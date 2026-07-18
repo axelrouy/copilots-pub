@@ -76,6 +76,59 @@ export const ROLES: Bilingual[] = [
 
 export const tips: Tip[] = [
   {
+    slug: "creer-infographie-notebooks",
+    section: "m365",
+    audience: ["user"],
+    product: "notebooks",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
+    level: "beginner",
+    icon: "/notebooks.png",
+    date: "2026-07-18",
+    isNew: true,
+    trending: true,
+    readMinutes: 5,
+    title: {
+      fr: "Créer une infographie depuis Notebooks, à partir de vos propres contenus",
+      en: "Create an infographic from Notebooks, based on your own content",
+    },
+    summary: {
+      fr: "Notebooks (que vous pouvez ouvrir directement depuis OneNote) sait faire plus que rassembler vos sources : avec une licence, son menu « Create » génère une infographie complète à partir du contenu référencé dans votre notebook. Ici, on part du projet fictif « Thunderbolt » pour transformer des specs en un visuel prêt à partager.",
+      en: "Notebooks (which you can open straight from OneNote) does more than gather your sources: with a license, its « Create » menu generates a full infographic from the content referenced in your notebook. Here, we use the fictional « Thunderbolt » project to turn specs into a share-ready visual.",
+    },
+    steps: {
+      fr: [
+        "Notebooks, et son accès depuis OneNote\nLes Notebooks Copilot sont des espaces où vous réunissez tout ce qui concerne un sujet : documents, présentations, notes, pages web. Bonne nouvelle : vous pouvez ouvrir un notebook directement depuis OneNote, l'application de prise de notes que beaucoup utilisent déjà. Pas besoin de changer d'outil, vos notes et votre notebook cohabitent au même endroit.\nUne fois vos sources réunies, Copilot peut raisonner dessus et produire différents formats : résumé audio, guide d'étude, carte mentale… et, ce qui nous intéresse ici, une infographie.",
+        "Rassemblez vos sources dans le notebook\nTout part du contenu que vous référencez. Dans notre exemple, le notebook « Thunderbolt Specifications » regroupe plusieurs sources autour d'un vélo électrique fictif : specs techniques, présentations, planning de lancement.\nC'est important : l'infographie ne sera générée qu'à partir de ces contenus, pas d'informations inventées. Plus vos sources sont riches et à jour, plus le visuel sera pertinent et fidèle.",
+        "Ouvrez « Create » et choisissez « Infographic »\nDans le menu de gauche du notebook, cliquez sur « Create ». Sous « Quick create with Copilot », vous trouvez plusieurs formats : Audio overview, Mind map, Study guide… et « Infographic ».\nCette option fait partie des capacités avancées (mention « Frontier ») réservées aux utilisateurs disposant d'une licence Copilot. Un clic, et c'est parti.",
+        "Copilot génère l'infographie depuis votre contenu\nCopilot lance alors la création. En coulisses, la consigne est claire : produire une infographie soignée et dense, strictement à partir du contenu du notebook. Laissez-le travailler quelques instants (« Give me a moment… ») en restant sur la page.\nVous n'avez rien à mettre en forme vous-même : Copilot choisit la structure, les graphiques et la hiérarchie de l'information.",
+        "Le résultat : une infographie complète, à télécharger\nEn quelques secondes, vous obtenez un visuel professionnel : chiffres clés, comparaisons, graphiques, frise du lancement, le tout mis en page proprement à partir des specs Thunderbolt.\nElle apparaît dans « Created content » du notebook (vous la retrouverez plus tard), et le bouton « Download » permet de l'exporter pour l'intégrer à une présentation, un e-mail ou un support de réunion.",
+        "Ce qu'il faut retenir\nNotebooks, accessible depuis OneNote, n'est pas qu'un classeur : avec une licence, son menu « Create » transforme le contenu que vous avez rassemblé en une infographie complète, sans compétence en design. On réunit ses sources, on clique sur « Infographic », Copilot met en forme, et on télécharge. Le moyen le plus rapide de passer d'un dossier de specs à un visuel clair et partageable.",
+      ],
+      en: [
+        "Notebooks, and opening it from OneNote\nCopilot Notebooks are spaces where you gather everything about a topic: documents, presentations, notes, web pages. Good news: you can open a notebook straight from OneNote, the note-taking app many people already use. No need to switch tools, your notes and your notebook live in the same place.\nOnce your sources are gathered, Copilot can reason over them and produce different formats: audio overview, study guide, mind map… and, what we're after here, an infographic.",
+        "Gather your sources in the notebook\nIt all starts from the content you reference. In our example, the « Thunderbolt Specifications » notebook gathers several sources around a fictional e-bike: technical specs, presentations, launch plan.\nThis matters: the infographic will only be generated from this content, not from made-up information. The richer and more up-to-date your sources, the more relevant and faithful the visual.",
+        "Open « Create » and choose « Infographic »\nIn the notebook's left menu, click « Create ». Under « Quick create with Copilot », you'll find several formats: Audio overview, Mind map, Study guide… and « Infographic ».\nThis option is part of the advanced capabilities (labeled « Frontier ») reserved for users with a Copilot license. One click, and off you go.",
+        "Copilot generates the infographic from your content\nCopilot then starts creating. Behind the scenes, the instruction is clear: produce a polished, dense infographic strictly from the notebook's content. Let it work for a few moments (« Give me a moment… ») while staying on the page.\nYou don't have to format anything yourself: Copilot picks the structure, the charts and the information hierarchy.",
+        "The result: a complete infographic, ready to download\nIn seconds, you get a professional visual: key figures, comparisons, charts, launch timeline, all cleanly laid out from the Thunderbolt specs.\nIt appears under the notebook's « Created content » (you'll find it again later), and the « Download » button lets you export it to drop into a presentation, an email or a meeting deck.",
+        "What to remember\nNotebooks, reachable from OneNote, isn't just a binder: with a license, its « Create » menu turns the content you've gathered into a full infographic, with no design skills needed. You gather your sources, click « Infographic », Copilot lays it out, and you download it. The fastest way to go from a folder of specs to a clear, shareable visual.",
+      ],
+    },
+    stepImages: [
+      null,
+      null,
+      "/articles/notebooks-infographic-create-menu.png",
+      "/articles/notebooks-infographic-generating.png",
+      "/articles/notebooks-infographic-result.png",
+      null,
+    ],
+    imageWidth: "md",
+    imageCaptions: [
+      { step: 2, text: { fr: "Menu « Create » : l'option « Infographic (Frontier) », pour les utilisateurs sous licence.", en: "The « Create » menu: the « Infographic (Frontier) » option, for licensed users." } },
+      { step: 4, text: { fr: "L'infographie générée depuis les sources du notebook, avec le bouton « Download ».", en: "The infographic generated from the notebook sources, with the « Download » button." } },
+    ],
+    tags: ["notebooks", "onenote", "infographie", "infographic", "frontier", "création", "avec licence"],
+  },
+  {
     slug: "recherche-copilot-search",
     section: "m365",
     audience: ["user"],
