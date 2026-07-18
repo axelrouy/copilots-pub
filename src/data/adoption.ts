@@ -348,6 +348,9 @@ export const ADOPTION_WEEKS: { week: number; topic: Bilingual }[] = [
 export function weeksForTip(tip: Tip): number[] {
   // Les articles Cowork restent hors du programme d'adoption (rubrique à part).
   if (tip.product === "cowork") return [];
+  // Les articles de gouvernance réservés à l'IT ne font pas partie du parcours
+  // d'adoption (end-user) : ils ne se trouvent que dans la section IT & Governance.
+  if (tip.governance && !tip.audience.includes("user")) return [];
   if (tip.adoptionWeeks && tip.adoptionWeeks.length > 0) return tip.adoptionWeeks;
 
   const weeks = new Set<number>();
