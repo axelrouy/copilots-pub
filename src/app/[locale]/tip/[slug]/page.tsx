@@ -1,6 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getDictionary, isLocale, pick, locales } from "@/lib/i18n";
+import { getDictionary, isLocale, pick, locales, type Locale } from "@/lib/i18n";
 import { getTip, relatedTips, tips } from "@/data/tips";
 import { AudienceBadge, SectionBadge } from "@/components/badges";
 import CopyButton from "@/components/copy-button";
@@ -8,6 +9,51 @@ import TipCard from "@/components/tip-card";
 import Comments from "@/components/comments";
 import PageTracker from "@/components/page-tracker";
 import ProductIcon from "@/components/product-icon";
+
+const BASE = "https://ai-tips-pub.com";
+
+function truncate(text: string, max = 160) {
+  if (text.length <= max) return text;
+  return text.slice(0, max - 1).trimEnd() + "…";
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const tip = getTip(slug);
+  if (!isLocale(locale) || !tip) return {};
+  const loc = locale as Locale;
+  const title = pick(tip.title, loc);
+  const description = truncate(pick(tip.summary, loc));
+  const url = `${BASE}/${loc}/tip/${slug}`;
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: `${BASE}/fr/tip/${slug}`,
+        en: `${BASE}/en/tip/${slug}`,
+      },
+    },
+    openGraph: {
+      type: "article",
+      title,
+      description,
+      url,
+      siteName: "AI Tip's Pub",
+      locale: loc === "fr" ? "fr_FR" : "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
 
 function renderWithLinks(text: string) {
   const parts = text.split(/(https?:\/\/[^\s]+)/g);
@@ -48,8 +94,29 @@ export default async function TipPage({
   const related = relatedTips(tip, 3);
   const steps = pick(tip.steps, locale);
 
+  const firstImage = tip.stepImages?.find(
+    (im): im is string => typeof im === "string",
+  );
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: pick(tip.title, locale),
+    description: pick(tip.summary, locale),
+    inLanguage: locale === "fr" ? "fr-FR" : "en-US",
+    datePublished: tip.date || undefined,
+    author: { "@type": "Person", name: "Axel Rouy" },
+    publisher: { "@type": "Organization", name: "AI Tip's Pub" },
+    mainEntityOfPage: `${BASE}/${locale}/tip/${slug}`,
+    ...(firstImage ? { image: `${BASE}${firstImage}` } : {}),
+    ...(tip.tags && tip.tags.length ? { keywords: tip.tags.join(", ") } : {}),
+  };
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageTracker path={`/${locale}/tip/${slug}`} />
 
       <Link
