@@ -1918,6 +1918,14 @@ export const tips: Tip[] = [
       fr: "Aide-moi à bâtir un plan de suivi d'adoption de Microsoft 365 Copilot à partir du Copilot Dashboard (Viva Insights). Liste les indicateurs clés à suivre (usage, rétention, adoption par application, temps économisé), propose une segmentation utile (équipe, métier, cohortes actifs/inactifs) et une cadence de revue mensuelle avec des objectifs par vague.",
       en: "Help me build a Microsoft 365 Copilot adoption tracking plan based on the Copilot Dashboard (Viva Insights). List the key metrics to follow (usage, retention, per-app adoption, time saved), suggest a useful segmentation (team, role, active/inactive cohorts) and a monthly review cadence with per-wave targets.",
     },
+    stepImages: [
+      null,
+      "/articles/copilot-dashboard-readiness-overview.png",
+      null,
+      null,
+      null,
+    ],
+    imageWidth: "full",
     tags: ["copilot dashboard", "viva insights", "adoption", "reporting", "IT"],
   },
   {
