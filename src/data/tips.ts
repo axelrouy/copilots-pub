@@ -2302,13 +2302,15 @@ export const tips: Tip[] = [
     steps: {
       fr: [
         "Pourquoi des prompts d'organisation ?\nUn bon prompt bien formulé peut être réutilisé par toute l'entreprise. Plutôt que de laisser chacun réinventer ses formulations, l'IT peut publier des prompts validés, cohérents et alignés sur les usages métier, un vrai accélérateur d'adoption. C'est accessible que vos utilisateurs aient une licence Copilot M365 ou non.",
-        "Publier depuis le centre d'administration\nDans le centre d'administration, rendez-vous dans Copilot > Prompts. Vous y gérez les prompts de votre organisation : créez-en un via « Create prompt », donnez-lui un titre parlant (ex. « Rédiger un email pro », « Préparer une réunion »), puis publiez-le. L'onglet « Analytics » vous donne un aperçu de leur utilisation.",
+        "Publier depuis le Portail d'administration M365\nRendez-vous sur le Portail d'administration M365 (admin.cloud.microsoft), rubrique Copilot > Prompts. Vous y gérez les prompts de votre organisation : créez-en un via « Create prompt », donnez-lui un titre parlant (ex. « Rédiger un email pro », « Préparer une réunion »), puis publiez-le. L'onglet « Analytics » vous donne un aperçu de leur utilisation.",
+        "Renseigner la fiche du prompt\nLe volet « Create prompt » affiche en haut un aperçu de la carte telle qu'elle apparaîtra, puis les champs à compléter :\n➞ Title : le titre affiché dans la galerie de prompts (obligatoire).\n➞ Description : quand et comment utiliser ce prompt, pour guider l'utilisateur.\n➞ Display Prompt : le texte court affiché sur la carte (obligatoire).\n➞ Prompt : le prompt complet, clair et actionnable (jusqu'à 8000 caractères, obligatoire).\n➞ Supported apps : les surfaces où il apparaît, Copilot web / Copilot work… (obligatoire).\n➞ Department, Task type (Execute…) et Language : pour cibler et classer le prompt par métier, type de tâche et langue.\nUne fois la fiche remplie, cliquez sur « Publish » pour le mettre à disposition de vos utilisateurs.",
         "Côté utilisateur : le laboratoire de prompts\nUne fois publiés, ces prompts apparaissent pour vos utilisateurs dans le laboratoire de prompts de Copilot, regroupés dans « Suggéré », par « Sujets de prompt » ou dans « Prompts de l'agent ». L'utilisateur n'a plus qu'à cliquer pour partir sur une base solide, sans réfléchir à la formulation.",
         "Structurer et réutiliser\nOrganisez vos prompts par thème et par métier pour qu'ils soient faciles à retrouver. L'objectif : une bibliothèque vivante qui capitalise sur les meilleures interactions et diffuse les bonnes pratiques à toute l'organisation.",
       ],
       en: [
         "Why organization prompts?\nA well-crafted prompt can be reused by the whole company. Rather than letting everyone reinvent their wording, IT can publish validated, consistent prompts aligned with business usage, a real adoption accelerator. It works whether your users have a Copilot M365 license or not.",
-        "Publish from the admin center\nIn the admin center, go to Copilot > Prompts. There you manage your organization's prompts: create one via “Create prompt”, give it a clear title (e.g. “Write a professional email”, “Prepare a meeting”), then publish it. The “Analytics” tab gives you a view of their usage.",
+        "Publish from the M365 admin portal\nGo to the M365 admin portal (admin.cloud.microsoft), Copilot > Prompts section. There you manage your organization's prompts: create one via “Create prompt”, give it a clear title (e.g. “Write a professional email”, “Prepare a meeting”), then publish it. The “Analytics” tab gives you a view of their usage.",
+        "Fill in the prompt card\nThe “Create prompt” panel shows a preview of the card at the top, then the fields to complete:\n➞ Title: the title shown in the prompt gallery (required).\n➞ Description: when and how to use this prompt, to guide the user.\n➞ Display Prompt: the short text shown on the card (required).\n➞ Prompt: the full, clear and actionable prompt (up to 8000 characters, required).\n➞ Supported apps: the surfaces where it appears, Copilot web / Copilot work… (required).\n➞ Department, Task type (Execute…) and Language: to target and classify the prompt by role, task type and language.\nOnce the card is filled in, click “Publish” to make it available to your users.",
         "User side: the prompt lab\nOnce published, these prompts appear for your users in Copilot's prompt lab, grouped under “Suggested”, by “Prompt topics” or under “Agent prompts”. The user just clicks to start from a solid base, without thinking about the wording.",
         "Structure and reuse\nOrganize your prompts by theme and by role so they're easy to find. The goal: a living library that capitalizes on the best interactions and spreads good practices across the whole organization.",
       ],
@@ -2316,10 +2318,20 @@ export const tips: Tip[] = [
     stepImages: [
       null,
       "/articles/prompts-admin-contoso.png",
+      "/articles/prompts-create-panel.png",
       "/articles/prompts-lab.png",
       null,
     ],
     imageWidth: "md",
+    links: [
+      {
+        label: {
+          fr: "Portail d'administration Microsoft 365",
+          en: "Microsoft 365 admin portal",
+        },
+        url: "https://admin.cloud.microsoft/",
+      },
+    ],
     tags: ["prompts", "gouvernance", "adoption", "administration", "réutilisation"],
   },
 ];
