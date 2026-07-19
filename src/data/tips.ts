@@ -1943,13 +1943,13 @@ export const tips: Tip[] = [
     },
     steps: {
       fr: [
-        "Ouvrez Copilot Chat (l'icône Copilot dans Outlook ou sur Microsoft365.com), pas besoin de licence Copilot payante : il raisonne déjà sur le contenu de vos e-mails.",
+        "Ouvrez Copilot Chat (l'icône Copilot dans Outlook), pas besoin de licence Copilot payante : il raisonne déjà sur le contenu de vos e-mails.",
         "Demandez-lui de balayer l'ensemble de votre boîte : « Parcours mes mails récents et repère ce qui attend une action ou une réponse de ma part ».",
         "Croisez avec l'agenda du jour : « À partir de mes rendez-vous d'aujourd'hui et de ces mails, prépare-moi une to-do priorisée pour préparer chaque réunion ».",
         "Affinez : demandez de regrouper par réunion, d'estimer le temps de chaque tâche, ou de mettre en avant les échéances les plus urgentes.",
       ],
       en: [
-        "Open Copilot Chat (the Copilot icon in Outlook or on Microsoft365.com), no paid Copilot license needed: it already reasons over your email content.",
+        "Open Copilot Chat (the Copilot icon in Outlook), no paid Copilot license needed: it already reasons over your email content.",
         "Ask it to scan your whole inbox: “Go through my recent emails and flag anything awaiting an action or a reply from me.”",
         "Cross-reference with today's calendar: “From today's meetings and these emails, build me a prioritised to-do list to prepare for each meeting.”",
         "Refine: ask it to group by meeting, estimate time per task, or surface the most urgent deadlines.",
