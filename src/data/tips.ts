@@ -37,6 +37,8 @@ export type Tip = {
   steps: BilingualList;
   stepImages?: (string | string[] | null)[];
   imagesBeforeText?: boolean;
+  /** Quand true, la 1re ligne de chaque étape (avant le 1er saut de ligne) est mise en avant comme une accroche/titre. */
+  leadTitles?: boolean;
   stepTable?: { step: number; columns: Bilingual[]; rows: Bilingual[][] };
   imageWidth?: "xs" | "md" | "full";
   video?: string;
@@ -77,6 +79,7 @@ export const ROLES: Bilingual[] = [
 export const tips: Tip[] = [
   {
     slug: "creer-regle-outlook-copilot",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "outlook",
@@ -126,6 +129,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "parametres-copilot-outlook",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "outlook",
@@ -186,6 +190,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "creer-infographie-notebooks",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "notebooks",
@@ -239,6 +244,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "recherche-copilot-search",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "general",
@@ -296,6 +302,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "bibliotheque-pages-copilot",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "general",
@@ -356,6 +363,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "cowork-prompt-multitache-cost",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "cowork",
@@ -405,6 +413,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "meeting-recaps-teams",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "teams",
@@ -457,6 +466,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "edit-with-copilot-word-allow-editing",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "scout",
@@ -523,6 +533,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "decouvrir-copilot-cowork",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "cowork",
@@ -569,6 +580,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "planifier-une-reunion-avec-copilot",
+    leadTitles: true,
     section: "chat",
     extraSections: ["m365"],
     audience: ["user"],
@@ -616,6 +628,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "parlez-a-copilot-voix-mobile",
+    leadTitles: true,
     section: "chat",
     extraSections: ["m365"],
     audience: ["user"],
@@ -670,6 +683,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "agents-1p-microsoft-copilot",
+    leadTitles: true,
     section: "m365",
     extraSections: ["chat"],
     audience: ["user", "it"],
@@ -806,6 +820,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "personnaliser-copilot-instructions-memories",
+    leadTitles: true,
     section: "m365",
     extraSections: ["chat"],
     audience: ["user"],
@@ -866,6 +881,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "planifier-un-prompt-recurrent",
+    leadTitles: true,
     section: "m365",
     extraSections: ["chat"],
     audience: ["user"],
@@ -923,6 +939,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "schedule-with-copilot-outlook",
+    leadTitles: true,
     section: "m365",
     audience: ["user"],
     product: "outlook",
@@ -968,6 +985,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "enregistrer-un-prompt-copilot",
+    leadTitles: true,
     section: "m365",
     extraSections: ["chat"],
     audience: ["user"],
@@ -1031,6 +1049,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "ajouter-copilot-conversation-teams",
+    leadTitles: true,
     section: "m365",
     extraSections: ["chat"],
     audience: ["user"],
@@ -1081,6 +1100,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "ou-acceder-a-copilot",
+    leadTitles: true,
     section: "chat",
     extraSections: ["m365"],
     audience: ["user"],
@@ -1140,6 +1160,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "interface-copilot-avec-licence",
+    leadTitles: true,
     section: "m365",
     extraSections: ["chat"],
     audience: ["user"],
@@ -1768,6 +1789,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "mise-en-place-copilot-dashboard",
+    leadTitles: true,
     section: "m365",
     governance: true,
     audience: ["it"],
@@ -1858,6 +1880,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "gouvernance-securite-copilot",
+    leadTitles: true,
     section: "m365",
     governance: true,
     audience: ["it"],
@@ -2100,6 +2123,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "ressources-gratuites-montee-competence",
+    leadTitles: true,
     section: "chat",
     audience: ["user", "it"],
     product: "general",
@@ -2183,6 +2207,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "confiance-securite-m365-copilot",
+    leadTitles: true,
     section: "m365",
     governance: true,
     audience: ["user", "it"],
@@ -2231,6 +2256,7 @@ export const tips: Tip[] = [
   },
   {
     slug: "notebooks-sans-licence-chat",
+    leadTitles: true,
     section: "chat",
     audience: ["user"],
     product: "notebooks",
@@ -2323,6 +2349,7 @@ export const tips: Tip[] = [
       null,
     ],
     imageWidth: "md",
+    leadTitles: true,
     links: [
       {
         label: {

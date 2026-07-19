@@ -185,7 +185,26 @@ export default async function TipPage({
                 <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full brand-gradient text-sm font-bold text-white">
                   {i + 1}
                 </span>
-                <span className="text-sm leading-relaxed whitespace-pre-line">{renderWithLinks(s)}</span>
+                {(() => {
+                  const nl = s.indexOf("\n");
+                  if (tip.leadTitles && nl > 0) {
+                    const lead = s.slice(0, nl);
+                    const body = s.slice(nl + 1);
+                    return (
+                      <span className="flex flex-col gap-1">
+                        <span className="text-sm font-semibold">{lead}</span>
+                        <span className="text-sm leading-relaxed whitespace-pre-line">
+                          {renderWithLinks(body)}
+                        </span>
+                      </span>
+                    );
+                  }
+                  return (
+                    <span className="text-sm leading-relaxed whitespace-pre-line">
+                      {renderWithLinks(s)}
+                    </span>
+                  );
+                })()}
               </div>
               {tip.stepVideos
                 ?.filter((v) => v.step === i)
