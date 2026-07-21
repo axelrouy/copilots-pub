@@ -986,8 +986,8 @@ export const tips: Tip[] = [
   {
     slug: "enregistrer-un-prompt-copilot",
     leadTitles: true,
-    section: "m365",
-    extraSections: ["chat"],
+    section: "chat",
+    extraSections: ["m365"],
     audience: ["user"],
     product: "general",
     roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
