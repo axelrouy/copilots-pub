@@ -22,6 +22,7 @@ export default function ExplorerClient({
 
   const results = useMemo(() => {
     return tips.filter((t) => {
+      if (t.draft) return false;
       if (role !== "any" && !t.roles.includes(role)) return false;
       if (product !== "any" && t.product !== product) return false;
       return true;

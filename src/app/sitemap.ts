@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
     for (const tip of tips) {
+      if (tip.draft) continue;
       entries.push({
         url: `${BASE}/${locale}/tip/${tip.slug}`,
         lastModified: tip.date ? new Date(tip.date) : undefined,

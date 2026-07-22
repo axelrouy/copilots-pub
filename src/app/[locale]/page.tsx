@@ -125,7 +125,7 @@ export default async function HomePage({
           <SectionIcon name="browse" /> {dict.home.browse_by}
         </h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {PRODUCTS.filter((p) => tips.some((t) => t.product === p.id)).map(
+          {PRODUCTS.filter((p) => tips.some((t) => !t.draft && t.product === p.id)).map(
             (p) => (
               <Link
                 key={p.id}

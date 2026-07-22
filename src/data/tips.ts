@@ -21,6 +21,8 @@ export type Tip = {
   section: Section;
   extraSections?: Section[];
   governance?: boolean;
+  /** Quand true, l'article est un brouillon : prévisualisable par URL directe mais masqué de toutes les listes, du sitemap et de l'explorateur. */
+  draft?: boolean;
   audience: Audience[];
   product: Product;
   roles: string[];
@@ -2587,12 +2589,230 @@ export const tips: Tip[] = [
     ],
     tags: ["prompts", "gouvernance", "adoption", "administration", "réutilisation"],
   },
+  {
+    slug: "analyst-agent-copilot",
+    draft: true,
+    leadTitles: true,
+    section: "m365",
+    audience: ["user"],
+    product: "agents",
+    roles: ["Manager", "Consultant", "Sales", "Marketing"],
+    level: "intermediate",
+    icon: "/agents.png",
+    date: "2026-07-22",
+    isNew: true,
+    readMinutes: 5,
+    title: {
+      fr: "Analyst : l'agent data scientist qui transforme vos données en réponses",
+      en: "Analyst: the data-scientist agent that turns your data into answers",
+    },
+    summary: {
+      fr: "Analyst est un agent de Microsoft 365 Copilot qui raisonne comme un data scientist : vous lui donnez un tableur ou un CSV, il exécute du code Python en direct et vous ramène des analyses, des tendances et des visualisations, sans que vous ayez à connaître Excel sur le bout des doigts.",
+      en: "Analyst is a Microsoft 365 Copilot agent that reasons like a data scientist: you give it a spreadsheet or a CSV, it runs Python live and brings back analyses, trends and visualizations, without you needing to master Excel.",
+    },
+    steps: {
+      fr: [
+        "Un data scientist à portée de prompt\nAnalyst est l'un des agents de raisonnement de Microsoft 365 Copilot (aux côtés de Researcher). Sa spécialité : l'analyse de données. Vous lui posez une question sur vos chiffres, et il avance par étapes, comme le ferait un analyste humain, pour vous donner une réponse solide.\nSa particularité : il peut écrire et exécuter du code Python en direct pour traiter vos données les plus complexes. Et vous pouvez voir le code qu'il exécute, pour vérifier son raisonnement.",
+        "Où le trouver\nRendez-vous dans l'application Microsoft 365 Copilot (microsoft365.com/copilot). Dans le volet de gauche, ouvrez « Agents » et sélectionnez « Analyst ». Il est en général déjà épinglé, prêt à l'emploi.\nDepuis septembre 2025, il est aussi disponible sur mobile (iOS et Android).",
+        "Lui donner vos données\nUne fois Analyst ouvert, posez votre question, puis joignez vos données : cliquez sur l'icône « + » puis « Attach content » pour ajouter un fichier Excel, un CSV, depuis votre appareil ou OneDrive.\nAnalyst raisonne uniquement sur ce à quoi vous avez déjà accès : il respecte vos permissions Microsoft 365, ni plus ni moins.",
+        "Voir le raisonnement, pas juste le résultat\nContrairement à une réponse « boîte noire », Analyst affiche le code Python qu'il exécute au fur et à mesure. Vous suivez sa logique, vous vérifiez ses étapes, et vous gagnez en confiance dans le résultat.\nÀ la clé : des insights, des comparaisons, des visualisations, prêts à être repris dans un rapport ou une présentation.",
+        "Quelques exemples concrets\nDes questions que vous pouvez lui confier :\n➞ « Compare les performances de vente par région et par trimestre. »\n➞ « Identifie mes meilleurs clients qui n'exploitent pas encore tout ce qu'ils ont acheté. »\n➞ « Analyse l'effet des remises sur le comportement d'achat. »\n➞ « Fais ressortir les tendances de sentiment produit pour éclairer une décision go-to-market. »\nÀ chaque fois, vous partez de données brutes et vous obtenez une analyse exploitable en quelques minutes.",
+        "Ce qu'il faut retenir\nAnalyst, c'est l'analyste de données que vous n'avez pas toujours sous la main : il prend vos fichiers, exécute du Python à votre place, et transforme des colonnes de chiffres en réponses claires. Idéal quand vous avez la donnée mais pas le temps (ou l'expertise) de la creuser.",
+      ],
+      en: [
+        "A data scientist a prompt away\nAnalyst is one of Microsoft 365 Copilot's reasoning agents (alongside Researcher). Its specialty: data analysis. You ask a question about your numbers, and it works step by step, like a human analyst would, to give you a solid answer.\nIts trademark: it can write and run Python live to handle your most complex data. And you can watch the code it runs, to check its reasoning.",
+        "Where to find it\nGo to the Microsoft 365 Copilot app (microsoft365.com/copilot). In the left pane, open « Agents » and select « Analyst ». It's usually already pinned, ready to use.\nSince September 2025 it's also available on mobile (iOS and Android).",
+        "Give it your data\nOnce Analyst is open, ask your question, then attach your data: click the « + » icon then « Attach content » to add an Excel file or a CSV, from your device or OneDrive.\nAnalyst only reasons over what you already have access to: it honors your Microsoft 365 permissions, no more, no less.",
+        "See the reasoning, not just the result\nUnlike a « black box » answer, Analyst shows the Python code it runs as it goes. You follow its logic, check its steps, and gain confidence in the result.\nThe payoff: insights, comparisons and visualizations, ready to drop into a report or a presentation.",
+        "A few concrete examples\nQuestions you can hand it:\n➞ « Compare sales performance across regions and quarters. »\n➞ « Identify my top customers who aren't fully using what they bought. »\n➞ « Assess how discounts affect buying behavior. »\n➞ « Surface product sentiment trends to inform a go-to-market decision. »\nEach time, you start from raw data and get an actionable analysis in minutes.",
+        "What to remember\nAnalyst is the data analyst you don't always have on hand: it takes your files, runs Python for you, and turns columns of numbers into clear answers. Ideal when you have the data but not the time (or the expertise) to dig into it.",
+      ],
+    },
+    info: {
+      fr: "Analyst nécessite une licence Microsoft 365 Copilot. La licence inclut 25 requêtes par mois partagées entre Analyst et Researcher. Il s'appuie sur un modèle de raisonnement OpenAI et exécute du code Python. Disponible sur l'app Copilot (web et mobile).",
+      en: "Analyst requires a Microsoft 365 Copilot license. The license includes 25 queries per month shared between Analyst and Researcher. It relies on an OpenAI reasoning model and runs Python code. Available on the Copilot app (web and mobile).",
+    },
+    links: [
+      {
+        label: { fr: "Bien démarrer avec Analyst (support Microsoft)", en: "Get started with Analyst (Microsoft support)" },
+        url: "https://support.microsoft.com/en-us/Microsoft-365-Copilot/get-started-with-analyst-in-microsoft-365-copilot",
+      },
+      {
+        label: { fr: "Researcher et Analyst désormais disponibles (blog Microsoft 365)", en: "Researcher and Analyst now generally available (Microsoft 365 blog)" },
+        url: "https://www.microsoft.com/en-us/microsoft-365/blog/2025/06/02/researcher-and-analyst-are-now-generally-available-in-microsoft-365-copilot/",
+      },
+    ],
+    tags: ["agents", "analyst", "analyse de données", "python", "data", "reasoning", "avec licence"],
+  },
+  {
+    slug: "interpreter-agent-teams",
+    draft: true,
+    leadTitles: true,
+    section: "m365",
+    audience: ["user"],
+    product: "teams",
+    roles: ["Manager", "Consultant", "Sales", "Marketing", "HR"],
+    level: "beginner",
+    icon: "/teams.png",
+    date: "2026-07-22",
+    isNew: true,
+    readMinutes: 5,
+    title: {
+      fr: "Interpreter : l'interprète en temps réel de vos réunions Teams",
+      en: "Interpreter: the real-time interpreter for your Teams meetings",
+    },
+    summary: {
+      fr: "Interpreter est un agent qui traduit la parole en direct pendant vos réunions Teams : chacun écoute la réunion dans sa langue, en temps réel, avec même l'option de conserver le timbre de votre voix. Fini l'interprète humain pour comprendre un collègue ou un client à l'étranger.",
+      en: "Interpreter is an agent that translates speech live during your Teams meetings: everyone listens to the meeting in their own language, in real time, with the option to keep the tone of your voice. No more human interpreter to understand a colleague or client abroad.",
+    },
+    steps: {
+      fr: [
+        "Un interprète intégré à la réunion\nInterpreter agit comme un traducteur instantané pendant vos réunions Teams. Il écoute la langue parlée et la restitue en direct dans une autre langue, de la voix à la voix (speech-to-speech). Chaque participant peut ainsi suivre la réunion dans la langue de son choix.\nCerise sur le gâteau : une option permet de simuler votre voix, pour que la traduction sonne comme vous plutôt que comme une voix de synthèse neutre.",
+        "L'activer pendant une réunion\nSur Teams (Windows, Mac ou web), en réunion : ouvrez « More actions », puis « Language and speech », puis « Interpreter » et « Turn on for me ». Choisissez la langue dans laquelle vous voulez écouter la réunion.\nVous pouvez régler l'équilibre du volume entre l'audio d'origine et la traduction, et choisir la voix entendue par les autres (votre voix simulée, ou une voix automatisée).",
+        "Sur mobile aussi\nEn déplacement, c'est tout aussi simple. Sur Teams mobile (iOS ou Android) : « More », puis « Turn on Interpreter », sélectionnez la langue, et validez.\nLa langue parlée est détectée automatiquement et se reflète dans les sous-titres en direct et la transcription.",
+        "Les langues et le cadre d'usage\nInterpreter prend en charge une dizaine de langues (anglais, français, espagnol, portugais, allemand, italien, japonais, chinois mandarin, coréen, entre autres). Il fonctionne dans les réunions planifiées et les réunions de canal, sur desktop, mobile, web et Teams Rooms sur Windows.\nÀ noter : il n'est pas disponible dans les appels improvisés, les événements type webinaire/town hall, ni Teams gratuit. Et la traduction n'est pas capturée dans l'enregistrement ni la transcription, qui restent dans la langue d'origine.",
+        "Quelques exemples concrets\nLà où Interpreter change la donne :\n➞ Une réunion commerciale entre un vendeur francophone et un client japonais, sans interprète humain.\n➞ Une revue de projet avec une équipe répartie en Allemagne, en Corée et au Brésil.\n➞ Une formation animée en anglais, écoutée en mandarin et en français par tout le monde.\nChacun parle et écoute dans sa langue, la conversation reste fluide.",
+        "Ce qu'il faut retenir\nInterpreter, c'est la traduction vocale en direct qui tombe la barrière de la langue en réunion. Un clic dans les commandes de réunion, vous choisissez votre langue d'écoute, et vous suivez tout le monde sans effort. La confidentialité est préservée : aucun échantillon de voix n'est conservé.",
+      ],
+      en: [
+        "An interpreter built into the meeting\nInterpreter acts like an instant translator during your Teams meetings. It listens to the spoken language and renders it live into another language, voice to voice (speech-to-speech). Each participant can follow the meeting in the language of their choice.\nThe cherry on top: an option lets it simulate your voice, so the translation sounds like you rather than a neutral synthetic voice.",
+        "Turn it on during a meeting\nOn Teams (Windows, Mac or web), in a meeting: open « More actions », then « Language and speech », then « Interpreter » and « Turn on for me ». Choose the language you want to listen to the meeting in.\nYou can adjust the volume balance between the original audio and the translation, and choose the voice others hear (your simulated voice, or an automated one).",
+        "On mobile too\nOn the go, it's just as simple. On Teams mobile (iOS or Android): « More », then « Turn on Interpreter », pick the language and confirm.\nThe spoken language is detected automatically and reflected in live captions and the transcript.",
+        "Languages and where it works\nInterpreter supports around ten languages (English, French, Spanish, Portuguese, German, Italian, Japanese, Mandarin Chinese, Korean, among others). It works in scheduled meetings and channel meetings, on desktop, mobile, web and Teams Rooms on Windows.\nNote: it isn't available in ad-hoc calls, webinar/town-hall style events, or Teams Free. And the translation isn't captured in the recording or transcript, which stay in the original language.",
+        "A few concrete examples\nWhere Interpreter is a game changer:\n➞ A sales meeting between a French-speaking rep and a Japanese client, no human interpreter.\n➞ A project review with a team spread across Germany, Korea and Brazil.\n➞ A training delivered in English, heard in Mandarin and French by everyone.\nEveryone speaks and listens in their own language, the conversation stays fluid.",
+        "What to remember\nInterpreter is live voice translation that drops the language barrier in meetings. One click in the meeting controls, you choose your listening language, and you follow everyone effortlessly. Privacy is preserved: no voice sample is kept.",
+      ],
+    },
+    info: {
+      fr: "Interpreter nécessite une licence Microsoft 365 Copilot pour écouter la traduction (20 heures d'interprétation incluses par utilisateur et par mois ; au-delà, selon la capacité disponible). L'organisateur doit disposer de Microsoft 365 Copilot ou de Teams Premium. Aucun échantillon vocal n'est stocké.",
+      en: "Interpreter requires a Microsoft 365 Copilot license to listen to the translation (20 hours of interpretation included per user per month; beyond that, subject to available capacity). The organizer needs Microsoft 365 Copilot or Teams Premium. No voice sample is stored.",
+    },
+    links: [
+      {
+        label: { fr: "Interpreter dans les réunions et appels Teams (support Microsoft)", en: "Interpreter in Teams meetings and calls (Microsoft support)" },
+        url: "https://support.microsoft.com/en-us/office/interpreter-in-microsoft-teams-meetings-and-calls",
+      },
+      {
+        label: { fr: "Interpreter agent dans Teams (Microsoft Learn)", en: "Interpreter agent in Teams (Microsoft Learn)" },
+        url: "https://learn.microsoft.com/en-us/microsoftteams/interpreter-agent-teams",
+      },
+    ],
+    tags: ["teams", "interpreter", "traduction", "temps réel", "réunion", "multilingue", "avec licence"],
+  },
+  {
+    slug: "surveys-agent-copilot",
+    draft: true,
+    leadTitles: true,
+    section: "m365",
+    audience: ["user"],
+    product: "agents",
+    roles: ["Manager", "Consultant", "Marketing", "HR"],
+    level: "beginner",
+    icon: "/agents.png",
+    date: "2026-07-22",
+    isNew: true,
+    readMinutes: 5,
+    title: {
+      fr: "Surveys Agent : créer et piloter vos sondages en conversant avec Copilot",
+      en: "Surveys Agent: create and run your surveys by chatting with Copilot",
+    },
+    summary: {
+      fr: "Surveys Agent est un agent de Microsoft 365 Copilot qui gère tout le cycle de vie d'un sondage par la conversation : il crée un brouillon Microsoft Forms, l'affine, planifie l'envoi, relance les participants, suit les réponses et vous en fait la synthèse, avec export Excel pour aller plus loin.",
+      en: "Surveys Agent is a Microsoft 365 Copilot agent that handles the whole survey lifecycle through conversation: it creates a Microsoft Forms draft, refines it, schedules the send, chases participants, tracks responses and summarizes them for you, with Excel export to go further.",
+    },
+    steps: {
+      fr: [
+        "Un assistant sondage de bout en bout\nCréer un sondage, le diffuser, relancer les gens, dépouiller les réponses : c'est souvent chronophage. Surveys Agent prend tout ça en charge par la conversation. Vous décrivez ce que vous voulez mesurer, il s'occupe du reste, en s'appuyant sur Microsoft Forms comme moteur de création.",
+        "Où le trouver\nSurveys Agent vit dans Microsoft 365 Copilot. Ouvrez l'Agent Store, cherchez « Surveys Agent » dans les agents « Built by Microsoft », installez-le et épinglez-le dans la barre latérale de Copilot pour l'avoir sous la main.",
+        "Créer un sondage en quelques phrases\nDécrivez votre besoin à l'agent (« un sondage de satisfaction après ma formation », « une enquête d'engagement pour mon équipe »). Il génère instantanément un brouillon de formulaire Microsoft Forms, prêt à partager.\nVous pouvez aussi partir d'un fichier existant (Word, Excel, PowerPoint) pour contextualiser les questions, ou lui donner le lien d'un formulaire existant pour l'améliorer.",
+        "Affiner, planifier, diffuser\nUne fois le brouillon là, demandez à l'agent d'améliorer la clarté et la structure des questions. Puis laissez-le planifier le calendrier de lancement et la stratégie de diffusion, envoyer les invitations et les rappels pour maximiser le taux de réponse.",
+        "Suivre et analyser\nPendant la collecte, Surveys Agent vous tient informé (notamment via Outlook), vous donne le statut et un résumé des réponses. Besoin d'aller plus loin ? Il ouvre les résultats dans Excel pour une analyse approfondie.\nQuelques cas d'usage : évaluation post-formation, enquête d'engagement, étude client, feedback projet, ou encore un NPS.",
+        "Ce qu'il faut retenir\nSurveys Agent, c'est le sondage sans la corvée : vous conversez, il crée dans Forms, diffuse, relance et synthétise. Vous gardez la main sur le fond des questions, il prend en charge toute la logistique.",
+      ],
+      en: [
+        "An end-to-end survey assistant\nCreating a survey, distributing it, chasing people, crunching the responses: often time-consuming. Surveys Agent takes care of all of it through conversation. You describe what you want to measure, it handles the rest, using Microsoft Forms as the creation engine.",
+        "Where to find it\nSurveys Agent lives in Microsoft 365 Copilot. Open the Agent Store, look for « Surveys Agent » among the « Built by Microsoft » agents, install it and pin it to the Copilot side bar to keep it handy.",
+        "Create a survey in a few sentences\nDescribe your need to the agent (« a satisfaction survey after my training », « an engagement survey for my team »). It instantly generates a Microsoft Forms draft, ready to share.\nYou can also start from an existing file (Word, Excel, PowerPoint) to contextualize the questions, or give it the link of an existing form to improve it.",
+        "Refine, plan, distribute\nOnce the draft is there, ask the agent to improve the clarity and structure of the questions. Then let it plan the launch timeline and distribution strategy, send the invitations and reminders to maximize the response rate.",
+        "Track and analyze\nDuring collection, Surveys Agent keeps you posted (notably via Outlook), gives you the status and a summary of responses. Need to go further? It opens the results in Excel for deep analysis.\nA few use cases: post-training evaluation, engagement survey, customer study, project feedback, or an NPS.",
+        "What to remember\nSurveys Agent is surveys without the chore: you chat, it creates in Forms, distributes, chases and summarizes. You stay in control of the substance of the questions, it takes on all the logistics.",
+      ],
+    },
+    info: {
+      fr: "Surveys Agent nécessite une licence Microsoft 365 Copilot et s'appuie sur Microsoft Forms. Généralement disponible depuis novembre 2025 pour les clients commerciaux. À vérifier auprès de votre IT : le modèle de facturation au-delà de la licence (crédits / PAYGO) n'est pas précisé publiquement.",
+      en: "Surveys Agent requires a Microsoft 365 Copilot license and relies on Microsoft Forms. Generally available since November 2025 for commercial customers. Check with your IT: the billing model beyond the license (credits / PAYGO) isn't publicly specified.",
+    },
+    links: [
+      {
+        label: { fr: "Surveys Agent désormais disponible (blog Microsoft Forms)", en: "Surveys Agent now generally available (Microsoft Forms blog)" },
+        url: "https://techcommunity.microsoft.com/blog/microsoftformsblog/now-generally-available-surveys-agent-in-microsoft-365-copilot/4462155",
+      },
+    ],
+    tags: ["agents", "surveys", "sondage", "microsoft forms", "enquête", "feedback", "avec licence"],
+  },
+  {
+    slug: "microsoft-365-admin-agent",
+    draft: true,
+    leadTitles: true,
+    section: "m365",
+    governance: true,
+    audience: ["it"],
+    product: "agents",
+    roles: ["IT Admin", "Cloud Architect"],
+    level: "intermediate",
+    icon: "/agents.png",
+    date: "2026-07-22",
+    isNew: true,
+    readMinutes: 5,
+    title: {
+      fr: "Microsoft 365 Admin Agent : administrer votre tenant en langage naturel",
+      en: "Microsoft 365 Admin Agent: run your tenant in natural language",
+    },
+    summary: {
+      fr: "Le Microsoft 365 Admin Agent est un assistant agentique pour les administrateurs IT : au lieu de naviguer entre dix portails, vous demandez en langage naturel (« qui sont mes admins globaux ? », « Teams est-il en panne ? »), et l'agent interroge, recommande et propose des actions, toujours avec votre confirmation.",
+      en: "The Microsoft 365 Admin Agent is an agentic assistant for IT administrators: instead of navigating ten portals, you ask in natural language (« who are my global admins? », « is Teams down? »), and the agent queries, recommends and proposes actions, always with your confirmation.",
+    },
+    steps: {
+      fr: [
+        "L'administration qui passe à l'intention\nGérer Microsoft 365, c'est jongler entre de nombreux écrans et paramètres. Le Microsoft 365 Admin Agent change l'approche : vous exprimez votre intention en langage naturel, et il traduit ça en opérations sur votre tenant, avec des conseils contextuels et des suggestions proactives.\nPoint rassurant : toute action qui modifie quelque chose exige votre confirmation explicite. L'agent ne fait jamais de changement tout seul.",
+        "Où l'utiliser : deux surfaces reliées\nL'agent vit à deux endroits, avec continuité de contexte entre les deux :\n➞ Dans le centre d'administration Microsoft 365 (admin.microsoft.com) : cliquez sur le bouton « Copilot » en haut ; l'agent Admin est déjà sélectionné.\n➞ Dans Microsoft 365 Copilot Chat : allez dans « Agents » et choisissez « Microsoft 365 Admin ».\nVous pouvez démarrer une demande dans le chat, puis la poursuivre dans l'admin center sans perdre le fil.",
+        "Pas de licence Copilot en plus\nBonne nouvelle pour les équipes IT : le Microsoft 365 Admin Agent ne demande pas de licence Microsoft 365 Copilot supplémentaire. Il est disponible pour les administrateurs, en s'appuyant sur leurs rôles existants.\nCôté droits : le rôle « AI Administrator » permet d'utiliser et de configurer les scénarios ; « Global Reader » donne un accès en lecture seule. Et l'agent respecte les permissions de l'admin connecté (un admin Teams gère les politiques Teams, pas les paramètres SharePoint).",
+        "Ce qu'il sait faire\nQuelques demandes que vous pouvez lui adresser :\n➞ « Qui sont les administrateurs globaux de mon organisation ? »\n➞ « Mon organisation est-elle prête pour Copilot ? Que dois-je prioriser ? »\n➞ « Teams est-il en panne ? Mes utilisateurs ont des soucis de mails. »\n➞ « Affiche le statut MFA et active l'authentification sans mot de passe. »\n➞ « Déploie l'agent Viva Goals à tout le monde. »\nIl interroge les bons services, corrèle avec l'état en temps réel, et propose l'action, que vous validez.",
+        "Sécurité et traçabilité\nChaque action d'écriture ou d'exécution passe par une confirmation. Et tout est journalisé : les opérations se retrouvent dans les journaux d'audit des services concernés (centre d'administration Microsoft 365, Microsoft Entra, admin Teams).\nVous gardez donc le contrôle et la traçabilité, comme pour n'importe quelle opération d'administration sensible.",
+        "Ce qu'il faut retenir\nLe Microsoft 365 Admin Agent, c'est l'administration en langage naturel : moins de navigation entre portails, des réponses et des actions guidées, sans licence Copilot supplémentaire. L'agent propose, l'admin dispose, et tout reste audité.",
+      ],
+      en: [
+        "Administration that shifts to intent\nManaging Microsoft 365 means juggling many screens and settings. The Microsoft 365 Admin Agent changes the approach: you express your intent in natural language, and it turns that into operations on your tenant, with contextual guidance and proactive suggestions.\nReassuring point: any action that changes something requires your explicit confirmation. The agent never makes a change on its own.",
+        "Where to use it: two connected surfaces\nThe agent lives in two places, with context continuity between them:\n➞ In the Microsoft 365 admin center (admin.microsoft.com): click the « Copilot » button at the top; the Admin agent is already selected.\n➞ In Microsoft 365 Copilot Chat: go to « Agents » and choose « Microsoft 365 Admin ».\nYou can start a request in the chat, then continue it in the admin center without losing the thread.",
+        "No extra Copilot license\nGood news for IT teams: the Microsoft 365 Admin Agent doesn't require an extra Microsoft 365 Copilot license. It's available to administrators, relying on their existing roles.\nOn permissions: the « AI Administrator » role lets you use and configure the scenarios; « Global Reader » gives read-only access. And the agent honors the signed-in admin's permissions (a Teams admin manages Teams policies, not SharePoint settings).",
+        "What it can do\nA few requests you can give it:\n➞ « Who are the global admins in my organization? »\n➞ « Is my org ready for Copilot? What should I prioritize? »\n➞ « Is Teams down? My users have email problems. »\n➞ « Show the MFA status and turn on passwordless authentication. »\n➞ « Deploy the Viva Goals agent to everyone. »\nIt queries the right services, correlates with real-time status, and proposes the action, which you approve.",
+        "Security and traceability\nEvery write or execute action goes through a confirmation. And everything is logged: operations show up in the audit logs of the relevant services (Microsoft 365 admin center, Microsoft Entra, Teams admin).\nSo you keep control and traceability, as with any sensitive admin operation.",
+        "What to remember\nThe Microsoft 365 Admin Agent is administration in natural language: less portal hopping, guided answers and actions, with no extra Copilot license. The agent proposes, the admin decides, and everything stays audited.",
+      ],
+    },
+    info: {
+      fr: "Le Microsoft 365 Admin Agent ne nécessite pas de licence Microsoft 365 Copilot supplémentaire : il s'appuie sur les rôles d'administration (AI Administrator pour agir, Global Reader en lecture seule) et respecte les permissions RBAC de l'admin. Toute action modifiante demande une confirmation explicite.",
+      en: "The Microsoft 365 Admin Agent doesn't require an extra Microsoft 365 Copilot license: it relies on admin roles (AI Administrator to act, Global Reader for read-only) and honors the admin's RBAC permissions. Any changing action requires explicit confirmation.",
+    },
+    links: [
+      {
+        label: { fr: "Microsoft 365 Admin agent (Microsoft Learn)", en: "Microsoft 365 Admin agent (Microsoft Learn)" },
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-ai-admin-agent",
+      },
+    ],
+    tags: ["agents", "administration", "admin center", "gouvernance", "it", "microsoft entra", "sans licence copilot"],
+  },
 ];
 
 /* ---------- Helpers ---------- */
 
 export function getTip(slug: string): Tip | undefined {
   return tips.find((t) => t.slug === slug);
+}
+
+/** Articles publiés (hors brouillons) : base de toutes les listes publiques. */
+export function publishedTips(): Tip[] {
+  return tips.filter((t) => !t.draft);
 }
 
 export function inSection(t: Tip, section: Section): boolean {
@@ -2605,7 +2825,7 @@ export function isPremium(t: Tip): boolean {
 }
 
 export function tipsBySection(section: Section): Tip[] {
-  return tips.filter((t) => inSection(t, section));
+  return publishedTips().filter((t) => inSection(t, section));
 }
 
 /**
@@ -2613,14 +2833,14 @@ export function tipsBySection(section: Section): Tip[] {
  * On exclut donc tout article Premium (section m365), même s'il est cross-listé dans chat.
  */
 export function chatBasicTips(): Tip[] {
-  return tips.filter((t) => inSection(t, "chat") && !isPremium(t));
+  return publishedTips().filter((t) => inSection(t, "chat") && !isPremium(t));
 }
 
 export function tipsByAudience(
   audience: Audience,
   opts: { excludeGovernance?: boolean } = {},
 ): Tip[] {
-  return tips.filter(
+  return publishedTips().filter(
     (t) =>
       t.audience.includes(audience) &&
       !(opts.excludeGovernance && t.governance),
@@ -2628,30 +2848,33 @@ export function tipsByAudience(
 }
 
 export function governanceTips(): Tip[] {
-  return tips.filter((t) => t.governance);
+  return publishedTips().filter((t) => t.governance);
 }
 
 export function tipOfTheDay(date: Date = new Date()): Tip {
-  if (tips.length === 0) return tips[0];
+  const pool = publishedTips();
+  if (pool.length === 0) return tips[0];
   // Rotation quotidienne déterministe : le numéro de jour (UTC) sélectionne
   // une astuce différente chaque jour, en parcourant toute la liste.
   const dayNumber = Math.floor(date.getTime() / 86_400_000);
-  return tips[dayNumber % tips.length];
+  return pool[dayNumber % pool.length];
 }
 
 export function trendingTips(limit = 4): Tip[] {
-  return tips.filter((t) => t.trending).slice(0, limit);
+  return publishedTips()
+    .filter((t) => t.trending)
+    .slice(0, limit);
 }
 
 export function newTips(limit = 4): Tip[] {
-  return [...tips]
+  return publishedTips()
     .filter((t) => t.isNew)
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, limit);
 }
 
 export function relatedTips(tip: Tip, limit = 3): Tip[] {
-  return tips
+  return publishedTips()
     .filter((t) => t.slug !== tip.slug)
     .map((t) => ({
       t,
