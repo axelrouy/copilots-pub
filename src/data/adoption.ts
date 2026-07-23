@@ -406,7 +406,7 @@ export function weeksForTip(tip: Tip): number[] {
 
 /** Retourne les articles rattachés à une semaine donnée du parcours. */
 export function articlesForWeek(week: number): Tip[] {
-  return tips.filter((t) => weeksForTip(t).includes(week));
+  return tips.filter((t) => !t.draft && weeksForTip(t).includes(week));
 }
 
 /** Résout et dédoublonne les articles fil rouge d'une étape (chips). */
