@@ -2591,7 +2591,6 @@ export const tips: Tip[] = [
   },
   {
     slug: "analyst-agent-copilot",
-    draft: true,
     leadTitles: true,
     section: "m365",
     audience: ["user"],
@@ -2674,7 +2673,6 @@ export const tips: Tip[] = [
   },
   {
     slug: "interpreter-agent-teams",
-    draft: true,
     leadTitles: true,
     section: "m365",
     audience: ["user"],
