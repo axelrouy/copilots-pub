@@ -2854,6 +2854,69 @@ export const tips: Tip[] = [
     ],
     tags: ["agents", "administration", "admin center", "gouvernance", "it", "microsoft entra", "sans licence copilot"],
   },
+  {
+    slug: "cowork-tarification-valeur",
+    draft: true,
+    leadTitles: true,
+    section: "m365",
+    audience: ["user", "it"],
+    product: "cowork",
+    roles: ["Manager", "IT Admin", "Cloud Architect", "Consultant"],
+    level: "intermediate",
+    icon: "/cowork.png",
+    date: "2026-07-23",
+    isNew: true,
+    readMinutes: 6,
+    title: {
+      fr: "Cowork : comprendre la valeur consommée, pas le prix",
+      en: "Cowork: understanding value consumed, not price",
+    },
+    summary: {
+      fr: "Cowork ne se raisonne pas comme une licence de plus, mais comme une valeur consommée : vous payez le travail réellement effectué. On voit le cadre en quatre briques (licence, Cowork, crédits, FinOps), pourquoi le paiement à l'usage est intéressant, quand utiliser Cowork, et comment repérer vos meilleurs cas d'usage.",
+      en: "Cowork isn't reasoned about like one more license, but like value consumed: you pay for the work actually done. Let's look at the four-building-block framework (license, Cowork, credits, FinOps), why pay-as-you-go is interesting, when to use Cowork, and how to spot your best use cases.",
+    },
+    steps: {
+      fr: [
+        "Changer de regard : valeur consommée, pas prix\nLa bonne question pour Cowork n'est pas « combien ça coûte ? » mais « quelle valeur je consomme ? ». Le paiement à l'usage aligne le coût sur le travail réellement effectué.\nAutrement dit : vous ne payez pas un forfait moyen pour tout le monde, vous payez la valeur produite, quand elle est produite.",
+        "Le cadre en quatre briques\nPour situer chaque élément sans se perdre :\n➞ Licence Copilot : la productivité individuelle, dans vos apps du quotidien (Word, Excel, Outlook, Teams).\n➞ Cowork : l'automatisation de tâches multi-étapes, à plus grande échelle.\n➞ Crédits : le coût, aligné sur la valeur produite (paiement à l'usage).\n➞ FinOps : le pilotage (budgets, alertes, plafonds, gouvernance).\nChaque brique a son rôle ; ensemble, elles cadrent proprement l'adoption.",
+        "Comment ça marche : le paiement à l'usage\nCowork demande deux choses côté organisation : une licence Microsoft 365 Copilot active, et le paiement à l'usage (usage-based billing) activé par l'IT. C'est ce second point qui débloque l'exécution des tâches Cowork.\nLe modèle officiel s'appelle pay-as-you-go (PAYGO). L'usage des agents Copilot se mesure en crédits Copilot ; la grille Copilot Studio publiée par Microsoft référence un tarif public de 0,01 $ par crédit. Le détail de consommation propre à Cowork n'est pas publié séparément : voyez avec votre IT et l'estimateur officiel pour cadrer une hypothèse.",
+        "Pourquoi ce format est intéressant\nMicrosoft met en avant plusieurs atouts du paiement à l'usage :\n➞ Pas d'engagement ni d'achat en amont : on démarre sans licence dédiée.\n➞ On ne paie que ce qui est réellement utilisé.\n➞ On observe les usages réels avant de décider si des licences prépayées ont du sens.\n➞ On passe à l'échelle selon la demande, en payant au prorata de l'usage.\n➞ On réduit la charge d'achat de licences et on répartit les coûts par équipe grâce à la facturation Azure.",
+        "Quand utiliser Cowork\nGardez le bon réflexe : la licence Copilot pour la productivité individuelle au fil de l'eau, Cowork pour des missions autonomes à plusieurs étapes que vous voulez déléguer et faire tourner à l'échelle.\nSi une tâche tient dans une réponse, restez sur Copilot. Si c'est une mission répétable qui enchaîne des actions (rassembler, produire, publier, notifier), c'est le terrain de Cowork, et donc de la valeur consommée.",
+        "FinOps : garder la main\nLe paiement à l'usage ne veut pas dire perte de contrôle. Côté gouvernance, l'IT dispose de leviers officiels :\n➞ Une billing policy qui relie l'usage à un abonnement Azure.\n➞ Des budgets avec alertes par e-mail (attention : ils notifient mais ne bloquent pas automatiquement).\n➞ Des plafonds de consommation par agent et un suivi de la consommation.\n➞ La visibilité des coûts dans Microsoft Cost Management (Azure), avec répartition par équipe.\nLe bon réflexe FinOps : budget + alertes + plafonds + revue régulière.",
+        "Trouver vos cas d'usage\nLa valeur vient des bons cas d'usage. Pour les repérer dans votre contexte :\n➞ Partez de votre rôle : quelles tâches répétitives et multi-étapes vous prennent du temps chaque semaine ?\n➞ Cherchez les missions à faible valeur ajoutée mais chronophages (consolidation, mise en forme, relances, reporting récurrent).\n➞ Estimez la valeur produite (temps gagné, régularité, qualité) avant le coût.\n➞ Testez sur un périmètre restreint, mesurez la consommation avec l'estimateur et le suivi, puis élargissez ce qui prouve sa valeur.",
+        "Ce qu'il faut retenir\nCowork se raisonne en valeur consommée : on paie le travail fait, pas une moyenne. Le cadre licence / Cowork / crédits / FinOps aide à décider sans se tromper de brique.\nCommencez petit, mesurez, gouvernez avec les outils FinOps, et laissez les cas d'usage qui prouvent leur valeur guider l'échelle.",
+      ],
+      en: [
+        "Shift your view: value consumed, not price\nThe right question for Cowork isn't « how much does it cost? » but « what value am I consuming? ». Usage-based billing aligns cost to the work actually being done.\nIn other words: you're not paying an average flat fee for everyone, you're paying for value created, when it's created.",
+        "The four-building-block framework\nTo place each element without getting lost:\n➞ Copilot license: individual productivity, in your everyday apps (Word, Excel, Outlook, Teams).\n➞ Cowork: automation of multi-step tasks, at a larger scale.\n➞ Credits: cost, aligned to the value produced (pay-as-you-go).\n➞ FinOps: steering (budgets, alerts, caps, governance).\nEach block has its role; together they frame adoption cleanly.",
+        "How it works: pay-as-you-go\nCowork asks two things of the organization: an active Microsoft 365 Copilot license, and usage-based billing enabled by IT. That second point is what unlocks Cowork task execution.\nThe official model is called pay-as-you-go (PAYGO). Copilot agent usage is measured in Copilot Credits; the Copilot Studio grid published by Microsoft references a public rate of $0.01 per credit. Cowork's own consumption detail isn't published separately: check with your IT and the official estimator to frame an assumption.",
+        "Why this model is interesting\nMicrosoft highlights several strengths of pay-as-you-go:\n➞ No commitment or upfront purchase: you start without a dedicated license.\n➞ You only pay for what's actually used.\n➞ You observe real usage before deciding whether prepaid licenses make sense.\n➞ You scale with demand, paying in proportion to usage.\n➞ You cut license-procurement overhead and split costs across teams via Azure billing.",
+        "When to use Cowork\nKeep the right reflex: the Copilot license for individual productivity on the fly, Cowork for autonomous multi-step missions you want to delegate and run at scale.\nIf a task fits in one answer, stick with Copilot. If it's a repeatable mission chaining actions (gather, produce, post, notify), that's Cowork territory, and therefore value consumed.",
+        "FinOps: stay in control\nPay-as-you-go doesn't mean losing control. On governance, IT has official levers:\n➞ A billing policy linking usage to an Azure subscription.\n➞ Budgets with email alerts (careful: they notify but don't automatically block).\n➞ Per-agent consumption caps and usage monitoring.\n➞ Cost visibility in Microsoft Cost Management (Azure), with per-team breakdown.\nThe right FinOps reflex: budget + alerts + caps + regular review.",
+        "Find your use cases\nValue comes from the right use cases. To spot them in your context:\n➞ Start from your role: which repetitive, multi-step tasks eat your time each week?\n➞ Look for low-value but time-consuming missions (consolidation, formatting, follow-ups, recurring reporting).\n➞ Estimate the value produced (time saved, consistency, quality) before the cost.\n➞ Test on a small scope, measure consumption with the estimator and monitoring, then scale what proves its value.",
+        "What to remember\nCowork is reasoned about in value consumed: you pay for work done, not an average. The license / Cowork / credits / FinOps framework helps you decide without picking the wrong block.\nStart small, measure, govern with FinOps tools, and let the use cases that prove their value guide the scale.",
+      ],
+    },
+    info: {
+      fr: "Cowork nécessite une licence Microsoft 365 Copilot ET le paiement à l'usage (usage-based billing) activé par l'IT. Le tarif propre à Cowork n'est pas publié séparément : le tarif public de référence est celui des crédits Copilot Studio (0,01 $ par crédit). Utilisez l'estimateur officiel et voyez avec votre IT pour cadrer un budget.",
+      en: "Cowork requires a Microsoft 365 Copilot license AND usage-based billing enabled by IT. Cowork's own rate isn't published separately: the public reference rate is the Copilot Studio credit rate ($0.01 per credit). Use the official estimator and check with your IT to frame a budget.",
+    },
+    links: [
+      {
+        label: { fr: "Copilot Cowork : vue d'ensemble (Microsoft Learn)", en: "Copilot Cowork overview (Microsoft Learn)" },
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/",
+      },
+      {
+        label: { fr: "Paiement à l'usage Microsoft 365 Copilot (Microsoft Learn)", en: "Microsoft 365 Copilot pay-as-you-go (Microsoft Learn)" },
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/pay-as-you-go/overview",
+      },
+      {
+        label: { fr: "Estimateur d'usage des agents (Microsoft)", en: "Agent usage estimator (Microsoft)" },
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator",
+      },
+    ],
+    tags: ["cowork", "tarification", "valeur", "pay-as-you-go", "paygo", "crédits", "finops", "gouvernance", "avec licence"],
+  },
 ];
 
 /* ---------- Helpers ---------- */
