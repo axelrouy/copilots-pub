@@ -2802,7 +2802,6 @@ export const tips: Tip[] = [
   },
   {
     slug: "microsoft-365-admin-agent",
-    draft: true,
     leadTitles: true,
     section: "m365",
     governance: true,
