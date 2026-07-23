@@ -2751,7 +2751,6 @@ export const tips: Tip[] = [
   },
   {
     slug: "surveys-agent-copilot",
-    draft: true,
     leadTitles: true,
     section: "m365",
     audience: ["user"],
