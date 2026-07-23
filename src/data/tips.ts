@@ -2814,6 +2814,7 @@ export const tips: Tip[] = [
         url: "https://techcommunity.microsoft.com/category/microsoft-forms/blog/microsoftformsblog",
       },
     ],
+    adoptionWeeks: [5],
     tags: ["copilot", "microsoft forms", "sondage", "enquête", "forms", "feedback", "surveys agent"],
   },
   {
